@@ -52,25 +52,6 @@ const newsItems = [
   },
 ];
 
-const seoPages = [
-  {
-    path: "/",
-    title: "Дом 2 смотреть онлайн — свежий выпуск сегодня",
-    description:
-      "Смотреть дом 2 онлайн, свежий выпуск сегодня, стримы и архив эфиров каждый день.",
-  },
-  {
-    path: "/dom-2-segodnya",
-    title: "Дом 2 сегодняшний выпуск",
-    description:
-      "Актуальный выпуск дом 2 сегодня, эфир, обсуждения участников и свежий стрим.",
-  },
-  {
-    path: "/archive",
-    title: "Архив выпусков дом 2",
-    description: "Архив свежих стримов и выпусков дом 2 для удобного просмотра.",
-  },
-];
 
 function Icon({ children, label }) {
   return (
@@ -247,44 +228,28 @@ export default function HomePage() {
           </GlassCard>
         </section>
 
-        <section className="mt-8 grid gap-4 lg:grid-cols-[1fr_360px]">
-          <GlassCard className="p-6">
+
+        <section className="mt-8 grid gap-4 md:grid-cols-2">
+          <GlassCard className="p-6 md:p-8">
             <div className="mb-4 flex items-center gap-3">
-              <span className="text-2xl">⚙️</span>
-              <h2 className="text-2xl font-black text-slate-950">Как обновлять новый стрим</h2>
+              <span className="text-2xl">🔥</span>
+              <h2 className="text-2xl font-black text-slate-950">Смотреть дом 2 онлайн удобно</h2>
             </div>
-            <div className="grid gap-3 text-sm leading-7 text-slate-600 md:grid-cols-3">
-              <div className="rounded-3xl border border-white/60 bg-white/45 p-4 shadow-md backdrop-blur-xl">
-                <div className="mb-2 font-black text-slate-950">1. Берёшь ссылку</div>
-                <p>Например: https://www.youtube.com/watch?v=НОВЫЙ_ID</p>
-              </div>
-              <div className="rounded-3xl border border-white/60 bg-white/45 p-4 shadow-md backdrop-blur-xl">
-                <div className="mb-2 font-black text-slate-950">2. Меняешь ID</div>
-                <p>В siteConfig меняешь currentVideoId на новый ID после watch?v=</p>
-              </div>
-              <div className="rounded-3xl border border-white/60 bg-white/45 p-4 shadow-md backdrop-blur-xl">
-                <div className="mb-2 font-black text-slate-950">3. Добавляешь в архив</div>
-                <p>В archiveItems добавляешь дату, название и ссылку на прошлый выпуск.</p>
-              </div>
-            </div>
+            <p className="text-sm leading-7 text-slate-600 md:text-base">
+              На странице собран актуальный эфир, свежий выпуск и архив стримов дом 2. 
+              Заходите каждый день, чтобы быстро открыть последний доступный выпуск и продолжить просмотр без лишнего поиска.
+            </p>
           </GlassCard>
 
-          <GlassCard className="p-5">
-            <div className="mb-4 flex items-center gap-2 text-lg font-black text-slate-950">
-              <span>🚀</span>
-              SEO-страницы
+          <GlassCard className="p-6 md:p-8">
+            <div className="mb-4 flex items-center gap-3">
+              <span className="text-2xl">💬</span>
+              <h2 className="text-2xl font-black text-slate-950">Новости и обсуждения</h2>
             </div>
-            <div className="space-y-3">
-              {seoPages.map((page) => (
-                <div key={page.path} className="rounded-3xl border border-white/60 bg-white/42 p-4 shadow-md backdrop-blur-xl">
-                  <div className="mb-1 text-xs font-black uppercase tracking-wide text-slate-400">
-                    {page.path}
-                  </div>
-                  <div className="text-sm font-black text-slate-800">{page.title}</div>
-                  <div className="mt-1 text-xs leading-5 text-slate-500">{page.description}</div>
-                </div>
-              ))}
-            </div>
+            <p className="text-sm leading-7 text-slate-600 md:text-base">
+              Следим за свежими событиями проекта, участниками, эфирами и обсуждениями зрителей. 
+              Основной акцент сайта — дом 2 смотреть онлайн, свежие выпуски и удобный архив.
+            </p>
           </GlassCard>
         </section>
 
