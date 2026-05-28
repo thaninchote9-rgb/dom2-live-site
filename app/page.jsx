@@ -1,0 +1,337 @@
+const siteConfig = {
+  siteName: "Дом 2 Live",
+  brandName: "Max Brabus",
+  youtubeChannelUrl: "https://www.youtube.com/@ThomasKing4771",
+  telegramUrl: "https://t.me/maxbrabusstrim",
+
+  // Чтобы обновить главный плеер, меняйте только этот ID.
+  // Пример: https://www.youtube.com/watch?v=j-jxUE1EYUg
+  // ID здесь: j-jxUE1EYUg
+  currentVideoId: "j-jxUE1EYUg",
+};
+
+const archiveItems = [
+  {
+    date: "Сегодня",
+    title: "Дом 2 сегодняшний выпуск — свежий стрим",
+    videoUrl: "https://www.youtube.com/watch?v=j-jxUE1EYUg",
+    tag: "Новый эфир",
+  },
+  {
+    date: "Вчера",
+    title: "Дом 2 смотреть онлайн — архив эфира",
+    videoUrl: "#",
+    tag: "Архив",
+  },
+  {
+    date: "26.05",
+    title: "Дом 2 свежий выпуск — вечерний стрим",
+    videoUrl: "#",
+    tag: "Архив",
+  },
+  {
+    date: "25.05",
+    title: "Дом 2 стрим — участники, новости, обсуждение",
+    videoUrl: "#",
+    tag: "Архив",
+  },
+];
+
+const newsItems = [
+  {
+    title: "Дом 2: свежие обсуждения участников",
+    text: "Новости, реакции зрителей и самые заметные моменты последних выпусков проекта.",
+  },
+  {
+    title: "Стрим каждый день в 18:00 по Москве",
+    text: "На сайте всегда доступен актуальный эфир или последний опубликованный выпуск.",
+  },
+  {
+    title: "Архив выпусков дом 2",
+    text: "Собираем свежие эфиры, записи стримов и удобные ссылки для просмотра.",
+  },
+];
+
+const seoPages = [
+  {
+    path: "/",
+    title: "Дом 2 смотреть онлайн — свежий выпуск сегодня",
+    description:
+      "Смотреть дом 2 онлайн, свежий выпуск сегодня, стримы и архив эфиров каждый день.",
+  },
+  {
+    path: "/dom-2-segodnya",
+    title: "Дом 2 сегодняшний выпуск",
+    description:
+      "Актуальный выпуск дом 2 сегодня, эфир, обсуждения участников и свежий стрим.",
+  },
+  {
+    path: "/archive",
+    title: "Архив выпусков дом 2",
+    description: "Архив свежих стримов и выпусков дом 2 для удобного просмотра.",
+  },
+];
+
+function Icon({ children, label }) {
+  return (
+    <span aria-label={label} role="img" className="inline-flex items-center justify-center">
+      {children}
+    </span>
+  );
+}
+
+function getYouTubeEmbedUrl(videoId) {
+  return `https://www.youtube.com/embed/${videoId}`;
+}
+
+function getYouTubeWatchUrl(videoId) {
+  return `https://www.youtube.com/watch?v=${videoId}`;
+}
+
+function GlassCard({ children, className = "", id }) {
+  return (
+    <div
+      id={id}
+      className={`rounded-[2rem] border border-white/60 bg-white/45 shadow-[0_20px_80px_rgba(31,41,55,0.16)] backdrop-blur-2xl ${className}`}
+    >
+      {children}
+    </div>
+  );
+}
+
+export default function HomePage() {
+  const embedUrl = getYouTubeEmbedUrl(siteConfig.currentVideoId);
+  const currentWatchUrl = getYouTubeWatchUrl(siteConfig.currentVideoId);
+
+  return (
+    <main className="min-h-screen overflow-hidden bg-[#eef5ff] text-slate-950">
+      <div className="pointer-events-none fixed inset-0 overflow-hidden">
+        <div className="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-sky-300/60 blur-3xl" />
+        <div className="absolute top-24 right-[-80px] h-[30rem] w-[30rem] rounded-full bg-fuchsia-300/50 blur-3xl" />
+        <div className="absolute bottom-[-160px] left-1/3 h-[34rem] w-[34rem] rounded-full bg-rose-300/45 blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.95),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.78),transparent_30%)]" />
+      </div>
+
+      <header className="sticky top-0 z-30 border-b border-white/40 bg-white/35 backdrop-blur-2xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6">
+          <a href="/" className="flex items-center gap-3">
+            <div className="flex h-12 w-12 items-center justify-center rounded-3xl border border-white/60 bg-white/55 text-xl shadow-xl backdrop-blur-xl">
+              <Icon label="play">▶</Icon>
+            </div>
+            <div>
+              <div className="text-lg font-black tracking-tight text-slate-950">
+                {siteConfig.siteName}
+              </div>
+              <div className="text-xs font-medium text-slate-500">
+                стримы • эфиры • архив
+              </div>
+            </div>
+          </a>
+
+          <nav className="hidden items-center gap-2 rounded-full border border-white/60 bg-white/35 px-3 py-2 text-sm font-semibold text-slate-600 shadow-lg backdrop-blur-2xl md:flex">
+            <a href="#watch" className="rounded-full px-4 py-2 hover:bg-white/70 hover:text-slate-950">Смотреть эфир</a>
+            <a href="#archive" className="rounded-full px-4 py-2 hover:bg-white/70 hover:text-slate-950">Архив</a>
+            <a href="#news" className="rounded-full px-4 py-2 hover:bg-white/70 hover:text-slate-950">Новости</a>
+            <a href="#about" className="rounded-full px-4 py-2 hover:bg-white/70 hover:text-slate-950">О проекте</a>
+          </nav>
+
+          <div className="flex items-center gap-2">
+            <a href={siteConfig.youtubeChannelUrl} target="_blank" rel="noreferrer" className="rounded-full border border-white/60 bg-white/45 px-4 py-2 text-sm font-black text-slate-800 shadow-lg backdrop-blur-xl hover:bg-white/75">
+              YouTube
+            </a>
+            <a href={siteConfig.telegramUrl} target="_blank" rel="noreferrer" className="rounded-full bg-slate-950 px-4 py-2 text-sm font-black text-white shadow-xl hover:bg-slate-800">
+              TG
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 py-8 md:px-6 md:py-12">
+        <section className="mb-8 grid gap-6 lg:grid-cols-[1fr_360px]">
+          <GlassCard className="relative overflow-hidden p-6 md:p-10">
+            <div className="absolute right-8 top-8 hidden rounded-full border border-white/60 bg-white/40 px-4 py-2 text-sm font-bold text-slate-600 shadow-lg backdrop-blur-xl md:block">
+              live style • glass UI
+            </div>
+
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/55 px-4 py-2 text-sm font-bold text-slate-700 shadow-lg backdrop-blur-xl">
+              <Icon label="calendar">📅</Icon>
+              Каждый день в 18:00 по Москве
+            </div>
+
+            <h1 className="max-w-4xl text-4xl font-black leading-[1.02] tracking-tight text-slate-950 md:text-6xl">
+              Дом 2 смотреть онлайн — свежий выпуск и стрим сегодня
+            </h1>
+
+            <p className="mt-6 max-w-3xl text-base leading-8 text-slate-600 md:text-lg">
+              Смотрите актуальный эфир дом 2, свежие выпуски, архив стримов и новости участников.
+              Если новый прямой эфир ещё не начался, на сайте отображается последний доступный выпуск.
+            </p>
+
+            <div className="mt-7 flex flex-wrap gap-3 text-sm font-bold">
+              <span className="rounded-full border border-white/70 bg-white/55 px-4 py-2 text-slate-700 shadow-md backdrop-blur-xl">дом 2 смотреть</span>
+              <span className="rounded-full border border-white/70 bg-white/55 px-4 py-2 text-slate-700 shadow-md backdrop-blur-xl">дом 2 сегодняшний выпуск</span>
+              <span className="rounded-full border border-white/70 bg-white/55 px-4 py-2 text-slate-700 shadow-md backdrop-blur-xl">дом 2 стримы</span>
+            </div>
+          </GlassCard>
+
+          <GlassCard className="p-5">
+            <div className="mb-4 flex items-center gap-2 text-lg font-black text-slate-950">
+              <Icon label="search">🔎</Icon>
+              Быстрый поиск
+            </div>
+            <p className="mb-4 text-sm leading-6 text-slate-600">
+              Быстрые переходы на самые важные разделы сайта: сегодняшний выпуск, просмотр онлайн и архив стримов.
+            </p>
+            <div className="space-y-2 text-sm font-bold">
+              <a href="#watch" className="block rounded-3xl border border-white/60 bg-white/45 px-4 py-4 text-slate-700 shadow-md backdrop-blur-xl hover:bg-white/80">Дом 2 сегодняшний выпуск</a>
+              <a href="#watch" className="block rounded-3xl border border-white/60 bg-white/45 px-4 py-4 text-slate-700 shadow-md backdrop-blur-xl hover:bg-white/80">Дом 2 смотреть онлайн</a>
+              <a href="#archive" className="block rounded-3xl border border-white/60 bg-white/45 px-4 py-4 text-slate-700 shadow-md backdrop-blur-xl hover:bg-white/80">Свежие стримы дом 2</a>
+            </div>
+          </GlassCard>
+        </section>
+
+        <section id="watch" className="grid gap-6 lg:grid-cols-[1fr_360px]">
+          <GlassCard className="overflow-hidden p-3">
+            <div className="overflow-hidden rounded-[1.65rem] bg-slate-950 shadow-2xl">
+              <div className="aspect-video w-full">
+                <iframe
+                  className="h-full w-full"
+                  src={embedUrl}
+                  title="Дом 2 смотреть онлайн — свежий выпуск"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+            <div className="flex flex-col gap-3 p-4 md:flex-row md:items-center md:justify-between">
+              <div>
+                <div className="font-black text-slate-950">Актуальный эфир / последний выпуск</div>
+                <div className="text-sm text-slate-500">
+                  Чтобы обновить эфир, достаточно заменить currentVideoId в настройках сайта.
+                </div>
+              </div>
+              <a href={currentWatchUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-3xl bg-slate-950 px-5 py-3 text-sm font-black text-white shadow-xl hover:bg-slate-800">
+                <Icon label="youtube">▶</Icon>
+                Открыть YouTube
+              </a>
+            </div>
+          </GlassCard>
+
+          <GlassCard id="archive" className="p-5">
+            <div className="mb-4 flex items-center justify-between gap-3">
+              <h2 className="text-xl font-black text-slate-950">Архив выпусков</h2>
+              <span className="rounded-full border border-white/60 bg-white/55 px-3 py-1 text-xs font-bold text-slate-600 shadow-sm backdrop-blur-xl">
+                ручное
+              </span>
+            </div>
+
+            <div className="space-y-3">
+              {archiveItems.map((item) => (
+                <a
+                  key={`${item.date}-${item.title}`}
+                  href={item.videoUrl}
+                  target={item.videoUrl === "#" ? undefined : "_blank"}
+                  rel={item.videoUrl === "#" ? undefined : "noreferrer"}
+                  className="block rounded-3xl border border-white/60 bg-white/42 p-4 shadow-md backdrop-blur-xl transition hover:-translate-y-0.5 hover:bg-white/80 hover:shadow-xl"
+                >
+                  <div className="mb-2 flex items-center justify-between gap-3">
+                    <span className="text-sm font-bold text-slate-500">{item.date}</span>
+                    <span className="rounded-full bg-slate-950 px-2 py-1 text-[11px] font-black text-white">
+                      {item.tag}
+                    </span>
+                  </div>
+                  <div className="text-sm font-black leading-5 text-slate-800">{item.title}</div>
+                </a>
+              ))}
+            </div>
+          </GlassCard>
+        </section>
+
+        <section className="mt-8 grid gap-4 lg:grid-cols-[1fr_360px]">
+          <GlassCard className="p-6">
+            <div className="mb-4 flex items-center gap-3">
+              <span className="text-2xl">⚙️</span>
+              <h2 className="text-2xl font-black text-slate-950">Как обновлять новый стрим</h2>
+            </div>
+            <div className="grid gap-3 text-sm leading-7 text-slate-600 md:grid-cols-3">
+              <div className="rounded-3xl border border-white/60 bg-white/45 p-4 shadow-md backdrop-blur-xl">
+                <div className="mb-2 font-black text-slate-950">1. Берёшь ссылку</div>
+                <p>Например: https://www.youtube.com/watch?v=НОВЫЙ_ID</p>
+              </div>
+              <div className="rounded-3xl border border-white/60 bg-white/45 p-4 shadow-md backdrop-blur-xl">
+                <div className="mb-2 font-black text-slate-950">2. Меняешь ID</div>
+                <p>В siteConfig меняешь currentVideoId на новый ID после watch?v=</p>
+              </div>
+              <div className="rounded-3xl border border-white/60 bg-white/45 p-4 shadow-md backdrop-blur-xl">
+                <div className="mb-2 font-black text-slate-950">3. Добавляешь в архив</div>
+                <p>В archiveItems добавляешь дату, название и ссылку на прошлый выпуск.</p>
+              </div>
+            </div>
+          </GlassCard>
+
+          <GlassCard className="p-5">
+            <div className="mb-4 flex items-center gap-2 text-lg font-black text-slate-950">
+              <span>🚀</span>
+              SEO-страницы
+            </div>
+            <div className="space-y-3">
+              {seoPages.map((page) => (
+                <div key={page.path} className="rounded-3xl border border-white/60 bg-white/42 p-4 shadow-md backdrop-blur-xl">
+                  <div className="mb-1 text-xs font-black uppercase tracking-wide text-slate-400">
+                    {page.path}
+                  </div>
+                  <div className="text-sm font-black text-slate-800">{page.title}</div>
+                  <div className="mt-1 text-xs leading-5 text-slate-500">{page.description}</div>
+                </div>
+              ))}
+            </div>
+          </GlassCard>
+        </section>
+
+        <section id="news" className="mt-8 grid gap-4 md:grid-cols-3">
+          {newsItems.map((item) => (
+            <GlassCard key={item.title} className="p-6 transition hover:-translate-y-1 hover:bg-white/60">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-3xl border border-white/70 bg-white/55 text-xl shadow-lg backdrop-blur-xl">
+                <Icon label="news">📰</Icon>
+              </div>
+              <h2 className="mb-3 text-lg font-black text-slate-950">{item.title}</h2>
+              <p className="text-sm leading-6 text-slate-600">{item.text}</p>
+            </GlassCard>
+          ))}
+        </section>
+
+        <GlassCard id="about" className="mt-8 p-6 md:p-8">
+          <div className="mb-4 flex items-center gap-3">
+            <span className="text-2xl">✅</span>
+            <h2 className="text-2xl font-black text-slate-950">О проекте</h2>
+          </div>
+          <p className="max-w-4xl text-sm leading-7 text-slate-600 md:text-base">
+            Сайт создан для удобного просмотра стримов, свежих выпусков, архива эфиров и новостей,
+            связанных с проектом дом 2. Видео воспроизводятся через официальный встроенный плеер YouTube.
+          </p>
+          <p className="mt-4 max-w-4xl text-xs leading-6 text-slate-500">
+            Дисклеймер: видеоматериалы встроены с YouTube. Все права на видео, изображения,
+            товарные знаки и материалы принадлежат их законным правообладателям. Сайт не претендует
+            на авторские права и размещает материалы исключительно в информационно-развлекательных целях.
+          </p>
+        </GlassCard>
+      </div>
+
+      <footer id="contacts" className="relative z-10 border-t border-white/40 bg-white/20 px-4 py-8 text-center text-sm text-slate-500 backdrop-blur-2xl md:px-6">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-3 font-black text-slate-800">
+            {siteConfig.siteName} • {siteConfig.brandName}
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-4 font-bold">
+            <a href={siteConfig.youtubeChannelUrl} target="_blank" rel="noreferrer" className="hover:text-slate-950">
+              YouTube
+            </a>
+            <a href={siteConfig.telegramUrl} target="_blank" rel="noreferrer" className="hover:text-slate-950">
+              Telegram
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  );
+}
