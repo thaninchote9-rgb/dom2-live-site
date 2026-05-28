@@ -164,11 +164,11 @@ export default function HomePage() {
           </GlassCard>
 
           <GlassCard className="overflow-hidden p-3">
-            <div className="relative overflow-hidden rounded-[1.65rem] bg-white/55 shadow-xl">
+            <div className="relative overflow-hidden rounded-[1.65rem] bg-gradient-to-br from-white/70 via-pink-100/45 to-sky-100/45 shadow-xl">
               <img
                 src={streamerPhotos[0].src}
                 alt="Фото стримеров дом 2"
-                className="aspect-[4/3] w-full object-cover object-center"
+                className="aspect-[4/3] w-full bg-white/30 object-contain object-center"
               />
               <div className="absolute left-4 top-4 rounded-full border border-white/70 bg-white/75 px-3 py-1 text-xs font-black text-slate-800 shadow-lg backdrop-blur-xl">
                 фото
