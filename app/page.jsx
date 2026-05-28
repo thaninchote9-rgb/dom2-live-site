@@ -138,10 +138,6 @@ export default function HomePage() {
       <div className="relative z-10 mx-auto max-w-7xl px-4 py-8 md:px-6 md:py-12">
         <section className="mb-8 grid gap-6 lg:grid-cols-[1fr_360px]">
           <GlassCard className="relative overflow-hidden p-6 md:p-10">
-            <div className="absolute right-8 top-8 hidden rounded-full border border-white/60 bg-white/40 px-4 py-2 text-sm font-bold text-slate-600 shadow-lg backdrop-blur-xl md:block">
-              live style • glass UI
-            </div>
-
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/55 px-4 py-2 text-sm font-bold text-slate-700 shadow-lg backdrop-blur-xl">
               <Icon label="calendar">📅</Icon>
               Каждый день в 18:00 по Москве
@@ -203,7 +199,7 @@ export default function HomePage() {
               <div>
                 <div className="font-black text-slate-950">Актуальный эфир / последний выпуск</div>
                 <div className="text-sm text-slate-500">
-                  Чтобы обновить эфир, достаточно заменить currentVideoId в настройках сайта.
+                  Смотрите свежий выпуск и прямой эфир на сайте или откройте видео на YouTube.
                 </div>
               </div>
               <a href={currentWatchUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-3xl bg-slate-950 px-5 py-3 text-sm font-black text-white shadow-xl hover:bg-slate-800">
@@ -216,9 +212,6 @@ export default function HomePage() {
           <GlassCard id="archive" className="p-5">
             <div className="mb-4 flex items-center justify-between gap-3">
               <h2 className="text-xl font-black text-slate-950">Архив выпусков</h2>
-              <span className="rounded-full border border-white/60 bg-white/55 px-3 py-1 text-xs font-bold text-slate-600 shadow-sm backdrop-blur-xl">
-                ручное
-              </span>
             </div>
 
             <div className="space-y-3">
