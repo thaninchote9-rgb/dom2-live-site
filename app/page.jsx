@@ -81,7 +81,7 @@ function GlassCard({ children, className = "", id }) {
   return (
     <div
       id={id}
-      className={`rounded-[2rem] border border-white/60 bg-white/45 shadow-[0_20px_80px_rgba(31,41,55,0.16)] backdrop-blur-2xl ${className}`}
+      className={`rounded-[2rem] border border-white/55 bg-white/58 shadow-[0_24px_90px_rgba(15,23,42,0.26)] backdrop-blur-2xl ${className}`}
     >
       {children}
     </div>
@@ -93,15 +93,14 @@ export default function HomePage() {
   const currentWatchUrl = getYouTubeWatchUrl(siteConfig.currentVideoId);
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#eef5ff] text-slate-950">
+    <main className="min-h-screen overflow-hidden bg-slate-950 bg-[url('/backgrounds/rain-window.jpg')] bg-cover bg-center bg-fixed text-slate-950">
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-sky-300/60 blur-3xl" />
-        <div className="absolute top-24 right-[-80px] h-[30rem] w-[30rem] rounded-full bg-fuchsia-300/50 blur-3xl" />
-        <div className="absolute bottom-[-160px] left-1/3 h-[34rem] w-[34rem] rounded-full bg-rose-300/45 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.95),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.78),transparent_30%)]" />
+        <div className="absolute inset-0 bg-slate-950/25" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.48),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(15,23,42,0.34),transparent_42%)]" />
+        <div className="absolute inset-0 backdrop-blur-[1px]" />
       </div>
 
-      <header className="sticky top-0 z-30 border-b border-white/40 bg-white/35 backdrop-blur-2xl">
+      <header className="sticky top-0 z-30 border-b border-white/35 bg-white/48 shadow-sm backdrop-blur-2xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6">
           <a href="/" className="flex items-center gap-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-3xl border border-white/60 bg-white/55 text-xl shadow-xl backdrop-blur-xl">

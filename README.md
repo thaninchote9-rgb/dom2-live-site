@@ -47,3 +47,12 @@
 `public/photos/streamers-main.jpg`
 
 Чтобы заменить фото, загрузите новое изображение с тем же именем `streamers-main.jpg` в эту папку и сделайте commit changes.
+
+
+## Как заменить фон сайта
+
+Фон сайта хранится здесь:
+
+`public/backgrounds/rain-window.jpg`
+
+Чтобы заменить фон, загрузите новое изображение с тем же именем `rain-window.jpg` в эту папку и сделайте commit changes.
