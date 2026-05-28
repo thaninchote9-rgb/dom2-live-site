@@ -53,6 +53,14 @@ const newsItems = [
 ];
 
 
+const streamerPhotos = [
+  {
+    src: "/photos/streamers-main.jpg",
+    title: "Фото стримеров",
+    text: "Свежие фото, настроение эфира и закулисье стримов.",
+  },
+];
+
 function Icon({ children, label }) {
   return (
     <span aria-label={label} role="img" className="inline-flex items-center justify-center">
@@ -155,18 +163,25 @@ export default function HomePage() {
             </div>
           </GlassCard>
 
-          <GlassCard className="p-5">
-            <div className="mb-4 flex items-center gap-2 text-lg font-black text-slate-950">
-              <Icon label="search">🔎</Icon>
-              Быстрый поиск
+          <GlassCard className="overflow-hidden p-3">
+            <div className="relative overflow-hidden rounded-[1.65rem] bg-white/55 shadow-xl">
+              <img
+                src={streamerPhotos[0].src}
+                alt="Фото стримеров дом 2"
+                className="aspect-[4/3] w-full object-cover object-center"
+              />
+              <div className="absolute left-4 top-4 rounded-full border border-white/70 bg-white/75 px-3 py-1 text-xs font-black text-slate-800 shadow-lg backdrop-blur-xl">
+                фото
+              </div>
             </div>
-            <p className="mb-4 text-sm leading-6 text-slate-600">
-              Быстрые переходы на самые важные разделы сайта: сегодняшний выпуск, просмотр онлайн и архив стримов.
-            </p>
-            <div className="space-y-2 text-sm font-bold">
-              <a href="#watch" className="block rounded-3xl border border-white/60 bg-white/45 px-4 py-4 text-slate-700 shadow-md backdrop-blur-xl hover:bg-white/80">Дом 2 сегодняшний выпуск</a>
-              <a href="#watch" className="block rounded-3xl border border-white/60 bg-white/45 px-4 py-4 text-slate-700 shadow-md backdrop-blur-xl hover:bg-white/80">Дом 2 смотреть онлайн</a>
-              <a href="#archive" className="block rounded-3xl border border-white/60 bg-white/45 px-4 py-4 text-slate-700 shadow-md backdrop-blur-xl hover:bg-white/80">Свежие стримы дом 2</a>
+            <div className="p-4">
+              <div className="mb-2 flex items-center gap-2 text-lg font-black text-slate-950">
+                <Icon label="camera">📸</Icon>
+                {streamerPhotos[0].title}
+              </div>
+              <p className="text-sm leading-6 text-slate-600">
+                {streamerPhotos[0].text}
+              </p>
             </div>
           </GlassCard>
         </section>
