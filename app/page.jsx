@@ -137,11 +137,14 @@ export default function HomePage() {
           </nav>
 
           <div className="flex items-center gap-2">
+            <span className="hidden text-sm font-black text-slate-700/90 drop-shadow-sm sm:inline">
+              Подписывайтесь на
+            </span>
             <a href={siteConfig.youtubeChannelUrl} target="_blank" rel="noreferrer" className="rounded-full border border-white/60 bg-white/45 px-4 py-2 text-sm font-black text-slate-800 shadow-lg backdrop-blur-xl hover:bg-white/75">
               YouTube
             </a>
             <a href={siteConfig.telegramUrl} target="_blank" rel="noreferrer" className="rounded-full bg-slate-950 px-4 py-2 text-sm font-black text-white shadow-xl hover:bg-slate-800">
-              TG
+              Telegram
             </a>
           </div>
         </div>
@@ -263,29 +266,8 @@ export default function HomePage() {
         </section>
 
 
-        <section className="mt-8 grid gap-4 md:grid-cols-2">
-          <GlassCard className="p-6 md:p-8">
-            <div className="mb-4 flex items-center gap-3">
-              <span className="text-2xl">🔥</span>
-              <h2 className="text-2xl font-black text-slate-950">Смотреть дом 2 онлайн удобно</h2>
-            </div>
-            <p className="text-sm leading-7 text-slate-600 md:text-base">
-              На странице собран актуальный эфир, свежий выпуск и архив стримов дом 2. 
-              Заходите каждый день, чтобы быстро открыть последний доступный выпуск и продолжить просмотр без лишнего поиска.
-            </p>
-          </GlassCard>
+        
 
-          <GlassCard className="p-6 md:p-8">
-            <div className="mb-4 flex items-center gap-3">
-              <span className="text-2xl">💬</span>
-              <h2 className="text-2xl font-black text-slate-950">Новости и обсуждения</h2>
-            </div>
-            <p className="text-sm leading-7 text-slate-600 md:text-base">
-              Следим за свежими событиями проекта, участниками, эфирами и обсуждениями зрителей. 
-              Основной акцент сайта — дом 2 смотреть онлайн, свежие выпуски и удобный архив.
-            </p>
-          </GlassCard>
-        </section>
 
         <section id="news" className="mt-8">
           <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
