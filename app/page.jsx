@@ -39,25 +39,16 @@ const archiveItems = [
 
 const newsItems = [
   {
-    date: "29.05.2026",
-    image: "/news/news-chelovek-goda.jpg",
-    title: "Итоги второго этапа конкурса «Человек года»",
-    text: "Света Прель подвела итоги нового этапа конкурса. Победу одержала Элина Рахимова, второе место заняла Кристина Лясковец, а третье место стало неожиданностью для зрителей.",
-    tag: "Конкурс",
+    title: "Дом 2: свежие обсуждения участников",
+    text: "Новости, реакции зрителей и самые заметные моменты последних выпусков проекта.",
   },
   {
-    date: "29.05.2026",
-    image: "/news/news-romashovy.jpg",
-    title: "Женя и Настя Ромашовы поделились радостной новостью",
-    text: "Ромашовы сообщили поклонникам, что теперь их трое. Пара поделилась трогательной новостью и получила много поздравлений от зрителей проекта.",
-    tag: "Семья",
+    title: "Стрим каждый день в 18:00 по Москве",
+    text: "На сайте всегда доступен актуальный эфир или последний опубликованный выпуск.",
   },
   {
-    date: "29.05.2026",
-    image: "/news/news-salibekovy.jpg",
-    title: "Салибековы покинули проект",
-    text: "Кристина Лясковец подтвердила уход семейства: они решили строить любовь за периметром. Перед уходом у Салибековых произошёл серьёзный конфликт с Галей.",
-    tag: "Участники",
+    title: "Архив выпусков дом 2",
+    text: "Собираем свежие эфиры, записи стримов и удобные ссылки для просмотра.",
   },
 ];
 
@@ -269,44 +260,16 @@ export default function HomePage() {
           </GlassCard>
         </section>
 
-        <section id="news" className="mt-8">
-          <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
-            <div>
-              <div className="mb-2 text-sm font-black uppercase tracking-[0.22em] text-slate-500">новости проекта</div>
-              <h2 className="text-3xl font-black text-slate-950">Свежие новости дом 2</h2>
-            </div>
-            <div className="rounded-full border border-white/60 bg-white/55 px-4 py-2 text-xs font-black text-slate-600 shadow-md backdrop-blur-xl">
-              публикации от 29.05.2026
-            </div>
-          </div>
-
-          <div className="grid gap-4 md:grid-cols-3">
-            {newsItems.map((item) => (
-              <GlassCard key={item.title} className="overflow-hidden p-3">
-                <div className="relative overflow-hidden rounded-[1.4rem] bg-white/60 shadow-lg">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="aspect-[4/5] w-full object-cover object-center"
-                  />
-                  <div className="absolute left-3 top-3 rounded-full border border-white/70 bg-white/80 px-3 py-1 text-xs font-black text-slate-800 shadow-lg backdrop-blur-xl">
-                    {item.tag}
-                  </div>
-                  <div className="absolute right-3 top-3 rounded-full border border-white/70 bg-slate-950/85 px-3 py-1 text-xs font-black text-white shadow-lg backdrop-blur-xl">
-                    {item.date}
-                  </div>
-                </div>
-
-                <div className="p-3">
-                  <div className="mb-2 text-xs font-black uppercase tracking-[0.18em] text-slate-500">
-                    публикация от {item.date}
-                  </div>
-                  <h3 className="mb-3 text-lg font-black leading-snug text-slate-950">{item.title}</h3>
-                  <p className="text-sm leading-6 text-slate-600">{item.text}</p>
-                </div>
-              </GlassCard>
-            ))}
-          </div>
+        <section id="news" className="mt-8 grid gap-4 md:grid-cols-3">
+          {newsItems.map((item) => (
+            <GlassCard key={item.title} className="p-6 transition hover:-translate-y-1 hover:bg-white/60">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-3xl border border-white/70 bg-white/55 text-xl shadow-lg backdrop-blur-xl">
+                <Icon label="news">📰</Icon>
+              </div>
+              <h2 className="mb-3 text-lg font-black text-slate-950">{item.title}</h2>
+              <p className="text-sm leading-6 text-slate-600">{item.text}</p>
+            </GlassCard>
+          ))}
         </section>
 
         <GlassCard id="about" className="mt-8 p-6 md:p-8">
