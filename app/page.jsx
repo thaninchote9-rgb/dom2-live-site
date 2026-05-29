@@ -5,22 +5,22 @@ const siteConfig = {
   telegramUrl: "https://t.me/maxbrabusstrim",
 
   // Чтобы обновить главный плеер, меняйте только этот ID.
-  // Пример: https://www.youtube.com/watch?v=j-jxUE1EYUg
-  // ID здесь: j-jxUE1EYUg
-  currentVideoId: "j-jxUE1EYUg",
+  // Пример: https://www.youtube.com/watch?v=r6JvpOAPlG4
+  // ID здесь: r6JvpOAPlG4
+  currentVideoId: "r6JvpOAPlG4",
 };
 
 const archiveItems = [
   {
-    date: "Сегодня",
+    date: "28.05",
     title: "Дом 2 сегодняшний выпуск — свежий стрим",
-    videoUrl: "https://www.youtube.com/watch?v=j-jxUE1EYUg",
+    videoUrl: "https://www.youtube.com/live/r6JvpOAPlG4",
     tag: "Новый эфир",
   },
   {
-    date: "Вчера",
+    date: "27.05",
     title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "#",
+    videoUrl: "https://youtu.be/j-jxUE1EYUg",
     tag: "Архив",
   },
   {
