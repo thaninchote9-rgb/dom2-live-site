@@ -15,40 +15,53 @@ const archiveItems = [
     date: "28.05",
     title: "Дом 2 сегодняшний выпуск — свежий стрим",
     videoUrl: "https://www.youtube.com/live/r6JvpOAPlG4",
+    image: "https://img.youtube.com/vi/r6JvpOAPlG4/hqdefault.jpg",
     tag: "Новый эфир",
   },
   {
     date: "27.05",
     title: "Дом 2 смотреть онлайн — архив эфира",
     videoUrl: "https://youtu.be/j-jxUE1EYUg",
+    image: "https://img.youtube.com/vi/j-jxUE1EYUg/hqdefault.jpg",
     tag: "Архив",
   },
   {
     date: "26.05",
     title: "Дом 2 свежий выпуск — вечерний стрим",
     videoUrl: "#",
+    image: "https://img.youtube.com/vi/r6JvpOAPlG4/hqdefault.jpg",
     tag: "Архив",
   },
   {
     date: "25.05",
     title: "Дом 2 стрим — участники, новости, обсуждение",
     videoUrl: "#",
+    image: "https://img.youtube.com/vi/j-jxUE1EYUg/hqdefault.jpg",
     tag: "Архив",
   },
 ];
 
 const newsItems = [
   {
-    title: "Дом 2: свежие обсуждения участников",
-    text: "Новости, реакции зрителей и самые заметные моменты последних выпусков проекта.",
+    date: "29.05.2026",
+    image: "/news/news-chelovek-goda.jpg",
+    title: "Итоги второго этапа конкурса «Человек года»",
+    text: "Света Прель подвела итоги нового этапа конкурса. Победу одержала Элина Рахимова, второе место заняла Кристина Лясковец, а третье место стало неожиданностью для зрителей.",
+    tag: "Конкурс",
   },
   {
-    title: "Стрим каждый день в 18:00 по Москве",
-    text: "На сайте всегда доступен актуальный эфир или последний опубликованный выпуск.",
+    date: "29.05.2026",
+    image: "/news/news-romashovy.jpg",
+    title: "Женя и Настя Ромашовы поделились радостной новостью",
+    text: "Ромашовы сообщили поклонникам, что теперь их трое. Пара поделилась трогательной новостью и получила много поздравлений от зрителей проекта.",
+    tag: "Семья",
   },
   {
-    title: "Архив выпусков дом 2",
-    text: "Собираем свежие эфиры, записи стримов и удобные ссылки для просмотра.",
+    date: "29.05.2026",
+    image: "/news/news-salibekovy.jpg",
+    title: "Салибековы покинули проект",
+    text: "Кристина Лясковец подтвердила уход семейства: они решили строить любовь за периметром. Перед уходом у Салибековых произошёл серьёзный конфликт с Галей.",
+    tag: "Участники",
   },
 ];
 
@@ -159,24 +172,25 @@ export default function HomePage() {
           </GlassCard>
 
           <GlassCard className="overflow-hidden p-3">
-            <div className="relative overflow-hidden rounded-[1.65rem] bg-gradient-to-br from-white/70 via-pink-100/45 to-sky-100/45 shadow-xl">
+            <div className="relative min-h-[360px] overflow-hidden rounded-[1.65rem] bg-slate-950/20 shadow-xl md:min-h-[430px]">
               <img
                 src={streamerPhotos[0].src}
                 alt="Фото стримеров дом 2"
-                className="aspect-[4/3] w-full bg-white/30 object-contain object-center"
+                className="absolute inset-0 h-full w-full object-cover object-center"
               />
-              <div className="absolute left-4 top-4 rounded-full border border-white/70 bg-white/75 px-3 py-1 text-xs font-black text-slate-800 shadow-lg backdrop-blur-xl">
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-slate-950/12 to-transparent" />
+              <div className="absolute left-4 top-4 rounded-full border border-white/70 bg-white/80 px-3 py-1 text-xs font-black text-slate-800 shadow-lg backdrop-blur-xl">
                 фото
               </div>
-            </div>
-            <div className="p-4">
-              <div className="mb-2 flex items-center gap-2 text-lg font-black text-slate-950">
-                <Icon label="camera">📸</Icon>
-                {streamerPhotos[0].title}
+              <div className="absolute inset-x-0 bottom-0 p-5">
+                <div className="mb-2 flex items-center gap-2 text-lg font-black text-white drop-shadow">
+                  <Icon label="camera">📸</Icon>
+                  {streamerPhotos[0].title}
+                </div>
+                <p className="max-w-[18rem] text-sm leading-6 text-white/85 drop-shadow">
+                  {streamerPhotos[0].text}
+                </p>
               </div>
-              <p className="text-sm leading-6 text-slate-600">
-                {streamerPhotos[0].text}
-              </p>
             </div>
           </GlassCard>
         </section>
@@ -220,15 +234,28 @@ export default function HomePage() {
                   href={item.videoUrl}
                   target={item.videoUrl === "#" ? undefined : "_blank"}
                   rel={item.videoUrl === "#" ? undefined : "noreferrer"}
-                  className="block rounded-3xl border border-white/60 bg-white/42 p-4 shadow-md backdrop-blur-xl transition hover:-translate-y-0.5 hover:bg-white/80 hover:shadow-xl"
+                  className="group block overflow-hidden rounded-3xl border border-white/60 bg-white/48 p-2 shadow-md backdrop-blur-xl transition hover:-translate-y-0.5 hover:bg-white/75 hover:shadow-xl"
                 >
-                  <div className="mb-2 flex items-center justify-between gap-3">
-                    <span className="text-sm font-bold text-slate-500">{item.date}</span>
-                    <span className="rounded-full bg-slate-950 px-2 py-1 text-[11px] font-black text-white">
-                      {item.tag}
-                    </span>
+                  <div className="flex gap-3">
+                    <div className="relative h-20 w-28 shrink-0 overflow-hidden rounded-2xl bg-slate-200 shadow-sm">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="h-full w-full object-cover object-center transition duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center bg-slate-950/10">
+                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-xs text-white shadow-lg">▶</span>
+                      </div>
+                    </div>
+
+                    <div className="min-w-0 flex-1 py-1">
+                      <div className="mb-2 flex items-center justify-between gap-2">
+                        <span className="text-xs font-black text-slate-500">{item.date}</span>
+                        <span className="rounded-full bg-slate-950 px-2 py-1 text-[10px] font-black text-white">{item.tag}</span>
+                      </div>
+                      <div className="line-clamp-2 text-sm font-black leading-snug text-slate-900">{item.title}</div>
+                    </div>
                   </div>
-                  <div className="text-sm font-black leading-5 text-slate-800">{item.title}</div>
                 </a>
               ))}
             </div>
@@ -260,16 +287,44 @@ export default function HomePage() {
           </GlassCard>
         </section>
 
-        <section id="news" className="mt-8 grid gap-4 md:grid-cols-3">
-          {newsItems.map((item) => (
-            <GlassCard key={item.title} className="p-6 transition hover:-translate-y-1 hover:bg-white/60">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-3xl border border-white/70 bg-white/55 text-xl shadow-lg backdrop-blur-xl">
-                <Icon label="news">📰</Icon>
-              </div>
-              <h2 className="mb-3 text-lg font-black text-slate-950">{item.title}</h2>
-              <p className="text-sm leading-6 text-slate-600">{item.text}</p>
-            </GlassCard>
-          ))}
+        <section id="news" className="mt-8">
+          <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <div className="mb-2 text-sm font-black uppercase tracking-[0.22em] text-slate-500">новости проекта</div>
+              <h2 className="text-3xl font-black text-slate-950">Свежие новости дом 2</h2>
+            </div>
+            <div className="rounded-full border border-white/60 bg-white/55 px-4 py-2 text-xs font-black text-slate-600 shadow-md backdrop-blur-xl">
+              публикации от 29.05.2026
+            </div>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            {newsItems.map((item) => (
+              <GlassCard key={item.title} className="overflow-hidden p-3">
+                <div className="relative overflow-hidden rounded-[1.4rem] bg-white/60 shadow-lg">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="aspect-[4/5] w-full object-cover object-center"
+                  />
+                  <div className="absolute left-3 top-3 rounded-full border border-white/70 bg-white/80 px-3 py-1 text-xs font-black text-slate-800 shadow-lg backdrop-blur-xl">
+                    {item.tag}
+                  </div>
+                  <div className="absolute right-3 top-3 rounded-full border border-white/70 bg-slate-950/85 px-3 py-1 text-xs font-black text-white shadow-lg backdrop-blur-xl">
+                    {item.date}
+                  </div>
+                </div>
+
+                <div className="p-3">
+                  <div className="mb-2 text-xs font-black uppercase tracking-[0.18em] text-slate-500">
+                    публикация от {item.date}
+                  </div>
+                  <h3 className="mb-3 text-lg font-black leading-snug text-slate-950">{item.title}</h3>
+                  <p className="text-sm leading-6 text-slate-600">{item.text}</p>
+                </div>
+              </GlassCard>
+            ))}
+          </div>
         </section>
 
         <GlassCard id="about" className="mt-8 p-6 md:p-8">
