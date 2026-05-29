@@ -156,3 +156,14 @@
 Изображение новости:
 
 `public/news/news-tigran-vika-salibekovy.jpg`
+
+
+## Обновление текущего эфира
+
+Главный эфир обновлён:
+
+`https://youtube.com/live/cC49cINpf_s?feature=share`
+
+Предыдущий эфир перенесён в архив:
+
+`https://www.youtube.com/live/r6JvpOAPlG4`

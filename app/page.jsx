@@ -7,16 +7,23 @@ const siteConfig = {
   // Чтобы обновить главный плеер, меняйте только этот ID.
   // Пример: https://www.youtube.com/watch?v=r6JvpOAPlG4
   // ID здесь: r6JvpOAPlG4
-  currentVideoId: "r6JvpOAPlG4",
+  currentVideoId: "cC49cINpf_s",
 };
 
 const archiveItems = [
   {
-    date: "28.05",
+    date: "29.05",
     title: "Дом 2 сегодняшний выпуск — свежий стрим",
+    videoUrl: "https://youtube.com/live/cC49cINpf_s?feature=share",
+    image: "https://img.youtube.com/vi/cC49cINpf_s/hqdefault.jpg",
+    tag: "Новый эфир",
+  },
+  {
+    date: "28.05",
+    title: "Дом 2 смотреть онлайн — архив эфира",
     videoUrl: "https://www.youtube.com/live/r6JvpOAPlG4",
     image: "https://img.youtube.com/vi/r6JvpOAPlG4/hqdefault.jpg",
-    tag: "Новый эфир",
+    tag: "Архив",
   },
   {
     date: "27.05",
@@ -30,13 +37,6 @@ const archiveItems = [
     title: "Дом 2 свежий выпуск — вечерний стрим",
     videoUrl: "#",
     image: "https://img.youtube.com/vi/r6JvpOAPlG4/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "25.05",
-    title: "Дом 2 стрим — участники, новости, обсуждение",
-    videoUrl: "#",
-    image: "https://img.youtube.com/vi/j-jxUE1EYUg/hqdefault.jpg",
     tag: "Архив",
   },
 ];
