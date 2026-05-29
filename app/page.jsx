@@ -140,10 +140,10 @@ export default function HomePage() {
             <span className="hidden text-sm font-black text-slate-700/90 drop-shadow-sm sm:inline">
               Подписывайтесь на
             </span>
-            <a href={siteConfig.youtubeChannelUrl} target="_blank" rel="noreferrer" className="rounded-full border border-white/60 bg-white/68 px-4 py-2 text-sm font-black text-slate-800 shadow-lg backdrop-blur-xl hover:bg-white/86">
+            <a href={siteConfig.youtubeChannelUrl} target="_blank" rel="noreferrer" className="rounded-full border border-red-500/50 bg-white/70 px-4 py-2 text-sm font-black text-red-600 shadow-lg backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-red-500/80 hover:bg-red-50/90 hover:text-red-700">
               YouTube
             </a>
-            <a href={siteConfig.telegramUrl} target="_blank" rel="noreferrer" className="rounded-full bg-slate-950 px-4 py-2 text-sm font-black text-white shadow-xl hover:bg-slate-800">
+            <a href={siteConfig.telegramUrl} target="_blank" rel="noreferrer" className="rounded-full border border-sky-500/55 bg-white/70 px-4 py-2 text-sm font-black text-sky-600 shadow-lg backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-sky-500/85 hover:bg-sky-50/90 hover:text-sky-700">
               Telegram
             </a>
           </div>
