@@ -171,10 +171,10 @@ export default function HomePage() {
                 Новые выпуски каждый день в 18:00 по Москве
               </div>
 
-              <h1 className="max-w-4xl rounded-[1.7rem] border border-orange-300/80 bg-white/88 px-5 py-5 font-black tracking-tight text-slate-950 shadow-[0_0_28px_rgba(249,115,22,0.38)] backdrop-blur-xl ring-2 ring-orange-400/25 md:px-7 md:py-6">
-                <span className="block text-4xl leading-[1.02] md:text-6xl">Дом-2 смотреть онлайн</span>
-                <span className="mt-2 block whitespace-nowrap text-[1.7rem] leading-[1.05] md:text-[3.05rem]">Каждый день свежие выпуски</span>
-                <span className="mt-2 block text-4xl leading-[1.02] md:text-6xl">Смотреть стримы</span>
+              <h1 className="w-full max-w-none rounded-[1.7rem] border border-orange-300/80 bg-white/90 px-5 py-5 text-left font-black tracking-tight text-slate-950 shadow-[0_0_28px_rgba(249,115,22,0.38)] backdrop-blur-xl ring-2 ring-orange-400/25 md:px-7 md:py-6">
+                <span className="block whitespace-nowrap text-[clamp(2rem,4.1vw,3.55rem)] leading-[1.04]">Дом-2 смотреть онлайн</span>
+                <span className="mt-2 block whitespace-nowrap text-[clamp(1.45rem,3.15vw,2.65rem)] leading-[1.05]">Каждый день свежие выпуски</span>
+                <span className="mt-2 block whitespace-nowrap text-[clamp(2rem,4.1vw,3.55rem)] leading-[1.04]">Смотри стримы</span>
               </h1>
 
               <p className="mt-6 max-w-3xl text-base leading-8 text-slate-800 md:text-lg">
