@@ -161,24 +161,34 @@ export default function HomePage() {
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-8 pt-28 md:px-6 md:pb-12 md:pt-32">
         <section className="mb-8 grid gap-6 lg:grid-cols-[1fr_360px]">
           <GlassCard className="relative overflow-hidden p-6 md:p-10">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/74 px-4 py-2 text-sm font-bold text-slate-800 shadow-lg backdrop-blur-xl">
-              <Icon label="calendar">📅</Icon>
-              Каждый день в 18:00 по Москве
-            </div>
+            <div className="absolute inset-0 bg-[url('/backgrounds/hero-rain-window.jpg')] bg-cover bg-center" />
+            <div className="absolute inset-0 bg-white/72 backdrop-blur-[2px]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.70),transparent_38%),radial-gradient(circle_at_bottom_right,rgba(219,234,254,0.58),transparent_44%)]" />
 
-            <h1 className="max-w-4xl text-4xl font-black leading-[1.02] tracking-tight text-slate-950 md:text-6xl">
-              Дом 2 смотреть онлайн — свежий выпуск и стрим сегодня
-            </h1>
+            <div className="relative z-10">
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-orange-300/80 bg-white/86 px-4 py-2 text-sm font-black text-slate-900 shadow-[0_0_22px_rgba(249,115,22,0.45)] backdrop-blur-xl ring-2 ring-orange-400/35">
+                <span className="text-base drop-shadow-[0_0_8px_rgba(249,115,22,0.95)]">🔥</span>
+                Новые выпуски каждый день в 18:00 по Москве
+              </div>
 
-            <p className="mt-6 max-w-3xl text-base leading-8 text-slate-800 md:text-lg">
-              Смотрите актуальный эфир дом 2, свежие выпуски, архив стримов и новости участников.
-              Если новый прямой эфир ещё не начался, на сайте отображается последний доступный выпуск.
-            </p>
+              <h1 className="max-w-4xl text-4xl font-black leading-[1.02] tracking-tight text-slate-950 md:text-6xl">
+                Дом-2 смотреть онлайн
+                <br />
+                Каждый день свежие выпуски
+                <br />
+                Смотри стримы
+              </h1>
 
-            <div className="mt-7 flex flex-wrap gap-3 text-sm font-bold">
-              <span className="rounded-full border border-white/80 bg-white/74 px-4 py-2 text-slate-800 shadow-md backdrop-blur-xl">дом 2 смотреть</span>
-              <span className="rounded-full border border-white/80 bg-white/74 px-4 py-2 text-slate-800 shadow-md backdrop-blur-xl">дом 2 сегодняшний выпуск</span>
-              <span className="rounded-full border border-white/80 bg-white/74 px-4 py-2 text-slate-800 shadow-md backdrop-blur-xl">дом 2 стримы</span>
+              <p className="mt-6 max-w-3xl text-base leading-8 text-slate-800 md:text-lg">
+                Смотрите актуальный эфир дом 2, свежие выпуски, архив стримов и новости участников.
+                Если новый прямой эфир ещё не начался, на сайте отображается последний доступный выпуск.
+              </p>
+
+              <div className="mt-7 flex flex-wrap gap-3 text-sm font-bold">
+                <span className="rounded-full border border-white/80 bg-white/82 px-4 py-2 text-slate-800 shadow-md backdrop-blur-xl">дом 2 смотреть</span>
+                <span className="rounded-full border border-white/80 bg-white/82 px-4 py-2 text-slate-800 shadow-md backdrop-blur-xl">дом 2 сегодняшний выпуск</span>
+                <span className="rounded-full border border-white/80 bg-white/82 px-4 py-2 text-slate-800 shadow-md backdrop-blur-xl">дом 2 стримы</span>
+              </div>
             </div>
           </GlassCard>
 
