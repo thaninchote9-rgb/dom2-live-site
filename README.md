@@ -324,3 +324,16 @@
 Предыдущий главный эфир перенесён в архив:
 
 `https://youtube.com/live/cC49cINpf_s?feature=share`
+
+## Новый favicon для Яндекса и браузера
+
+Обновлена иконка сайта:
+
+- `public/favicon.ico`
+- `app/favicon.ico`
+- `public/icon-192.png`
+- `public/favicon-512.png`
+- `public/apple-touch-icon.png`
+- `public/site.webmanifest`
+
+Новая иконка: синий значок с `Д2` и кнопкой play.
