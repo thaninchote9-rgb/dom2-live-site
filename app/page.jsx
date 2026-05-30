@@ -137,11 +137,13 @@ export default function HomePage() {
             </div>
           </a>
 
-          <nav className="hidden items-center gap-2 rounded-full border border-white/60 bg-white/64 px-3 py-2 text-sm font-semibold text-slate-800 shadow-lg backdrop-blur-2xl md:flex">
-            <a href="#watch" className="rounded-full px-4 py-2 hover:bg-white/84 hover:text-slate-950">Смотреть эфир</a>
-            <a href="/archive" className="rounded-full px-4 py-2 hover:bg-white/84 hover:text-slate-950">Архив</a>
-            <a href="/news" className="rounded-full px-4 py-2 hover:bg-white/84 hover:text-slate-950">Новости</a>
-            <a href="#about" className="rounded-full px-4 py-2 hover:bg-white/84 hover:text-slate-950">О проекте</a>
+          <nav className="hidden rounded-full bg-gradient-to-r from-sky-400 via-cyan-300 to-violet-500 p-[2px] shadow-[0_0_26px_rgba(56,189,248,0.45),0_0_38px_rgba(139,92,246,0.28)] md:flex">
+            <div className="flex items-center gap-2 rounded-full bg-white/78 px-3 py-2 text-sm font-black text-slate-800 backdrop-blur-2xl">
+              <a href="#watch" className="rounded-full px-4 py-2 transition hover:bg-sky-100/90 hover:text-sky-700 hover:shadow-[0_0_16px_rgba(56,189,248,0.38)]">Смотреть эфир</a>
+              <a href="/archive" className="rounded-full px-4 py-2 transition hover:bg-cyan-100/90 hover:text-cyan-700 hover:shadow-[0_0_16px_rgba(34,211,238,0.38)]">Архив</a>
+              <a href="/news" className="rounded-full px-4 py-2 transition hover:bg-violet-100/90 hover:text-violet-700 hover:shadow-[0_0_16px_rgba(139,92,246,0.38)]">Новости</a>
+              <a href="#about" className="rounded-full px-4 py-2 transition hover:bg-fuchsia-100/90 hover:text-fuchsia-700 hover:shadow-[0_0_16px_rgba(217,70,239,0.35)]">О проекте</a>
+            </div>
           </nav>
 
           <div className="flex items-center gap-2">
