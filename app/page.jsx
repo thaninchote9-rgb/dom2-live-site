@@ -120,7 +120,7 @@ export default function HomePage() {
         <div className="absolute inset-0 backdrop-blur-[4px]" />
       </div>
 
-      <header className="sticky top-0 z-30 border-b border-white/35 bg-white/72 shadow-sm backdrop-blur-2xl">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/35 bg-white/72 shadow-sm backdrop-blur-2xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6">
           <a href="/" className="flex items-center gap-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-3xl border border-white/60 bg-white/74 text-xl shadow-xl backdrop-blur-xl">
@@ -157,7 +157,7 @@ export default function HomePage() {
         </div>
       </header>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 py-8 md:px-6 md:py-12">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 pb-8 pt-28 md:px-6 md:pb-12 md:pt-32">
         <section className="mb-8 grid gap-6 lg:grid-cols-[1fr_360px]">
           <GlassCard className="relative overflow-hidden p-6 md:p-10">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/74 px-4 py-2 text-sm font-bold text-slate-700 shadow-lg backdrop-blur-xl">
