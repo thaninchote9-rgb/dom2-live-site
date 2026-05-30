@@ -8,6 +8,8 @@ export default function sitemap() {
     "/dom-2-efir",
     "/dom-2-arhiv",
     "/novosti",
+    "/archive",
+    "/news",
   ];
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,

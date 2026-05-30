@@ -138,8 +138,8 @@ export default function HomePage() {
 
           <nav className="hidden items-center gap-2 rounded-full border border-white/60 bg-white/35 px-3 py-2 text-sm font-semibold text-slate-700 shadow-lg backdrop-blur-2xl md:flex">
             <a href="#watch" className="rounded-full px-4 py-2 hover:bg-white/70 hover:text-slate-950">Смотреть эфир</a>
-            <a href="#archive" className="rounded-full px-4 py-2 hover:bg-white/70 hover:text-slate-950">Архив</a>
-            <a href="#news" className="rounded-full px-4 py-2 hover:bg-white/70 hover:text-slate-950">Новости</a>
+            <a href="/archive" className="rounded-full px-4 py-2 hover:bg-white/70 hover:text-slate-950">Архив</a>
+            <a href="/news" className="rounded-full px-4 py-2 hover:bg-white/70 hover:text-slate-950">Новости</a>
             <a href="#about" className="rounded-full px-4 py-2 hover:bg-white/70 hover:text-slate-950">О проекте</a>
           </nav>
 
