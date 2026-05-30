@@ -41,7 +41,36 @@ export default function NewsPage() {
   return (
     <main className="min-h-screen bg-slate-950 bg-[url('/backgrounds/rain-window.jpg')] bg-cover bg-center bg-fixed text-slate-950">
       <div className="fixed inset-0 bg-slate-950/46 backdrop-blur-[4px]" />
-      <div className="relative z-10 mx-auto max-w-7xl px-4 py-10 md:px-6 md:py-14">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/45 bg-white/78 shadow-lg backdrop-blur-3xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6">
+          <a href="/" className="flex items-center gap-3">
+            <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/70 bg-white/80 text-xl shadow-lg backdrop-blur-xl">▶️</span>
+            <span>
+              <span className="block text-lg font-black leading-5 text-slate-950">Дом 2 Live</span>
+              <span className="block text-xs font-bold text-slate-500">стримы • эфиры • архив</span>
+            </span>
+          </a>
+
+          <nav className="hidden items-center gap-2 rounded-full border border-white/60 bg-white/35 px-3 py-2 text-sm font-semibold text-slate-700 shadow-lg backdrop-blur-2xl md:flex">
+            <a href="/#watch" className="rounded-full px-4 py-2 hover:bg-white/70 hover:text-slate-950">Смотреть эфир</a>
+            <a href="/archive" className="rounded-full px-4 py-2 hover:bg-white/70 hover:text-slate-950">Архив</a>
+            <a href="/news" className="rounded-full px-4 py-2 hover:bg-white/70 hover:text-slate-950">Новости</a>
+            <a href="/#about" className="rounded-full px-4 py-2 hover:bg-white/70 hover:text-slate-950">О проекте</a>
+          </nav>
+
+          <div className="flex items-center gap-2">
+            <span className="hidden text-sm font-black text-slate-700/90 drop-shadow-sm sm:inline">Подписывайтесь на</span>
+            <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" className="rounded-full border border-red-500/50 bg-white/70 px-4 py-2 text-sm font-black text-red-600 shadow-lg backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-red-500/80 hover:bg-red-50/90 hover:text-red-700">
+              YouTube
+            </a>
+            <a href="https://t.me/" target="_blank" rel="noreferrer" className="rounded-full border border-sky-500/55 bg-white/70 px-4 py-2 text-sm font-black text-sky-600 shadow-lg backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-sky-500/85 hover:bg-sky-50/90 hover:text-sky-700">
+              Telegram
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 pb-10 pt-28 md:px-6 md:pb-14 md:pt-32">
         <a href="/" className="mb-6 inline-flex rounded-full border border-white/70 bg-white/82 px-5 py-3 text-sm font-black text-slate-800 shadow-lg backdrop-blur-2xl hover:bg-white">← На главную</a>
 
         <section className="mb-7 rounded-[2rem] border border-white/75 bg-white/82 p-7 shadow-[0_24px_90px_rgba(15,23,42,0.32)] backdrop-blur-3xl md:p-10">
