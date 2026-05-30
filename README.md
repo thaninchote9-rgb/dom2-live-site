@@ -193,3 +193,20 @@
 - `/novosti`
 
 Также обновлён `sitemap.js`, чтобы поисковики увидели новые страницы.
+
+
+## Исправление рекомендаций Яндекс.Вебмастера
+
+Добавлено:
+
+- `public/favicon.ico`
+- `app/favicon.ico`
+- `app/icon.png`
+- `public/icon.png`
+- `public/site.webmanifest`
+- явный `sitemap` в `app/robots.js`
+- статический fallback `public/robots.txt`
+
+Это закрывает рекомендации:
+- `Файл favicon не найден`
+- `Нет используемых роботом файлов Sitemap`
