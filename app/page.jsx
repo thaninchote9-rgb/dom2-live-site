@@ -43,6 +43,13 @@ const archiveItems = [
 
 const newsItems = [
   {
+    date: "30.05.2026",
+    image: "/news/news-kristina-nikita-left-project.jpg",
+    title: "Кристина и Никита покинули проект",
+    text: "Кристина и Никита покинули телепроект Дом-2. Новость уже активно обсуждают зрители, а поклонники пары следят за дальнейшими событиями за периметром.",
+    tag: "Участники",
+  },
+  {
     date: "29.05.2026",
     image: "/news/news-chelovek-goda.jpg",
     title: "Итоги второго этапа конкурса «Человек года»",
@@ -276,7 +283,7 @@ export default function HomePage() {
               <h2 className="text-3xl font-black text-white drop-shadow-lg">Свежие новости дом 2</h2>
             </div>
             <div className="rounded-full border border-white/60 bg-white/74 px-4 py-2 text-xs font-black text-slate-700 shadow-md backdrop-blur-xl">
-              публикации от 29.05.2026
+              публикации от 30.05.2026
             </div>
           </div>
 
