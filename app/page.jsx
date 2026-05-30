@@ -348,6 +348,20 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
-    </main>
+    
+        <section className="mt-8 rounded-[2rem] border border-white/70 bg-white/76 p-6 shadow-xl backdrop-blur-3xl md:p-8">
+          <div className="mb-4 text-sm font-black uppercase tracking-[0.22em] text-slate-600">разделы сайта</div>
+          <h2 className="mb-5 text-3xl font-black text-slate-950">Быстрые SEO-разделы</h2>
+          <div className="grid gap-3 md:grid-cols-3">
+            <a href="/dom-2-smotret-online" className="rounded-3xl border border-white/70 bg-white/72 p-5 font-black text-slate-800 shadow-md hover:bg-white">Дом 2 смотреть онлайн</a>
+            <a href="/dom-2-svezhie-serii" className="rounded-3xl border border-white/70 bg-white/72 p-5 font-black text-slate-800 shadow-md hover:bg-white">Дом 2 свежие серии</a>
+            <a href="/dom-2-segodnya" className="rounded-3xl border border-white/70 bg-white/72 p-5 font-black text-slate-800 shadow-md hover:bg-white">Дом 2 сегодня</a>
+            <a href="/dom-2-efir" className="rounded-3xl border border-white/70 bg-white/72 p-5 font-black text-slate-800 shadow-md hover:bg-white">Дом 2 эфир</a>
+            <a href="/dom-2-arhiv" className="rounded-3xl border border-white/70 bg-white/72 p-5 font-black text-slate-800 shadow-md hover:bg-white">Дом 2 архив</a>
+            <a href="/novosti" className="rounded-3xl border border-white/70 bg-white/72 p-5 font-black text-slate-800 shadow-md hover:bg-white">Новости Дом 2</a>
+          </div>
+        </section>
+
+</main>
   );
 }

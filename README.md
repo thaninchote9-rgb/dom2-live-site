@@ -180,3 +180,16 @@
 Изображение новости:
 
 `public/news/news-kristina-nikita-left-project.jpg`
+
+
+## SEO-страницы для Google и Яндекса
+
+Добавлены отдельные SEO-страницы:
+- `/dom-2-smotret-online`
+- `/dom-2-svezhie-serii`
+- `/dom-2-segodnya`
+- `/dom-2-efir`
+- `/dom-2-arhiv`
+- `/novosti`
+
+Также обновлён `sitemap.js`, чтобы поисковики увидели новые страницы.
