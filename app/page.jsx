@@ -101,7 +101,7 @@ function GlassCard({ children, className = "", id }) {
   return (
     <div
       id={id}
-      className={`rounded-[2rem] border border-white/85 bg-white/92 shadow-[0_24px_90px_rgba(15,23,42,0.38)] backdrop-blur-3xl ${className}`}
+      className={`rounded-[2rem] border border-white/80 bg-white/86 shadow-[0_24px_90px_rgba(15,23,42,0.38)] backdrop-blur-3xl ${className}`}
     >
       {children}
     </div>
@@ -115,10 +115,10 @@ export default function HomePage() {
   return (
     <main className="min-h-screen overflow-hidden bg-slate-950 bg-[url('/backgrounds/rain-window.jpg')] bg-cover bg-center bg-fixed text-slate-950">
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-slate-950/34" />
-        <div className="absolute inset-0 bg-white/18" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.34),transparent_34%),radial-gradient(circle_at_bottom_right,rgba(15,23,42,0.55),transparent_42%)]" />
-        <div className="absolute inset-0 backdrop-blur-[5px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(219,234,254,0.95),transparent_34%),radial-gradient(circle_at_top_right,rgba(243,232,255,0.90),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(224,242,254,0.92),transparent_38%),linear-gradient(135deg,#eef6ff_0%,#f8fbff_48%,#f4efff_100%)]" />
+        <div className="absolute -left-24 top-24 h-96 w-96 rounded-full bg-sky-200/45 blur-3xl" />
+        <div className="absolute right-0 top-40 h-[28rem] w-[28rem] rounded-full bg-fuchsia-200/35 blur-3xl" />
+        <div className="absolute bottom-0 left-1/3 h-[24rem] w-[24rem] rounded-full bg-blue-200/35 blur-3xl" />
       </div>
 
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/35 bg-white/86 shadow-sm backdrop-blur-2xl">
@@ -137,7 +137,7 @@ export default function HomePage() {
             </div>
           </a>
 
-          <nav className="hidden items-center gap-2 rounded-full border border-white/60 bg-white/58 px-3 py-2 text-sm font-semibold text-slate-800 shadow-lg backdrop-blur-2xl md:flex">
+          <nav className="hidden items-center gap-2 rounded-full border border-white/60 bg-white/64 px-3 py-2 text-sm font-semibold text-slate-800 shadow-lg backdrop-blur-2xl md:flex">
             <a href="#watch" className="rounded-full px-4 py-2 hover:bg-white/84 hover:text-slate-950">Смотреть эфир</a>
             <a href="/archive" className="rounded-full px-4 py-2 hover:bg-white/84 hover:text-slate-950">Архив</a>
             <a href="/news" className="rounded-full px-4 py-2 hover:bg-white/84 hover:text-slate-950">Новости</a>
@@ -161,7 +161,7 @@ export default function HomePage() {
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-8 pt-28 md:px-6 md:pb-12 md:pt-32">
         <section className="mb-8 grid gap-6 lg:grid-cols-[1fr_360px]">
           <GlassCard className="relative overflow-hidden p-6 md:p-10">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/85 bg-white/74 px-4 py-2 text-sm font-bold text-slate-800 shadow-lg backdrop-blur-xl">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/74 px-4 py-2 text-sm font-bold text-slate-800 shadow-lg backdrop-blur-xl">
               <Icon label="calendar">📅</Icon>
               Каждый день в 18:00 по Москве
             </div>
@@ -176,9 +176,9 @@ export default function HomePage() {
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3 text-sm font-bold">
-              <span className="rounded-full border border-white/85 bg-white/74 px-4 py-2 text-slate-800 shadow-md backdrop-blur-xl">дом 2 смотреть</span>
-              <span className="rounded-full border border-white/85 bg-white/74 px-4 py-2 text-slate-800 shadow-md backdrop-blur-xl">дом 2 сегодняшний выпуск</span>
-              <span className="rounded-full border border-white/85 bg-white/74 px-4 py-2 text-slate-800 shadow-md backdrop-blur-xl">дом 2 стримы</span>
+              <span className="rounded-full border border-white/80 bg-white/74 px-4 py-2 text-slate-800 shadow-md backdrop-blur-xl">дом 2 смотреть</span>
+              <span className="rounded-full border border-white/80 bg-white/74 px-4 py-2 text-slate-800 shadow-md backdrop-blur-xl">дом 2 сегодняшний выпуск</span>
+              <span className="rounded-full border border-white/80 bg-white/74 px-4 py-2 text-slate-800 shadow-md backdrop-blur-xl">дом 2 стримы</span>
             </div>
           </GlassCard>
 
@@ -190,7 +190,7 @@ export default function HomePage() {
                 className="absolute inset-0 h-full w-full object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/82 via-slate-950/24 to-transparent" />
-              <div className="absolute left-4 top-4 rounded-full border border-white/85 bg-white/90 px-3 py-1 text-xs font-black text-slate-800 shadow-lg backdrop-blur-xl">
+              <div className="absolute left-4 top-4 rounded-full border border-white/80 bg-white/86 px-3 py-1 text-xs font-black text-slate-800 shadow-lg backdrop-blur-xl">
                 фото
               </div>
               <div className="absolute inset-x-0 bottom-0 p-5">
@@ -291,16 +291,16 @@ export default function HomePage() {
           <div className="grid gap-4 md:grid-cols-3">
             {newsItems.map((item) => (
               <GlassCard key={item.title} className="overflow-hidden p-3">
-                <div className="relative overflow-hidden rounded-[1.4rem] bg-white/92 shadow-lg">
+                <div className="relative overflow-hidden rounded-[1.4rem] bg-white/86 shadow-lg">
                   <img
                     src={item.image}
                     alt={item.title}
                     className="aspect-[4/5] w-full object-cover object-center"
                   />
-                  <div className="absolute left-3 top-3 rounded-full border border-white/85 bg-white/90 px-3 py-1 text-xs font-black text-slate-800 shadow-lg backdrop-blur-xl">
+                  <div className="absolute left-3 top-3 rounded-full border border-white/80 bg-white/86 px-3 py-1 text-xs font-black text-slate-800 shadow-lg backdrop-blur-xl">
                     {item.tag}
                   </div>
-                  <div className="absolute right-3 top-3 rounded-full border border-white/85 bg-slate-950/85 px-3 py-1 text-xs font-black text-white shadow-lg backdrop-blur-xl">
+                  <div className="absolute right-3 top-3 rounded-full border border-white/80 bg-slate-950/85 px-3 py-1 text-xs font-black text-white shadow-lg backdrop-blur-xl">
                     {item.date}
                   </div>
                 </div>
@@ -350,16 +350,16 @@ export default function HomePage() {
         </div>
       </footer>
     
-        <section className="mt-8 rounded-[2rem] border border-white/85 bg-white/92 p-6 shadow-xl backdrop-blur-3xl md:p-8">
+        <section className="mt-8 rounded-[2rem] border border-white/80 bg-white/86 p-6 shadow-xl backdrop-blur-3xl md:p-8">
           <div className="mb-4 text-sm font-black uppercase tracking-[0.22em] text-slate-700">разделы сайта</div>
           <h2 className="mb-5 text-3xl font-black text-slate-950">Быстрые SEO-разделы</h2>
           <div className="grid gap-3 md:grid-cols-3">
-            <a href="/dom-2-smotret-online" className="rounded-3xl border border-white/85 bg-white/86 p-5 font-black text-slate-800 shadow-md hover:bg-white">Дом 2 смотреть онлайн</a>
-            <a href="/dom-2-svezhie-serii" className="rounded-3xl border border-white/85 bg-white/86 p-5 font-black text-slate-800 shadow-md hover:bg-white">Дом 2 свежие серии</a>
-            <a href="/dom-2-segodnya" className="rounded-3xl border border-white/85 bg-white/86 p-5 font-black text-slate-800 shadow-md hover:bg-white">Дом 2 сегодня</a>
-            <a href="/dom-2-efir" className="rounded-3xl border border-white/85 bg-white/86 p-5 font-black text-slate-800 shadow-md hover:bg-white">Дом 2 эфир</a>
-            <a href="/dom-2-arhiv" className="rounded-3xl border border-white/85 bg-white/86 p-5 font-black text-slate-800 shadow-md hover:bg-white">Дом 2 архив</a>
-            <a href="/novosti" className="rounded-3xl border border-white/85 bg-white/86 p-5 font-black text-slate-800 shadow-md hover:bg-white">Новости Дом 2</a>
+            <a href="/dom-2-smotret-online" className="rounded-3xl border border-white/80 bg-white/86 p-5 font-black text-slate-800 shadow-md hover:bg-white">Дом 2 смотреть онлайн</a>
+            <a href="/dom-2-svezhie-serii" className="rounded-3xl border border-white/80 bg-white/86 p-5 font-black text-slate-800 shadow-md hover:bg-white">Дом 2 свежие серии</a>
+            <a href="/dom-2-segodnya" className="rounded-3xl border border-white/80 bg-white/86 p-5 font-black text-slate-800 shadow-md hover:bg-white">Дом 2 сегодня</a>
+            <a href="/dom-2-efir" className="rounded-3xl border border-white/80 bg-white/86 p-5 font-black text-slate-800 shadow-md hover:bg-white">Дом 2 эфир</a>
+            <a href="/dom-2-arhiv" className="rounded-3xl border border-white/80 bg-white/86 p-5 font-black text-slate-800 shadow-md hover:bg-white">Дом 2 архив</a>
+            <a href="/novosti" className="rounded-3xl border border-white/80 bg-white/86 p-5 font-black text-slate-800 shadow-md hover:bg-white">Новости Дом 2</a>
           </div>
         </section>
 

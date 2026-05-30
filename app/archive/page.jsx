@@ -46,20 +46,19 @@ const archiveItems = [
 
 export default function ArchivePage() {
   return (
-    <main className="min-h-screen bg-slate-950 bg-[url('/backgrounds/rain-window.jpg')] bg-cover bg-center bg-fixed text-slate-950">
-      <div className="fixed inset-0 bg-slate-950/34 backdrop-blur-[5px]" />
-      <div className="fixed inset-0 bg-white/18" />
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/65 bg-white/92 shadow-lg backdrop-blur-3xl">
+    <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(219,234,254,0.95),transparent_34%),radial-gradient(circle_at_top_right,rgba(243,232,255,0.90),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(224,242,254,0.92),transparent_38%),linear-gradient(135deg,#eef6ff_0%,#f8fbff_48%,#f4efff_100%)] text-slate-950">
+      <div className="fixed inset-0 bg-white/10" />
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/65 bg-white/86 shadow-lg backdrop-blur-3xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6">
           <a href="/" className="flex items-center gap-3">
-            <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/85 bg-white/80 text-xl shadow-lg backdrop-blur-xl">▶️</span>
+            <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/80 bg-white/80 text-xl shadow-lg backdrop-blur-xl">▶️</span>
             <span>
               <span className="block text-lg font-black leading-5 text-slate-950">Дом 2 Live</span>
               <span className="block text-xs font-bold text-slate-600">стримы • эфиры • архив</span>
             </span>
           </a>
 
-          <nav className="hidden items-center gap-2 rounded-full border border-white/60 bg-white/58 px-3 py-2 text-sm font-semibold text-slate-800 shadow-lg backdrop-blur-2xl md:flex">
+          <nav className="hidden items-center gap-2 rounded-full border border-white/60 bg-white/64 px-3 py-2 text-sm font-semibold text-slate-800 shadow-lg backdrop-blur-2xl md:flex">
             <a href="/#watch" className="rounded-full px-4 py-2 hover:bg-white/84 hover:text-slate-950">Смотреть эфир</a>
             <a href="/archive" className="rounded-full px-4 py-2 hover:bg-white/84 hover:text-slate-950">Архив</a>
             <a href="/news" className="rounded-full px-4 py-2 hover:bg-white/84 hover:text-slate-950">Новости</a>
@@ -79,9 +78,9 @@ export default function ArchivePage() {
       </header>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-10 pt-28 md:px-6 md:pb-14 md:pt-32">
-        <a href="/" className="mb-6 inline-flex rounded-full border border-white/85 bg-white/90 px-5 py-3 text-sm font-black text-slate-800 shadow-lg backdrop-blur-2xl hover:bg-white">← На главную</a>
+        <a href="/" className="mb-6 inline-flex rounded-full border border-white/80 bg-white/86 px-5 py-3 text-sm font-black text-slate-800 shadow-lg backdrop-blur-2xl hover:bg-white">← На главную</a>
 
-        <section className="mb-7 rounded-[2rem] border border-white/90 bg-white/90 p-7 shadow-[0_24px_90px_rgba(15,23,42,0.38)] backdrop-blur-3xl md:p-10">
+        <section className="mb-7 rounded-[2rem] border border-white/80 bg-white/86 p-7 shadow-[0_24px_90px_rgba(15,23,42,0.38)] backdrop-blur-3xl md:p-10">
           <div className="mb-3 text-sm font-black uppercase tracking-[0.22em] text-slate-700">архив выпусков</div>
           <h1 className="mb-4 text-4xl font-black text-slate-950 md:text-6xl">Архив Дом 2</h1>
           <p className="max-w-3xl text-lg leading-8 text-slate-800">Здесь собраны архивные эфиры и выпуски Дом 2. Новые видео добавляются в начало списка, а предыдущие выпуски остаются доступными по датам.</p>
@@ -89,13 +88,13 @@ export default function ArchivePage() {
 
         <section className="grid gap-6 md:grid-cols-2">
           {archiveItems.map((item) => (
-            <a key={`${item.date}-${item.title}`} href={item.videoUrl} target={item.videoUrl === "#" ? undefined : "_blank"} rel={item.videoUrl === "#" ? undefined : "noreferrer"} className="group overflow-hidden rounded-[2rem] border border-white/90 bg-white/92 p-4 shadow-xl backdrop-blur-3xl transition hover:-translate-y-1 hover:bg-white/92">
+            <a key={`${item.date}-${item.title}`} href={item.videoUrl} target={item.videoUrl === "#" ? undefined : "_blank"} rel={item.videoUrl === "#" ? undefined : "noreferrer"} className="group overflow-hidden rounded-[2rem] border border-white/80 bg-white/86 p-4 shadow-xl backdrop-blur-3xl transition hover:-translate-y-1 hover:bg-white/86">
               <div className="relative overflow-hidden rounded-[1.5rem] bg-slate-200 shadow-lg">
                 <img src={item.image} alt={item.title} className="aspect-video w-full object-cover object-center transition duration-300 group-hover:scale-105" />
                 <div className="absolute inset-0 flex items-center justify-center bg-slate-950/10">
                   <span className="flex h-16 w-16 items-center justify-center rounded-full bg-red-600 text-2xl text-white shadow-xl">▶</span>
                 </div>
-                <div className="absolute left-4 top-4 rounded-full bg-white/92 px-4 py-2 text-sm font-black text-slate-800 shadow-lg backdrop-blur-xl">{item.date}</div>
+                <div className="absolute left-4 top-4 rounded-full bg-white/86 px-4 py-2 text-sm font-black text-slate-800 shadow-lg backdrop-blur-xl">{item.date}</div>
                 <div className="absolute right-4 top-4 rounded-full bg-slate-950 px-4 py-2 text-sm font-black text-white shadow-lg">{item.tag}</div>
               </div>
               <div className="p-3">
