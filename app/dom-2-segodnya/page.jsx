@@ -29,7 +29,7 @@ export default function SeoPage() {
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="/#watch" className="rounded-full bg-slate-950 px-5 py-3 text-sm font-black text-white shadow-lg hover:bg-slate-800">Смотреть эфир</a>
-            <a href="/#archive" className="rounded-full border border-white/70 bg-white/80 px-5 py-3 text-sm font-black text-slate-800 shadow-lg hover:bg-white">Архив</a>
+            <a href="/#archive" className="rounded-full border border-white/70 bg-white/80 px-5 py-3 text-sm font-black text-slate-800 shadow-lg hover:bg-white">Предыдущие выпуски</a>
             <a href="/#news" className="rounded-full border border-white/70 bg-white/80 px-5 py-3 text-sm font-black text-slate-800 shadow-lg hover:bg-white">Новости</a>
           </div>
         </section>

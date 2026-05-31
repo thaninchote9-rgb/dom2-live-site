@@ -16,7 +16,7 @@ export default function SeoPage() {
     <nav className="hidden rounded-full bg-gradient-to-r from-sky-400 via-cyan-300 to-violet-500 p-[2px] shadow-[0_0_26px_rgba(56,189,248,0.45),0_0_38px_rgba(139,92,246,0.28)] md:flex">
       <div className="flex items-center gap-2 rounded-full bg-white/64 px-3 py-2 text-sm font-black text-slate-900 backdrop-blur-2xl">
         <a href="/#watch" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-sky-800 shadow-md">Смотреть эфир</a>
-        <a href="/archive" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-cyan-800 shadow-md">Архив</a>
+        <a href="/archive" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-cyan-800 shadow-md">Предыдущие выпуски</a>
         <a href="/news" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-violet-800 shadow-md">Новости</a>
         <a href="/#about" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-fuchsia-800 shadow-md">О проекте</a>
       </div>
@@ -33,7 +33,7 @@ export default function SeoPage() {
 <span className="rounded-full border border-white/80 bg-white/80 px-4 py-2 text-sm font-black text-slate-800 shadow-md">дом 2 качество</span></div>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="/#watch" className="rounded-full bg-red-600 px-5 py-3 text-sm font-black text-white shadow-[0_10px_30px_rgba(220,38,38,0.32)] hover:bg-red-700">Смотреть эфир</a>
-            <a href="/archive" className="rounded-full border border-white/80 bg-white/80 px-5 py-3 text-sm font-black text-slate-800 shadow-lg hover:bg-white">Архив</a>
+            <a href="/archive" className="rounded-full border border-white/80 bg-white/80 px-5 py-3 text-sm font-black text-slate-800 shadow-lg hover:bg-white">Предыдущие выпуски</a>
             <a href="/news" className="rounded-full border border-white/80 bg-white/80 px-5 py-3 text-sm font-black text-slate-800 shadow-lg hover:bg-white">Новости</a>
           </div>
         </section>
