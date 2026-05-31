@@ -43,6 +43,28 @@ const archiveItems = [
 
 const newsItems = [
   {
+    date: "31.05.2026",
+    image: "/news/news-ksusha-zadoynova-recovery.jpg",
+    title: "Ксюша Задойнова восстановилась после пластической операции",
+    text: "Ксюша Задойнова уже полностью восстановилась после пластической операции и снова выходит на связь с подписчиками.",
+    tag: "Участники",
+  },
+  {
+    date: "31.05.2026",
+    image: "/news/news-zhenya-horosheva-sergo.jpg",
+    title: "Женя Хорошева о харизме с Серго",
+    text: "Женя Хорошева считает, что они с Серго не менее харизматичные, чем кое-кто. Зрители уже обсуждают новые кадры с проекта.",
+    tag: "Обсуждения",
+  },
+  {
+    date: "31.05.2026",
+    image: "/news/news-elina-veronika-lookalike.jpg",
+    title: "Элина Рахимова и Вероника — одно лицо?",
+    text: "Зрители заметили сходство: Элина Рахимова и Вероника действительно очень похожи. В сети уже обсуждают это сравнение.",
+    tag: "Участники",
+  },
+
+  {
     date: "30.05.2026",
     image: "/news/news-kristina-nikita-left-project.jpg",
     title: "Кристина и Никита покинули проект",
@@ -294,7 +316,7 @@ export default function HomePage() {
               <h2 className="text-3xl font-black text-white drop-shadow-lg">Свежие новости дом 2</h2>
             </div>
             <div className="rounded-full border border-white/60 bg-white/74 px-4 py-2 text-xs font-black text-slate-800 shadow-md backdrop-blur-xl">
-              публикации от 30.05.2026
+              публикации от 31.05.2026
             </div>
           </div>
 
