@@ -258,8 +258,8 @@ export default function HomePage() {
                   Смотрите свежий выпуск и прямой эфир на сайте или откройте видео на YouTube.
                 </div>
               </div>
-              <a href={currentWatchUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-3xl bg-slate-950 px-5 py-3 text-sm font-black text-white shadow-xl hover:bg-slate-800">
-                <Icon label="youtube">▶</Icon>
+              <a href={currentWatchUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-3xl bg-red-600 px-5 py-3 text-sm font-black text-white shadow-[0_10px_30px_rgba(220,38,38,0.38)] transition hover:-translate-y-0.5 hover:bg-red-700 hover:shadow-[0_12px_34px_rgba(220,38,38,0.52)]">
+                <span className="flex h-6 w-8 items-center justify-center rounded-lg bg-white text-[11px] text-red-600 shadow-sm">▶</span>
                 Открыть YouTube
               </a>
             </div>
