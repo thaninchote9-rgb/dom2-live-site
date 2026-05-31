@@ -399,7 +399,14 @@ export default function HomePage() {
             <a href="/dom-2-efir" className="rounded-3xl border border-white/80 bg-white/86 p-5 font-black text-slate-800 shadow-md hover:bg-white">Дом 2 эфир</a>
             <a href="/dom-2-arhiv" className="rounded-3xl border border-white/80 bg-white/86 p-5 font-black text-slate-800 shadow-md hover:bg-white">Дом 2 архив</a>
             <a href="/novosti" className="rounded-3xl border border-white/80 bg-white/86 p-5 font-black text-slate-800 shadow-md hover:bg-white">Новости Дом 2</a>
-          </div>
+          
+            <a href="/dom-2-segodnyashniy-vypusk" className="rounded-3xl border border-white/80 bg-white/72 p-5 font-black text-slate-800 shadow-md hover:bg-white">Сегодняшний выпуск</a>
+            <a href="/dom-2-smotret-online-besplatno" className="rounded-3xl border border-white/80 bg-white/72 p-5 font-black text-slate-800 shadow-md hover:bg-white">Смотреть онлайн бесплатно</a>
+            <a href="/dom-2-svezhie-serii-smotret-besplatno" className="rounded-3xl border border-white/80 bg-white/72 p-5 font-black text-slate-800 shadow-md hover:bg-white">Свежие серии бесплатно</a>
+            <a href="/dom-2-efir-smotret-online" className="rounded-3xl border border-white/80 bg-white/72 p-5 font-black text-slate-800 shadow-md hover:bg-white">Эфир смотреть онлайн</a>
+            <a href="/dom-2-smotret-2026" className="rounded-3xl border border-white/80 bg-white/72 p-5 font-black text-slate-800 shadow-md hover:bg-white">Дом 2 смотреть 2026</a>
+            <a href="/dom-2-smotret-v-horoshem-kachestve" className="rounded-3xl border border-white/80 bg-white/72 p-5 font-black text-slate-800 shadow-md hover:bg-white">В хорошем качестве</a>
+</div>
         </section>
 
 </main>

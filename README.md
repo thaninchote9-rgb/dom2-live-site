@@ -375,3 +375,16 @@
 Предыдущий главный эфир перенесён в архив:
 
 `https://youtu.be/0Rh6JCfb7kY`
+
+
+## SEO-страницы по запросам из Яндекс Вордстат
+
+Добавлены страницы:
+- `/dom-2-segodnyashniy-vypusk`
+- `/dom-2-smotret-online-besplatno`
+- `/dom-2-svezhie-serii-smotret-besplatno`
+- `/dom-2-efir-smotret-online`
+- `/dom-2-smotret-2026`
+- `/dom-2-smotret-v-horoshem-kachestve`
+
+Страницы добавлены в sitemap и связаны с главной через блок популярных разделов.
