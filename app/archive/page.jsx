@@ -8,11 +8,18 @@ export const metadata = {
 
 const archiveItems = [
   {
-    date: "30.05",
+    date: "31.05",
     title: "Дом 2 сегодняшний выпуск — свежий стрим",
+    videoUrl: "https://youtu.be/LcWHS-tVwpg",
+    image: "https://img.youtube.com/vi/LcWHS-tVwpg/hqdefault.jpg",
+    tag: "Новый эфир",
+  },
+  {
+    date: "30.05",
+    title: "Дом 2 смотреть онлайн — архив эфира",
     videoUrl: "https://youtu.be/0Rh6JCfb7kY",
     image: "https://img.youtube.com/vi/0Rh6JCfb7kY/hqdefault.jpg",
-    tag: "Новый эфир",
+    tag: "Архив",
   },
   {
     date: "29.05",
