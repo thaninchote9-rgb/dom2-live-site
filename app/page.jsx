@@ -337,12 +337,12 @@ export default function HomePage() {
 
           <div className="grid gap-4 md:grid-cols-3">
             {newsItems.map((item) => (
-              <GlassCard key={item.title} className="overflow-hidden p-3">
+              <GlassCard key={item.title} className="group overflow-hidden p-3 transition-transform duration-300 md:hover:-translate-y-2 md:hover:scale-[1.025] md:hover:shadow-[0_28px_80px_rgba(15,23,42,0.34)]">
                 <div className="relative overflow-hidden rounded-[1.4rem] bg-white/86 shadow-lg">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="aspect-[4/5] w-full object-cover object-center"
+                    className="aspect-[4/5] w-full object-cover object-center transition-transform duration-300 md:group-hover:scale-105"
                   />
                   <div className="absolute left-3 top-3 rounded-full border border-white/80 bg-white/86 px-3 py-1 text-xs font-black text-slate-800 shadow-lg backdrop-blur-xl">
                     {item.tag}

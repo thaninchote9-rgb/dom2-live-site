@@ -113,9 +113,9 @@ export default function NewsPage() {
 
         <section className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {newsItems.map((item) => (
-            <article key={item.title} className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/86 p-4 shadow-xl backdrop-blur-3xl">
+            <article key={item.title} className="group overflow-hidden rounded-[2rem] border border-white/80 bg-white/86 p-4 shadow-xl backdrop-blur-3xl transition-transform duration-300 md:hover:-translate-y-2 md:hover:scale-[1.025] md:hover:shadow-[0_28px_80px_rgba(15,23,42,0.34)]">
               <div className="relative overflow-hidden rounded-[1.5rem] bg-slate-200 shadow-lg">
-                <img src={item.image} alt={item.title} className="aspect-[4/5] w-full object-cover object-center" />
+                <img src={item.image} alt={item.title} className="aspect-[4/5] w-full object-cover object-center transition-transform duration-300 md:group-hover:scale-105" />
                 <div className="absolute left-4 top-4 rounded-full bg-white/86 px-4 py-2 text-sm font-black text-slate-800 shadow-lg backdrop-blur-xl">{item.tag}</div>
                 <div className="absolute right-4 top-4 rounded-full bg-slate-950 px-4 py-2 text-sm font-black text-white shadow-lg">{item.date}</div>
               </div>
