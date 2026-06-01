@@ -301,7 +301,7 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-3">
-              {archiveItems.map((item) => (
+              {archiveItems.slice(0, 5).map((item) => (
                 <a
                   key={`${item.date}-${item.title}`}
                   href={item.videoUrl}
