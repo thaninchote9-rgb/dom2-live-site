@@ -426,3 +426,13 @@
 Изображение добавлено в:
 
 `public/news/news-sveta-prel-leon-salibekovy.jpg`
+
+## Обновление главного видео
+
+Главный эфир обновлён:
+
+`https://youtube.com/live/XuAjJREmJnA?feature=share`
+
+Предыдущий главный эфир перенесён в архив:
+
+`https://youtu.be/LcWHS-tVwpg`
