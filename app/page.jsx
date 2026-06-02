@@ -7,16 +7,23 @@ const siteConfig = {
   // Чтобы обновить главный плеер, меняйте только этот ID.
   // Пример: https://www.youtube.com/watch?v=r6JvpOAPlG4
   // ID здесь: r6JvpOAPlG4
-  currentVideoId: "XuAjJREmJnA",
+  currentVideoId: "udLhhalRvKk",
 };
 
 const archiveItems = [
   {
-    date: "01.06",
+    date: "02.06",
     title: "Дом 2 сегодняшний выпуск — свежий стрим",
+    videoUrl: "https://youtube.com/live/udLhhalRvKk?feature=share",
+    image: "https://img.youtube.com/vi/udLhhalRvKk/hqdefault.jpg",
+    tag: "Новый эфир",
+  },
+  {
+    date: "01.06",
+    title: "Дом 2 смотреть онлайн — архив эфира",
     videoUrl: "https://youtube.com/live/XuAjJREmJnA?feature=share",
     image: "https://img.youtube.com/vi/XuAjJREmJnA/hqdefault.jpg",
-    tag: "Новый эфир",
+    tag: "Архив",
   },
   {
     date: "31.05",
@@ -359,7 +366,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-4 md:grid-cols-3">
-            {newsItems.map((item) => (
+            {newsItems.slice(0, 12).map((item) => (
               <GlassCard key={item.title} className="group overflow-hidden p-3 transition-transform duration-300 md:hover:-translate-y-2 md:hover:scale-[1.025] md:hover:shadow-[0_28px_80px_rgba(15,23,42,0.34)]">
                 <div className="relative overflow-hidden rounded-[1.4rem] bg-white/86 shadow-lg">
                   <img
