@@ -476,3 +476,13 @@
 Предыдущий главный эфир перенесён в архив:
 
 `https://youtube.com/live/XuAjJREmJnA?feature=share`
+
+## Обновление главного видео
+
+Главный эфир обновлён:
+
+`https://youtube.com/live/FQQA_0O5blA?feature=share`
+
+Предыдущий главный эфир перенесён в архив:
+
+`https://youtube.com/live/udLhhalRvKk?feature=share`
