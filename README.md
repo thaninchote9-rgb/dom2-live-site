@@ -500,3 +500,14 @@
 Изображение добавлено в:
 
 `public/news/news-zhenya-horosheva-left-china.jpg`
+
+
+## Обновление главного видео
+
+Главный эфир обновлён:
+
+`https://youtube.com/live/q0MIQp6TBgE?feature=share`
+
+Предыдущий главный эфир перенесён в архив:
+
+`https://youtube.com/live/FQQA_0O5blA?feature=share`
