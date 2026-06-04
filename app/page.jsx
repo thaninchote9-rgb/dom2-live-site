@@ -7,16 +7,23 @@ const siteConfig = {
   // Чтобы обновить главный плеер, меняйте только этот ID.
   // Пример: https://www.youtube.com/watch?v=r6JvpOAPlG4
   // ID здесь: r6JvpOAPlG4
-  currentVideoId: "FQQA_0O5blA",
+  currentVideoId: "q0MIQp6TBgE",
 };
 
 const archiveItems = [
   {
-    date: "03.06",
+    date: "04.06",
     title: "Дом 2 сегодняшний выпуск — свежий стрим",
+    videoUrl: "https://youtube.com/live/q0MIQp6TBgE?feature=share",
+    image: "https://img.youtube.com/vi/q0MIQp6TBgE/hqdefault.jpg",
+    tag: "Новый эфир",
+  },
+  {
+    date: "03.06",
+    title: "Дом 2 смотреть онлайн — архив эфира",
     videoUrl: "https://youtube.com/live/FQQA_0O5blA?feature=share",
     image: "https://img.youtube.com/vi/FQQA_0O5blA/hqdefault.jpg",
-    tag: "Новый эфир",
+    tag: "Архив",
   },
   {
     date: "02.06",
@@ -70,6 +77,14 @@ const archiveItems = [
 ];
 
 const newsItems = [
+  {
+    date: "04.06.2026",
+    image: "/news/news-elina-rakhimova-danya-sakhnov-flirt.jpg",
+    title: "Элина Рахимова рассказала о флирте с Даней Сахновым",
+    text: "Элина Рахимова рассказала о тёплом общении и флирте с экс-участником проекта Даней Сахновым. Она сообщила Веронике, что всю ночь общалась с Сахновым, услышала от него много комплиментов и подумала, что они могли бы стать идеальной парой. Элина ждёт Даниила на проекте, но он пока не появился и на свидание её не пригласил.",
+    tag: "Флирт",
+  },
+
   {
     date: "04.06.2026",
     image: "/news/news-zhenya-horosheva-left-china.jpg",
