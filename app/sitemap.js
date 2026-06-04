@@ -10,6 +10,7 @@ export default function sitemap() {
     "/novosti",
     "/archive",
     "/news",
+    "/news/dom-2-vypuski-online-besplatno",
     "/dom-2-segodnyashniy-vypusk",
     "/dom-2-smotret-online-besplatno",
     "/dom-2-svezhie-serii-smotret-besplatno",
