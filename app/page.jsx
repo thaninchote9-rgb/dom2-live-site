@@ -7,7 +7,7 @@ const siteConfig = {
   // Чтобы обновить главный плеер, меняйте только этот ID.
   // Пример: https://www.youtube.com/watch?v=r6JvpOAPlG4
   // ID здесь: r6JvpOAPlG4
-  currentVideoId: "q0MIQp6TBgE",
+  currentVideoId: "FQQA_0O5blA",
 };
 
 const archiveItems = [
@@ -70,6 +70,14 @@ const archiveItems = [
 ];
 
 const newsItems = [
+  {
+    date: "04.06.2026",
+    image: "/news/news-elina-rakhimova-danya-sakhnov-flirt.jpg",
+    title: "Элина Рахимова рассказала о флирте с Даней Сахновым",
+    text: "Элина Рахимова рассказала Веронике, что всю ночь общалась с Даней Сахновым, услышала много комплиментов и даже представила их идеальной парой. Но Даниил прекратил общение, на поляну не заглянул и на свидание Элину не пригласил.",
+    tag: "Флирт",
+  },
+
   {
     date: "04.06.2026",
     image: "/news/news-zhenya-horosheva-left-china.jpg",
