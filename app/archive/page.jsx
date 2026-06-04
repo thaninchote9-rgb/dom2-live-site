@@ -12,7 +12,7 @@ const archiveItems = [
     title: "Дом 2 сегодняшний выпуск — свежий стрим",
     videoUrl: "https://youtube.com/live/FQQA_0O5blA?feature=share",
     image: "https://img.youtube.com/vi/FQQA_0O5blA/hqdefault.jpg",
-    tag: "Новый эфир",
+    tag: "Архив",
   },
   {
     date: "02.06",

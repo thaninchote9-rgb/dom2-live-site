@@ -7,7 +7,7 @@ const siteConfig = {
   // Чтобы обновить главный плеер, меняйте только этот ID.
   // Пример: https://www.youtube.com/watch?v=r6JvpOAPlG4
   // ID здесь: r6JvpOAPlG4
-  currentVideoId: "FQQA_0O5blA",
+  currentVideoId: "q0MIQp6TBgE",
 };
 
 const archiveItems = [
@@ -16,7 +16,7 @@ const archiveItems = [
     title: "Дом 2 сегодняшний выпуск — свежий стрим",
     videoUrl: "https://youtube.com/live/FQQA_0O5blA?feature=share",
     image: "https://img.youtube.com/vi/FQQA_0O5blA/hqdefault.jpg",
-    tag: "Новый эфир",
+    tag: "Архив",
   },
   {
     date: "02.06",
@@ -72,11 +72,19 @@ const archiveItems = [
 const newsItems = [
   {
     date: "04.06.2026",
+    image: "/news/news-elina-rakhimova-danya-sakhnov.png",
+    title: "Элина Рахимова рассказала о флирте с Даней Сахновым",
+    text: "Элина Рахимова сообщила, что всю ночь общалась с экс-участником проекта Даней Сахновым, услышала много комплиментов и даже представила их идеальной парой. Но Даниил прекратил общение, не приехал на поляну и не пригласил её на свидание.",
+    tag: "Отношения",
+    href: "/news/elina-rakhimova-danya-sakhnov",
+  },
+
+  {
+    date: "04.06.2026",
     image: "/news/news-zhenya-horosheva-left-china.jpg",
     title: "Сергей Хорошев сообщил, что Женя улетела из Китая",
     text: "Сергей Хорошев рассказал, что Женя собрала вещи и улетела. По его словам, они снова наговорили друг другу много лишнего, между ними накопилось недопонимание, и ситуация получилась печальной.",
     tag: "Участники",
-    href: "/news/sergey-horoshev-zhenya-uletela-iz-kitaya",
   },
 
   {
@@ -85,7 +93,6 @@ const newsItems = [
     title: "Карина Титуева покинула проект Дом-2",
     text: "Участница Дома-2 Карина Титуева покинула телепроект после скандала. Так и не построив любовь на проекте, Карина ушла за периметр.",
     tag: "Участники",
-    href: "/news/karina-titueva-pokinula-proekt-dom-2",
   },
 
   {
@@ -378,13 +385,14 @@ export default function HomePage() {
               <h2 className="text-3xl font-black text-white drop-shadow-lg">Свежие новости дом 2</h2>
             </div>
             <div className="rounded-full border border-white/60 bg-white/74 px-4 py-2 text-xs font-black text-slate-800 shadow-md backdrop-blur-xl">
-              публикации от 31.05.2026
+              публикации от 04.06.2026
             </div>
           </div>
 
           <div className="grid gap-4 md:grid-cols-3">
             {newsItems.slice(0, 12).map((item) => (
-              <GlassCard key={item.title} className="group relative overflow-hidden p-3 transition-transform duration-300 md:hover:-translate-y-2 md:hover:scale-[1.025] md:hover:shadow-[0_28px_80px_rgba(15,23,42,0.34)]">
+              <a key={item.title} href={item.href || "/news"} className="block text-inherit no-underline">
+                <GlassCard className="group overflow-hidden p-3 transition-transform duration-300 md:hover:-translate-y-2 md:hover:scale-[1.025] md:hover:shadow-[0_28px_80px_rgba(15,23,42,0.34)]">
                 <div className="relative overflow-hidden rounded-[1.4rem] bg-white/86 shadow-lg">
                   <img
                     src={item.image}
@@ -405,14 +413,9 @@ export default function HomePage() {
                   </div>
                   <h3 className="mb-3 text-lg font-black leading-snug text-slate-950">{item.title}</h3>
                   <p className="text-sm leading-6 text-slate-800">{item.text}</p>
-                  {item.href && (
-                    <span className="relative z-20 mt-4 inline-flex rounded-full bg-slate-950 px-4 py-2 text-xs font-black text-white shadow-lg transition group-hover:bg-sky-700">
-                      Читать полностью
-                    </span>
-                  )}
                 </div>
-                {item.href && <a href={item.href} aria-label={`Открыть новость: ${item.title}`} className="absolute inset-0 z-10 rounded-[2rem]" />}
-              </GlassCard>
+                </GlassCard>
+              </a>
             ))}
           </div>
         </section>
