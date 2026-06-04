@@ -9,18 +9,11 @@ export const metadata = {
 const newsItems = [
   {
     date: "04.06.2026",
-    image: "/news/news-elina-rakhimova-danya-sakhnov-flirt.jpg",
-    title: "Элина Рахимова рассказала о флирте с Даней Сахновым",
-    text: "Элина Рахимова рассказала о тёплом общении и флирте с экс-участником проекта Даней Сахновым. Она сообщила Веронике, что всю ночь общалась с Сахновым, услышала от него много комплиментов и подумала, что они могли бы стать идеальной парой. Элина ждёт Даниила на проекте, но он пока не появился и на свидание её не пригласил.",
-    tag: "Флирт",
-  },
-
-  {
-    date: "04.06.2026",
     image: "/news/news-zhenya-horosheva-left-china.jpg",
     title: "Сергей Хорошев сообщил, что Женя улетела из Китая",
     text: "Сергей Хорошев рассказал, что Женя собрала вещи и улетела. По его словам, они снова наговорили друг другу много лишнего, между ними накопилось недопонимание, и ситуация получилась печальной.",
     tag: "Участники",
+    href: "/news/sergey-horoshev-zhenya-uletela-iz-kitaya",
   },
 
   {
@@ -29,6 +22,7 @@ const newsItems = [
     title: "Карина Титуева покинула проект Дом-2",
     text: "Участница Дома-2 Карина Титуева покинула телепроект после скандала. Так и не построив любовь на проекте, Карина ушла за периметр.",
     tag: "Участники",
+    href: "/news/karina-titueva-pokinula-proekt-dom-2",
   },
 
   {
@@ -145,7 +139,7 @@ export default function NewsPage() {
 
         <section className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {newsItems.map((item) => (
-            <article key={item.title} className="group overflow-hidden rounded-[2rem] border border-white/80 bg-white/86 p-4 shadow-xl backdrop-blur-3xl transition-transform duration-300 md:hover:-translate-y-2 md:hover:scale-[1.025] md:hover:shadow-[0_28px_80px_rgba(15,23,42,0.34)]">
+            <article key={item.title} className="group relative overflow-hidden rounded-[2rem] border border-white/80 bg-white/86 p-4 shadow-xl backdrop-blur-3xl transition-transform duration-300 md:hover:-translate-y-2 md:hover:scale-[1.025] md:hover:shadow-[0_28px_80px_rgba(15,23,42,0.34)]">
               <div className="relative overflow-hidden rounded-[1.5rem] bg-slate-200 shadow-lg">
                 <img src={item.image} alt={item.title} className="aspect-[4/5] w-full object-cover object-center transition-transform duration-300 md:group-hover:scale-105" />
                 <div className="absolute left-4 top-4 rounded-full bg-white/86 px-4 py-2 text-sm font-black text-slate-800 shadow-lg backdrop-blur-xl">{item.tag}</div>
@@ -155,7 +149,13 @@ export default function NewsPage() {
                 <div className="mb-2 text-xs font-black uppercase tracking-[0.18em] text-slate-700">публикация от {item.date}</div>
                 <h2 className="mb-3 text-xl font-black leading-snug text-slate-950">{item.title}</h2>
                 <p className="text-sm leading-6 text-slate-800">{item.text}</p>
+                {item.href && (
+                  <span className="relative z-20 mt-4 inline-flex rounded-full bg-slate-950 px-4 py-2 text-xs font-black text-white shadow-lg transition group-hover:bg-sky-700">
+                    Читать полностью
+                  </span>
+                )}
               </div>
+              {item.href && <a href={item.href} aria-label={`Открыть новость: ${item.title}`} className="absolute inset-0 z-10 rounded-[2rem]" />}
             </article>
           ))}
         </section>
