@@ -9,15 +9,6 @@ export const metadata = {
 const newsItems = [
   {
     date: "04.06.2026",
-    image: "/news/news-dom2-online-free.jpg",
-    title: "Смотреть выпуски Дома-2 онлайн бесплатно",
-    text: "Свежие выпуски Дома-2 можно смотреть онлайн бесплатно из любой точки мира. Каждый день без выходных в 18:00 по Москве на YouTube-канале и в Telegram-канале Max Brabus проходят стримы с обсуждениями, спорами, скандалами участников и прямым эфиром нового выпуска.",
-    tag: "Эфиры",
-    href: "/news/dom-2-vypuski-online-besplatno",
-  },
-
-  {
-    date: "04.06.2026",
     image: "/news/news-zhenya-horosheva-left-china.jpg",
     title: "Сергей Хорошев сообщил, что Женя улетела из Китая",
     text: "Сергей Хорошев рассказал, что Женя собрала вещи и улетела. По его словам, они снова наговорили друг другу много лишнего, между ними накопилось недопонимание, и ситуация получилась печальной.",
@@ -156,11 +147,6 @@ export default function NewsPage() {
                 <div className="mb-2 text-xs font-black uppercase tracking-[0.18em] text-slate-700">публикация от {item.date}</div>
                 <h2 className="mb-3 text-xl font-black leading-snug text-slate-950">{item.title}</h2>
                 <p className="text-sm leading-6 text-slate-800">{item.text}</p>
-                  {item.href && (
-                    <a href={item.href} className="mt-4 inline-flex rounded-full bg-slate-950 px-4 py-2 text-xs font-black text-white shadow-md transition hover:-translate-y-0.5 hover:bg-slate-800">
-                      Читать подробнее
-                    </a>
-                  )}
               </div>
             </article>
           ))}

@@ -7,7 +7,7 @@ const siteConfig = {
   // Чтобы обновить главный плеер, меняйте только этот ID.
   // Пример: https://www.youtube.com/watch?v=r6JvpOAPlG4
   // ID здесь: r6JvpOAPlG4
-  currentVideoId: "FQQA_0O5blA",
+  currentVideoId: "q0MIQp6TBgE",
 };
 
 const archiveItems = [
@@ -70,15 +70,6 @@ const archiveItems = [
 ];
 
 const newsItems = [
-  {
-    date: "04.06.2026",
-    image: "/news/news-dom2-online-free.jpg",
-    title: "Смотреть выпуски Дома-2 онлайн бесплатно",
-    text: "Свежие выпуски Дома-2 можно смотреть онлайн бесплатно из любой точки мира. Каждый день без выходных в 18:00 по Москве на YouTube-канале и в Telegram-канале Max Brabus проходят стримы с обсуждениями, спорами, скандалами участников и прямым эфиром нового выпуска.",
-    tag: "Эфиры",
-    href: "/news/dom-2-vypuski-online-besplatno",
-  },
-
   {
     date: "04.06.2026",
     image: "/news/news-zhenya-horosheva-left-china.jpg",
@@ -385,7 +376,7 @@ export default function HomePage() {
               <h2 className="text-3xl font-black text-white drop-shadow-lg">Свежие новости дом 2</h2>
             </div>
             <div className="rounded-full border border-white/60 bg-white/74 px-4 py-2 text-xs font-black text-slate-800 shadow-md backdrop-blur-xl">
-              публикации от 04.06.2026
+              публикации от 31.05.2026
             </div>
           </div>
 
@@ -412,11 +403,6 @@ export default function HomePage() {
                   </div>
                   <h3 className="mb-3 text-lg font-black leading-snug text-slate-950">{item.title}</h3>
                   <p className="text-sm leading-6 text-slate-800">{item.text}</p>
-                  {item.href && (
-                    <a href={item.href} className="mt-4 inline-flex rounded-full bg-slate-950 px-4 py-2 text-xs font-black text-white shadow-md transition hover:-translate-y-0.5 hover:bg-slate-800">
-                      Читать подробнее
-                    </a>
-                  )}
                 </div>
               </GlassCard>
             ))}
