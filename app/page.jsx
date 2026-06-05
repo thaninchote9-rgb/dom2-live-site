@@ -173,11 +173,11 @@ const newsItems = [
 ];
 
 
-const streamerPhotos = [
+const shortVideoItems = [
   {
-    src: "/photos/streamers-main.jpg",
-    title: "Фото стримеров",
-    text: "Свежие фото, настроение эфира и закулисье стримов.",
+    title: "Короткое видео Дом 2 Live",
+    date: "05.06.2026",
+    videoId: "9dIVZhsoS6U",
   },
 ];
 
@@ -195,6 +195,14 @@ function getYouTubeEmbedUrl(videoId) {
 
 function getYouTubeWatchUrl(videoId) {
   return `https://www.youtube.com/watch?v=${videoId}`;
+}
+
+function getYouTubeShortEmbedUrl(videoId) {
+  return `https://www.youtube.com/embed/${videoId}`;
+}
+
+function getYouTubeShortUrl(videoId) {
+  return `https://www.youtube.com/shorts/${videoId}`;
 }
 
 function GlassCard({ children, className = "", id }) {
@@ -242,6 +250,7 @@ export default function HomePage() {
               <a href="#watch" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-sky-800 shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-sky-700 hover:shadow-[0_0_18px_rgba(56,189,248,0.45)]">Смотреть эфир</a>
               <a href="/archive" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-cyan-800 shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-cyan-700 hover:shadow-[0_0_18px_rgba(34,211,238,0.45)]">Предыдущие выпуски</a>
               <a href="/news" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-violet-800 shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-violet-700 hover:shadow-[0_0_18px_rgba(139,92,246,0.45)]">Новости</a>
+              <a href="#shorts" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-pink-800 shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-pink-700 hover:shadow-[0_0_18px_rgba(236,72,153,0.42)]">Короткие видео</a>
               <a href="#about" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-fuchsia-800 shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-fuchsia-700 hover:shadow-[0_0_18px_rgba(217,70,239,0.42)]">О проекте</a>
             </div>
           </nav>
@@ -292,27 +301,63 @@ export default function HomePage() {
             </div>
           </GlassCard>
 
-          <GlassCard className="overflow-hidden p-3">
-            <div className="relative min-h-[360px] overflow-hidden rounded-[1.65rem] bg-slate-950/20 shadow-xl md:min-h-[430px]">
-              <img
-                src={streamerPhotos[0].src}
-                alt="Фото стримеров дом 2"
-                className="absolute inset-0 h-full w-full object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/82 via-slate-950/24 to-transparent" />
-              <div className="absolute left-4 top-4 rounded-full border border-white/80 bg-white/86 px-3 py-1 text-xs font-black text-slate-800 shadow-lg backdrop-blur-xl">
-                фото
-              </div>
-              <div className="absolute inset-x-0 bottom-0 p-5">
-                <div className="mb-2 flex items-center gap-2 text-lg font-black text-white drop-shadow">
-                  <Icon label="camera">📸</Icon>
-                  {streamerPhotos[0].title}
+          <GlassCard id="shorts" className="overflow-hidden p-4">
+            <div className="mb-4 flex items-start justify-between gap-3">
+              <div>
+                <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-pink-300/80 bg-white/88 px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-pink-700 shadow-md backdrop-blur-xl">
+                  <Icon label="shorts">🎬</Icon>
+                  shorts
                 </div>
-                <p className="max-w-[18rem] text-sm leading-6 text-white/92 drop-shadow">
-                  {streamerPhotos[0].text}
+                <h2 className="text-2xl font-black text-slate-950">Короткие видео</h2>
+                <p className="mt-1 text-sm leading-6 text-slate-700">
+                  Свежие Shorts с YouTube: фрагменты, реакции и закулисье Дом 2 Live.
                 </p>
               </div>
             </div>
+
+            {shortVideoItems.length > 0 ? (
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+                {shortVideoItems.slice(0, 3).map((item) => (
+                  <div key={item.videoId} className="overflow-hidden rounded-[1.4rem] border border-white/70 bg-white/86 p-2 shadow-lg backdrop-blur-xl">
+                    <div className="overflow-hidden rounded-[1.1rem] bg-slate-950 shadow-xl">
+                      <div className="aspect-[9/16] w-full">
+                        <iframe
+                          className="h-full w-full"
+                          src={getYouTubeShortEmbedUrl(item.videoId)}
+                          title={item.title}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                        />
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between gap-3 px-2 py-3">
+                      <div className="min-w-0">
+                        <div className="truncate text-sm font-black text-slate-950">{item.title}</div>
+                        <div className="mt-1 text-xs font-bold text-slate-600">{item.date}</div>
+                      </div>
+                      <a
+                        href={getYouTubeShortUrl(item.videoId)}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="shrink-0 rounded-full bg-red-600 px-3 py-2 text-xs font-black text-white shadow-md transition hover:-translate-y-0.5 hover:bg-red-700"
+                      >
+                        YouTube
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="flex min-h-[360px] flex-col items-center justify-center rounded-[1.65rem] border border-dashed border-pink-300/80 bg-white/74 p-6 text-center shadow-inner backdrop-blur-xl md:min-h-[430px]">
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-3xl bg-red-600 text-2xl text-white shadow-xl">
+                  ▶
+                </div>
+                <div className="text-xl font-black text-slate-950">Скоро появятся Shorts</div>
+                <p className="mt-3 max-w-[18rem] text-sm leading-6 text-slate-700">
+                  Пришлите ссылку на YouTube Shorts — добавим сюда встроенный плеер без загрузки видео на сайт.
+                </p>
+              </div>
+            )}
           </GlassCard>
         </section>
 
