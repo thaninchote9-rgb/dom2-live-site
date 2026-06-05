@@ -23,7 +23,7 @@ export default function SeoPage() {
     </nav>
   </div>
 </header>
-      <div className="relative z-10 mx-auto max-w-6xl px-4 pb-12 pt-28 md:px-6 md:pt-32">
+      <div className="relative z-10 mx-auto max-w-[1240px] px-4 pb-12 pt-28 md:px-6 md:pt-32">
         <section className="rounded-[2rem] border border-white/80 bg-white/86 p-7 shadow-[0_24px_90px_rgba(15,23,42,0.22)] backdrop-blur-3xl md:p-10">
           <div className="mb-4 inline-flex rounded-full border border-white/80 bg-white/80 px-4 py-2 text-sm font-black text-slate-700 shadow-md">SEO-раздел Дом 2 Live</div>
           <h1 className="mb-5 text-4xl font-black leading-tight text-slate-950 md:text-6xl">Дом 2 эфир смотреть онлайн</h1>

@@ -269,7 +269,7 @@ export default function HomePage() {
         </div>
       </header>
 
-      <div className="relative z-10 mx-auto max-w-6xl px-4 pb-8 pt-28 md:px-6 md:pb-12 md:pt-32">
+      <div className="relative z-10 mx-auto max-w-[1240px] px-4 pb-8 pt-28 md:px-6 md:pb-12 md:pt-32">
         <section className="mb-8 grid gap-6 lg:grid-cols-[minmax(0,1fr)_300px]">
           <GlassCard className="relative overflow-hidden p-5 md:p-8">
             <div className="absolute inset-0 bg-[url('/backgrounds/hero-rain-window.jpg')] bg-cover bg-center" />

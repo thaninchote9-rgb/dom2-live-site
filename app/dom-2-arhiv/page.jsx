@@ -15,7 +15,7 @@ export default function SeoPage() {
   return (
     <main className="min-h-screen bg-slate-950 bg-[url('/backgrounds/rain-window.jpg')] bg-cover bg-center bg-fixed text-slate-950">
       <div className="fixed inset-0 bg-slate-950/46 backdrop-blur-[4px]" />
-      <div className="relative z-10 mx-auto max-w-5xl px-4 py-10 md:px-6 md:py-14">
+      <div className="relative z-10 mx-auto max-w-[1120px] px-4 py-10 md:px-6 md:py-14">
         <a href="/" className="mb-6 inline-flex rounded-full border border-white/70 bg-white/80 px-5 py-3 text-sm font-black text-slate-800 shadow-lg backdrop-blur-2xl hover:bg-white">← На главную</a>
         <section className="rounded-[2rem] border border-white/75 bg-white/82 p-7 shadow-[0_24px_90px_rgba(15,23,42,0.32)] backdrop-blur-3xl md:p-10">
           <div className="mb-4 inline-flex rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-black text-slate-600 shadow-md">Дом 2 Live</div>
