@@ -11,6 +11,7 @@ export default function sitemap() {
     "/archive",
     "/news",
     "/news/elina-rakhimova-danya-sakhnov",
+    "/news/elina-rakhimova-komanda-popovicha",
     "/dom-2-segodnyashniy-vypusk",
     "/dom-2-smotret-online-besplatno",
     "/dom-2-svezhie-serii-smotret-besplatno",

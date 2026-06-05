@@ -71,6 +71,15 @@ const archiveItems = [
 
 const newsItems = [
   {
+    date: "05.06.2026",
+    image: "/news/news-elina-rakhimova-komanda-popovicha.png",
+    title: "Элина Рахимова собрала свою команду на Доме 2",
+    text: "Пока Галина Маковская улетела в Нижневартовск за собакой и летними вещами, Элина Рахимова начала рекламировать Влада Поповича и позвала подписчиц прийти к нему на проект, предупредив, что он сейчас в паре.",
+    tag: "Участники",
+    href: "/news/elina-rakhimova-komanda-popovicha",
+  },
+
+  {
     date: "04.06.2026",
     image: "/news/news-elina-rakhimova-danya-sakhnov.png",
     title: "Элина Рахимова рассказала о флирте с Даней Сахновым",
@@ -385,12 +394,12 @@ export default function HomePage() {
               <h2 className="text-3xl font-black text-white drop-shadow-lg">Свежие новости дом 2</h2>
             </div>
             <div className="rounded-full border border-white/60 bg-white/74 px-4 py-2 text-xs font-black text-slate-800 shadow-md backdrop-blur-xl">
-              публикации от 04.06.2026
+              публикации от 05.06.2026
             </div>
           </div>
 
           <div className="grid gap-4 md:grid-cols-3">
-            {newsItems.slice(0, 12).map((item) => (
+            {newsItems.slice(0, 9).map((item) => (
               <a key={item.title} href={item.href || "/news"} className="block text-inherit no-underline">
                 <GlassCard className="group overflow-hidden p-3 transition-transform duration-300 md:hover:-translate-y-2 md:hover:scale-[1.025] md:hover:shadow-[0_28px_80px_rgba(15,23,42,0.34)]">
                 <div className="relative overflow-hidden rounded-[1.4rem] bg-white/86 shadow-lg">

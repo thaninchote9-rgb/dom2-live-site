@@ -8,6 +8,15 @@ export const metadata = {
 
 const newsItems = [
   {
+    date: "05.06.2026",
+    image: "/news/news-elina-rakhimova-komanda-popovicha.png",
+    title: "Элина Рахимова собрала свою команду на Доме 2",
+    text: "Пока Галина Маковская улетела в Нижневартовск за собакой и летними вещами, Элина Рахимова начала рекламировать Влада Поповича и позвала подписчиц прийти к нему на проект, предупредив, что он сейчас в паре.",
+    tag: "Участники",
+    href: "/news/elina-rakhimova-komanda-popovicha",
+  },
+
+  {
     date: "04.06.2026",
     image: "/news/news-elina-rakhimova-danya-sakhnov.png",
     title: "Элина Рахимова рассказала о флирте с Даней Сахновым",
