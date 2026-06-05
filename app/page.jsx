@@ -230,7 +230,7 @@ export default function HomePage() {
       </div>
 
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/35 bg-white/86 shadow-sm backdrop-blur-2xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6">
+        <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-4 px-4 py-4 md:px-6">
           <a href="/" className="flex items-center gap-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-3xl border border-white/60 bg-white/74 text-xl shadow-xl backdrop-blur-xl">
               <Icon label="play">▶</Icon>
@@ -246,17 +246,17 @@ export default function HomePage() {
           </a>
 
           <nav className="hidden rounded-full bg-gradient-to-r from-sky-400 via-cyan-300 to-violet-500 p-[2px] shadow-[0_0_26px_rgba(56,189,248,0.45),0_0_38px_rgba(139,92,246,0.28)] md:flex">
-            <div className="flex items-center gap-2 rounded-full bg-white/64 px-3 py-2 text-sm font-black text-slate-900 backdrop-blur-2xl">
-              <a href="#watch" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-sky-800 shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-sky-700 hover:shadow-[0_0_18px_rgba(56,189,248,0.45)]">Смотреть эфир</a>
-              <a href="/archive" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-cyan-800 shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-cyan-700 hover:shadow-[0_0_18px_rgba(34,211,238,0.45)]">Предыдущие выпуски</a>
-              <a href="/news" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-violet-800 shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-violet-700 hover:shadow-[0_0_18px_rgba(139,92,246,0.45)]">Новости</a>
-              <a href="#shorts" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-pink-800 shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-pink-700 hover:shadow-[0_0_18px_rgba(236,72,153,0.42)]">Короткие видео</a>
-              <a href="#about" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-fuchsia-800 shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-fuchsia-700 hover:shadow-[0_0_18px_rgba(217,70,239,0.42)]">О проекте</a>
+            <div className="flex items-center gap-1.5 rounded-full bg-white/64 px-2 py-2 text-[13px] font-black text-slate-900 backdrop-blur-2xl">
+              <a href="#watch" className="rounded-full border border-white/70 bg-white/72 px-3 py-2 text-sky-800 whitespace-nowrap shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-sky-700 hover:shadow-[0_0_18px_rgba(56,189,248,0.45)]">Смотреть эфир</a>
+              <a href="/archive" className="rounded-full border border-white/70 bg-white/72 px-3 py-2 text-cyan-800 whitespace-nowrap shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-cyan-700 hover:shadow-[0_0_18px_rgba(34,211,238,0.45)]">Предыдущие выпуски</a>
+              <a href="/news" className="rounded-full border border-white/70 bg-white/72 px-3 py-2 text-violet-800 whitespace-nowrap shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-violet-700 hover:shadow-[0_0_18px_rgba(139,92,246,0.45)]">Новости</a>
+              <a href="#shorts" className="rounded-full border border-white/70 bg-white/72 px-3 py-2 text-pink-800 whitespace-nowrap shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-pink-700 hover:shadow-[0_0_18px_rgba(236,72,153,0.42)]">Короткие видео</a>
+              <a href="#about" className="rounded-full border border-white/70 bg-white/72 px-3 py-2 text-fuchsia-800 whitespace-nowrap shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-fuchsia-700 hover:shadow-[0_0_18px_rgba(217,70,239,0.42)]">О проекте</a>
             </div>
           </nav>
 
           <div className="flex items-center gap-2">
-            <span className="hidden text-sm font-black text-slate-800/90 drop-shadow-sm sm:inline">
+            <span className="hidden whitespace-nowrap text-sm font-black text-slate-800/90 drop-shadow-sm xl:inline">
               Подписывайтесь на
             </span>
             <a href={siteConfig.youtubeChannelUrl} target="_blank" rel="noreferrer" className="rounded-full border border-red-500/50 bg-white/84 px-4 py-2 text-sm font-black text-red-600 shadow-lg backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-red-500/80 hover:bg-red-50/90 hover:text-red-700">
@@ -269,9 +269,9 @@ export default function HomePage() {
         </div>
       </header>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 pb-8 pt-28 md:px-6 md:pb-12 md:pt-32">
-        <section className="mb-8 grid gap-6 lg:grid-cols-[1fr_360px]">
-          <GlassCard className="relative overflow-hidden p-6 md:p-10">
+      <div className="relative z-10 mx-auto max-w-6xl px-4 pb-8 pt-28 md:px-6 md:pb-12 md:pt-32">
+        <section className="mb-8 grid gap-6 lg:grid-cols-[minmax(0,1fr)_300px]">
+          <GlassCard className="relative overflow-hidden p-5 md:p-8">
             <div className="absolute inset-0 bg-[url('/backgrounds/hero-rain-window.jpg')] bg-cover bg-center" />
             <div className="absolute inset-0 bg-white/72 backdrop-blur-[2px]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.70),transparent_38%),radial-gradient(circle_at_bottom_right,rgba(219,234,254,0.58),transparent_44%)]" />
@@ -282,10 +282,10 @@ export default function HomePage() {
                 Новые выпуски каждый день в 18:00 по Москве
               </div>
 
-              <h1 className="w-full max-w-none rounded-[1.7rem] border border-orange-300/80 bg-white/90 px-5 py-5 text-left font-black tracking-tight text-slate-950 shadow-[0_0_28px_rgba(249,115,22,0.38)] backdrop-blur-xl ring-2 ring-orange-400/25 md:px-7 md:py-6">
-                <span className="block whitespace-nowrap text-[clamp(2rem,4.1vw,3.55rem)] leading-[1.04]">Дом-2 смотреть онлайн</span>
-                <span className="mt-2 block whitespace-nowrap text-[clamp(1.45rem,3.15vw,2.65rem)] leading-[1.05]">Каждый день свежие выпуски</span>
-                <span className="mt-2 block whitespace-nowrap text-[clamp(2rem,4.1vw,3.55rem)] leading-[1.04]">Смотри стримы</span>
+              <h1 className="w-full max-w-[720px] rounded-[1.7rem] border border-orange-300/80 bg-white/90 px-5 py-5 text-left font-black tracking-tight text-slate-950 shadow-[0_0_28px_rgba(249,115,22,0.38)] backdrop-blur-xl ring-2 ring-orange-400/25 md:px-6 md:py-5">
+                <span className="block whitespace-nowrap text-[clamp(1.75rem,3.35vw,3rem)] leading-[1.04]">Дом-2 смотреть онлайн</span>
+                <span className="mt-2 block whitespace-nowrap text-[clamp(1.28rem,2.6vw,2.22rem)] leading-[1.05]">Каждый день свежие выпуски</span>
+                <span className="mt-2 block whitespace-nowrap text-[clamp(1.75rem,3.35vw,3rem)] leading-[1.04]">Смотри стримы</span>
               </h1>
 
               <p className="mt-6 max-w-3xl text-base leading-8 text-slate-800 md:text-lg">
@@ -301,25 +301,12 @@ export default function HomePage() {
             </div>
           </GlassCard>
 
-          <GlassCard id="shorts" className="overflow-hidden p-4">
-            <div className="mb-4 flex items-start justify-between gap-3">
-              <div>
-                <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-pink-300/80 bg-white/88 px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-pink-700 shadow-md backdrop-blur-xl">
-                  <Icon label="shorts">🎬</Icon>
-                  shorts
-                </div>
-                <h2 className="text-2xl font-black text-slate-950">Короткие видео</h2>
-                <p className="mt-1 text-sm leading-6 text-slate-700">
-                  Свежие Shorts с YouTube: фрагменты, реакции и закулисье Дом 2 Live.
-                </p>
-              </div>
-            </div>
-
+          <GlassCard id="shorts" className="overflow-hidden p-3">
             {shortVideoItems.length > 0 ? (
-              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+              <div className="grid gap-3">
                 {shortVideoItems.slice(0, 3).map((item) => (
-                  <div key={item.videoId} className="overflow-hidden rounded-[1.4rem] border border-white/70 bg-white/86 p-2 shadow-lg backdrop-blur-xl">
-                    <div className="overflow-hidden rounded-[1.1rem] bg-slate-950 shadow-xl">
+                  <div key={item.videoId} className="overflow-hidden rounded-[1.25rem] border border-white/70 bg-white/86 p-2 shadow-lg backdrop-blur-xl">
+                    <div className="overflow-hidden rounded-[1rem] bg-slate-950 shadow-xl">
                       <div className="aspect-[9/16] w-full">
                         <iframe
                           className="h-full w-full"
@@ -361,7 +348,7 @@ export default function HomePage() {
           </GlassCard>
         </section>
 
-        <section id="watch" className="grid gap-6 lg:grid-cols-[1fr_360px]">
+        <section id="watch" className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_300px]">
           <GlassCard className="overflow-hidden p-3">
             <div className="overflow-hidden rounded-[1.65rem] bg-slate-950 shadow-2xl">
               <div className="aspect-video w-full">
