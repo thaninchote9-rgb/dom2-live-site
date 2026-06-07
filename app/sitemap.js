@@ -10,6 +10,7 @@ export default function sitemap() {
     "/novosti",
     "/archive",
     "/news",
+    "/news/vika-salibekova-poblagodarila-proekt",
     "/news/elina-rakhimova-danya-sakhnov",
     "/news/elina-rakhimova-komanda-popovicha",
     "/news/zhenya-horosheva-razvod-sergey",

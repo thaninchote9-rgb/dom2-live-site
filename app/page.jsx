@@ -85,6 +85,15 @@ const archiveItems = [
 
 const newsItems = [
   {
+    date: "07.06.2026",
+    image: "/news/news-vika-salibekova-thanks-project.jpg",
+    title: "Вика Салибекова поблагодарила проект Дом-2 и зрителей",
+    text: "Вика Салибекова вышла на связь после ухода с проекта. Она поблагодарила Дом-2 и зрителей за переживания, вспомнила три совместных года на проекте и призналась, что будет скучать по своей комнате.",
+    tag: "Участники",
+    href: "/news/vika-salibekova-poblagodarila-proekt",
+  },
+
+  {
     date: "05.06.2026",
     image: "/news/news-zhenya-horosheva-divorce-sergey.png",
     title: "Женя Хорошева хочет развестись с Сергеем",
@@ -449,7 +458,7 @@ export default function HomePage() {
               <h2 className="text-3xl font-black text-white drop-shadow-lg">Свежие новости дом 2</h2>
             </div>
             <div className="rounded-full border border-white/60 bg-white/74 px-4 py-2 text-xs font-black text-slate-800 shadow-md backdrop-blur-xl">
-              публикации от 05.06.2026
+              публикации от 07.06.2026
             </div>
           </div>
 

@@ -8,6 +8,15 @@ export const metadata = {
 
 const newsItems = [
   {
+    date: "07.06.2026",
+    image: "/news/news-vika-salibekova-thanks-project.jpg",
+    title: "Вика Салибекова поблагодарила проект Дом-2 и зрителей",
+    text: "Вика Салибекова вышла на связь после ухода с проекта. Она поблагодарила Дом-2 и зрителей за переживания, вспомнила три совместных года на проекте и призналась, что будет скучать по своей комнате.",
+    tag: "Участники",
+    href: "/news/vika-salibekova-poblagodarila-proekt",
+  },
+
+  {
     date: "05.06.2026",
     image: "/news/news-zhenya-horosheva-divorce-sergey.png",
     title: "Женя Хорошева хочет развестись с Сергеем",
