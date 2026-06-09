@@ -500,3 +500,9 @@
 Изображение добавлено в:
 
 `public/news/news-zhenya-horosheva-left-china.jpg`
+
+
+## Обновление главного видео 09.06.2026
+
+Главное видео обновлено на `https://youtube.com/live/sS-UEQHcAPI?feature=share`.
+Предыдущее главное видео перенесено в архив: `https://youtube.com/live/WuxfLiWWHcE?feature=share`.
