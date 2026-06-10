@@ -10,6 +10,7 @@ export default function sitemap() {
     "/novosti",
     "/archive",
     "/news",
+    "/news/andrey-cherkasov-nastavnitsy-grakovich-rakhimova",
     "/news/kristina-lyaskovets-zhenskaya-druzhba",
     "/news/vika-salibekova-poblagodarila-proekt",
     "/news/elina-rakhimova-danya-sakhnov",

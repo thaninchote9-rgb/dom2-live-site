@@ -8,6 +8,15 @@ export const metadata = {
 
 const newsItems = [
   {
+    date: "10.06.2026",
+    image: "/news/news-cherkasov-grakovich-rakhimova.png",
+    title: "Андрей Черкасов подтвердил роль наставниц Гракович и Рахимовой на проекте",
+    text: "Андрей Черкасов подтвердил, что Вероника Гракович и Элина Рахимова выполняют на поляне роль наставниц для молодёжного коллектива. Зрители давно обсуждали, какие функции у этого тандема на проекте.",
+    tag: "Участники",
+    href: "/news/andrey-cherkasov-nastavnitsy-grakovich-rakhimova",
+  },
+
+  {
     date: "07.06.2026",
     image: "/news/news-kristina-lyaskovets-female-friendship.png",
     title: "Кристина Лясковец рассказала о важности женской дружбы",
