@@ -9,7 +9,7 @@ export const metadata = {
     description: "Пока Галина Маковская уехала за собакой и вещами, Элина Рахимова предложила подписчицам прийти к Владу Поповичу на проект.",
     url: "https://dom2-live.ru/news/elina-rakhimova-komanda-popovicha",
     type: "article",
-    images: ["/news/news-elina-rakhimova-komanda-popovicha.png"],
+    images: ["/news/news-elina-rakhimova-komanda-popovicha.webp"],
   },
 };
 
@@ -42,8 +42,8 @@ export default function NewsArticlePage() {
 
         <section className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/88 shadow-[0_24px_90px_rgba(15,23,42,0.30)] backdrop-blur-3xl">
           <img
-            src="/news/news-elina-rakhimova-komanda-popovicha.png"
-            alt="Элина Рахимова собрала свою команду на Доме 2"
+            src="/news/news-elina-rakhimova-komanda-popovicha.webp"
+            alt="Элина Рахимова собрала свою команду на Доме 2" loading="lazy" decoding="async"
             className="w-full bg-slate-200 object-cover object-center"
           />
 

@@ -148,7 +148,7 @@ export default function ArchivePage() {
           {archiveItems.map((item) => (
             <a key={`${item.date}-${item.title}`} href={item.videoUrl} target={item.videoUrl === "#" ? undefined : "_blank"} rel={item.videoUrl === "#" ? undefined : "noreferrer"} className="group overflow-hidden rounded-[2rem] border border-white/80 bg-white/86 p-4 shadow-xl backdrop-blur-3xl transition hover:-translate-y-1 hover:bg-white/86">
               <div className="relative overflow-hidden rounded-[1.5rem] bg-slate-200 shadow-lg">
-                <img src={item.image} alt={item.title} className="aspect-video w-full object-cover object-center transition duration-300 group-hover:scale-105" />
+                <img src={item.image} alt={item.title} loading="lazy" decoding="async" className="aspect-video w-full object-cover object-center transition duration-300 group-hover:scale-105" />
                 <div className="absolute inset-0 flex items-center justify-center bg-slate-950/10">
                   <span className="flex h-16 w-16 items-center justify-center rounded-full bg-red-600 text-2xl text-white shadow-xl">▶</span>
                 </div>

@@ -9,7 +9,7 @@ export const metadata = {
     description: "Кристина Лясковец написала, что апрель подарил ей подруг и напомнила, как важны понимание, поддержка и дружба без осуждения.",
     url: "https://dom2-live.ru/news/kristina-lyaskovets-zhenskaya-druzhba",
     type: "article",
-    images: ["/news/news-kristina-lyaskovets-female-friendship.png"],
+    images: ["/news/news-kristina-lyaskovets-female-friendship.webp"],
   },
 };
 
@@ -42,8 +42,8 @@ export default function NewsArticlePage() {
 
         <section className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/88 shadow-[0_24px_90px_rgba(15,23,42,0.30)] backdrop-blur-3xl">
           <img
-            src="/news/news-kristina-lyaskovets-female-friendship.png"
-            alt="Кристина Лясковец рассказала о женской дружбе"
+            src="/news/news-kristina-lyaskovets-female-friendship.webp"
+            alt="Кристина Лясковец рассказала о женской дружбе" loading="lazy" decoding="async"
             className="w-full bg-slate-200 object-cover object-center"
           />
 
