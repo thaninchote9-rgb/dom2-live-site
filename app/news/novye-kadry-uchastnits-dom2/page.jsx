@@ -69,6 +69,14 @@ export default function NewsArticlePage() {
               На Дом-2 Live мы продолжаем собирать свежие новости, обсуждения и важные моменты проекта, чтобы зрителям было удобно следить за событиями в одном месте.
             </p>
 
+            <h2 className="mb-4 mt-8 text-2xl font-black leading-tight text-slate-950 md:text-3xl">
+              Андрей Черкасов подтвердил роль наставниц Гракович и Рахимовой на проекте
+            </h2>
+
+            <p className="text-lg leading-8 text-slate-800">
+              Зрители Дома 2 давно интересуются теми функциями, которые выполняет тандем Вероники Гракович и Элины Рахимовой на поляне в молодежном коллективе.
+            </p>
+
             <div className="mt-8 grid gap-3 rounded-[1.5rem] border border-white/80 bg-slate-50/80 p-5 text-sm font-bold text-slate-700 md:grid-cols-3">
               <a href="/#watch" className="rounded-full bg-red-600 px-5 py-3 text-center text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-red-700">Смотреть свежий эфир</a>
               <a href="/news" className="rounded-full bg-white px-5 py-3 text-center text-slate-900 shadow-lg transition hover:-translate-y-0.5 hover:bg-slate-50">Читать другие новости</a>
