@@ -7,10 +7,17 @@ const siteConfig = {
   // Чтобы обновить главный плеер, меняйте только этот ID.
   // Пример: https://www.youtube.com/watch?v=r6JvpOAPlG4
   // ID здесь: r6JvpOAPlG4
-  currentVideoId: "sS-UEQHcAPI",
+  currentVideoId: "FwnyRl_l1Fs",
 };
 
 const archiveItems = [
+  {
+    date: "09.06",
+    title: "Дом 2 смотреть онлайн — архив эфира",
+    videoUrl: "https://youtube.com/live/sS-UEQHcAPI?feature=share",
+    image: "https://img.youtube.com/vi/sS-UEQHcAPI/hqdefault.jpg",
+    tag: "Архив",
+  },
   {
     date: "08.06",
     title: "Дом 2 смотреть онлайн — архив эфира",
