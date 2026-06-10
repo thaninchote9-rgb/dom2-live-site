@@ -106,6 +106,15 @@ const archiveItems = [
 
 const newsItems = [
   {
+    date: "10.06.2026",
+    image: "/news/news-novye-kadry-uchastnits-dom2.webp",
+    title: "Новые кадры участниц Дом-2 вызвали обсуждение у зрителей",
+    text: "В сети появились свежие кадры участниц проекта Дом-2. Зрители уже обсуждают атмосферу на площадке, образы девушек и возможные новые повороты в отношениях на проекте.",
+    tag: "Новости",
+    href: "/news/novye-kadry-uchastnits-dom2",
+  },
+
+  {
     date: "07.06.2026",
     image: "/news/news-kristina-lyaskovets-female-friendship.webp",
     title: "Кристина Лясковец рассказала о важности женской дружбы",
