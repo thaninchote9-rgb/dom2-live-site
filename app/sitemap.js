@@ -10,7 +10,6 @@ export default function sitemap() {
     "/novosti",
     "/archive",
     "/news",
-    "/news/novye-kadry-uchastnits-dom2",
     "/news/kristina-lyaskovets-zhenskaya-druzhba",
     "/news/vika-salibekova-poblagodarila-proekt",
     "/news/elina-rakhimova-danya-sakhnov",

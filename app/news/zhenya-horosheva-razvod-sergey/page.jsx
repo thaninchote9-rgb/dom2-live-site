@@ -9,7 +9,7 @@ export const metadata = {
     description: "Женя Хорошева написала, что устала от конфликтов и надеется на спокойный развод без грязи.",
     url: "https://dom2-live.ru/news/zhenya-horosheva-razvod-sergey",
     type: "article",
-    images: ["/news/news-zhenya-horosheva-divorce-sergey.webp"],
+    images: ["/news/news-zhenya-horosheva-divorce-sergey.png"],
   },
 };
 
@@ -42,8 +42,8 @@ export default function NewsArticlePage() {
 
         <section className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/88 shadow-[0_24px_90px_rgba(15,23,42,0.30)] backdrop-blur-3xl">
           <img
-            src="/news/news-zhenya-horosheva-divorce-sergey.webp"
-            alt="Женя Хорошева и Сергей" loading="lazy" decoding="async"
+            src="/news/news-zhenya-horosheva-divorce-sergey.png"
+            alt="Женя Хорошева и Сергей"
             className="w-full bg-slate-200 object-cover object-center"
           />
 

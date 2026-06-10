@@ -106,17 +106,8 @@ const archiveItems = [
 
 const newsItems = [
   {
-    date: "10.06.2026",
-    image: "/news/news-novye-kadry-uchastnits-dom2.webp",
-    title: "Новые кадры участниц Дом-2 вызвали обсуждение у зрителей",
-    text: "В сети появились свежие кадры участниц проекта Дом-2. Зрители уже обсуждают атмосферу на площадке, образы девушек и возможные новые повороты в отношениях на проекте.",
-    tag: "Новости",
-    href: "/news/novye-kadry-uchastnits-dom2",
-  },
-
-  {
     date: "07.06.2026",
-    image: "/news/news-kristina-lyaskovets-female-friendship.webp",
+    image: "/news/news-kristina-lyaskovets-female-friendship.png",
     title: "Кристина Лясковец рассказала о важности женской дружбы",
     text: "Кристина Лясковец поделилась тёплой публикацией о подругах и женской поддержке. По её словам, очень важно встретить своего человека, который поймёт, выслушает, поддержит и не осудит.",
     tag: "Участники",
@@ -125,7 +116,7 @@ const newsItems = [
 
   {
     date: "07.06.2026",
-    image: "/news/news-vika-salibekova-thanks-project.webp",
+    image: "/news/news-vika-salibekova-thanks-project.jpg",
     title: "Вика Салибекова поблагодарила проект Дом-2 и зрителей",
     text: "Вика Салибекова вышла на связь после ухода с проекта. Она поблагодарила Дом-2 и зрителей за переживания, вспомнила три совместных года на проекте и призналась, что будет скучать по своей комнате.",
     tag: "Участники",
@@ -134,7 +125,7 @@ const newsItems = [
 
   {
     date: "05.06.2026",
-    image: "/news/news-zhenya-horosheva-divorce-sergey.webp",
+    image: "/news/news-zhenya-horosheva-divorce-sergey.png",
     title: "Женя Хорошева хочет развестись с Сергеем",
     text: "Женя Хорошева написала, что устала от конфликтов с Сергеем и хочет спокойно развестись без грязи. По её словам, она мечтает о семье, детях и спокойной жизни, а не о постоянном соперничестве в отношениях.",
     tag: "Отношения",
@@ -143,7 +134,7 @@ const newsItems = [
 
   {
     date: "05.06.2026",
-    image: "/news/news-elina-rakhimova-komanda-popovicha.webp",
+    image: "/news/news-elina-rakhimova-komanda-popovicha.png",
     title: "Элина Рахимова собрала свою команду на Доме 2",
     text: "Пока Галина Маковская улетела в Нижневартовск за собакой и летними вещами, Элина Рахимова начала рекламировать Влада Поповича и позвала подписчиц прийти к нему на проект, предупредив, что он сейчас в паре.",
     tag: "Участники",
@@ -152,7 +143,7 @@ const newsItems = [
 
   {
     date: "04.06.2026",
-    image: "/news/news-elina-rakhimova-danya-sakhnov.webp",
+    image: "/news/news-elina-rakhimova-danya-sakhnov.png",
     title: "Элина Рахимова рассказала о флирте с Даней Сахновым",
     text: "Элина Рахимова сообщила, что всю ночь общалась с экс-участником проекта Даней Сахновым, услышала много комплиментов и даже представила их идеальной парой. Но Даниил прекратил общение, не приехал на поляну и не пригласил её на свидание.",
     tag: "Отношения",
@@ -161,7 +152,7 @@ const newsItems = [
 
   {
     date: "04.06.2026",
-    image: "/news/news-zhenya-horosheva-left-china.webp",
+    image: "/news/news-zhenya-horosheva-left-china.jpg",
     title: "Сергей Хорошев сообщил, что Женя улетела из Китая",
     text: "Сергей Хорошев рассказал, что Женя собрала вещи и улетела. По его словам, они снова наговорили друг другу много лишнего, между ними накопилось недопонимание, и ситуация получилась печальной.",
     tag: "Участники",
@@ -169,7 +160,7 @@ const newsItems = [
 
   {
     date: "01.06.2026",
-    image: "/news/news-karina-titueva-left-project.webp",
+    image: "/news/news-karina-titueva-left-project.jpg",
     title: "Карина Титуева покинула проект Дом-2",
     text: "Участница Дома-2 Карина Титуева покинула телепроект после скандала. Так и не построив любовь на проекте, Карина ушла за периметр.",
     tag: "Участники",
@@ -177,7 +168,7 @@ const newsItems = [
 
   {
     date: "01.06.2026",
-    image: "/news/news-sveta-prel-leon-salibekovy.webp",
+    image: "/news/news-sveta-prel-leon-salibekovy.jpg",
     title: "Светлана Прель переживает за Леончика после ухода Салибековых",
     text: "Светлана Прель высказалась об уходе семьи Салибековых с проекта и заявила, что переживает за Леона. По её словам, история с конфликтом Тиграна, Вики и Карины оказалась правдой, а поведение семьи перешло границы допустимого.",
     tag: "Мнение",
@@ -185,7 +176,7 @@ const newsItems = [
 
   {
     date: "01.06.2026",
-    image: "/news/news-salibekovy-karina-scandal.webp",
+    image: "/news/news-salibekovy-karina-scandal.jpg",
     title: "Салибековы: причина ухода с проекта Дом-2. Скандал с участницей Кариной",
     text: "Появились подробности возможной причины ухода Салибековых с проекта Дом-2. В центре обсуждения — скандал с участницей Кариной, синяки, слёзы и конфликт, который активно обсуждают зрители.",
     tag: "Скандал",
@@ -193,21 +184,21 @@ const newsItems = [
 
   {
     date: "31.05.2026",
-    image: "/news/news-ksusha-zadoynova-recovery.webp",
+    image: "/news/news-ksusha-zadoynova-recovery.jpg",
     title: "Ксюша Задойнова восстановилась после пластической операции",
     text: "Ксюша Задойнова уже полностью восстановилась после пластической операции и снова выходит на связь с подписчиками.",
     tag: "Участники",
   },
   {
     date: "31.05.2026",
-    image: "/news/news-zhenya-horosheva-sergo.webp",
+    image: "/news/news-zhenya-horosheva-sergo.jpg",
     title: "Женя Хорошева о харизме с Серго",
     text: "Женя Хорошева считает, что они с Серго не менее харизматичные, чем кое-кто. Зрители уже обсуждают новые кадры с проекта.",
     tag: "Обсуждения",
   },
   {
     date: "31.05.2026",
-    image: "/news/news-elina-veronika-lookalike.webp",
+    image: "/news/news-elina-veronika-lookalike.jpg",
     title: "Элина Рахимова и Вероника — одно лицо?",
     text: "Зрители заметили сходство: Элина Рахимова и Вероника действительно очень похожи. В сети уже обсуждают это сравнение.",
     tag: "Участники",
@@ -215,28 +206,28 @@ const newsItems = [
 
   {
     date: "30.05.2026",
-    image: "/news/news-kristina-nikita-left-project.webp",
+    image: "/news/news-kristina-nikita-left-project.jpg",
     title: "Кристина и Никита покинули проект",
     text: "Кристина и Никита покинули телепроект Дом-2. Новость уже активно обсуждают зрители, а поклонники пары следят за дальнейшими событиями за периметром.",
     tag: "Участники",
   },
   {
     date: "29.05.2026",
-    image: "/news/news-chelovek-goda.webp",
+    image: "/news/news-chelovek-goda.jpg",
     title: "Итоги второго этапа конкурса «Человек года»",
     text: "Света Прель подвела итоги нового этапа конкурса. Победу одержала Элина Рахимова, второе место заняла Кристина Лясковец, а третье место стало неожиданностью для зрителей.",
     tag: "Конкурс",
   },
   {
     date: "29.05.2026",
-    image: "/news/news-romashovy.webp",
+    image: "/news/news-romashovy.jpg",
     title: "Женя и Настя Ромашовы поделились радостной новостью",
     text: "Ромашовы сообщили поклонникам, что теперь их трое. Пара поделилась трогательной новостью и получила много поздравлений от зрителей проекта.",
     tag: "Семья",
   },
   {
     date: "29.05.2026",
-    image: "/news/news-tigran-vika-salibekovy.webp",
+    image: "/news/news-tigran-vika-salibekovy.jpg",
     title: "Тигран и Вика Салибековы покинули телепроект Дом-2",
     text: "Стало известно, что Тигран и Вика Салибековы покинули телепроект Дом-2. По словам Кристины Лясковец, семья решила строить любовь за периметром.",
     tag: "Участники",
@@ -292,7 +283,7 @@ export default function HomePage() {
   const currentWatchUrl = getYouTubeWatchUrl(siteConfig.currentVideoId);
 
   return (
-    <main className="min-h-screen overflow-hidden bg-slate-950 bg-[url('/backgrounds/rain-window.webp')] bg-cover bg-center bg-fixed text-slate-950">
+    <main className="min-h-screen overflow-hidden bg-slate-950 bg-[url('/backgrounds/rain-window.jpg')] bg-cover bg-center bg-fixed text-slate-950">
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(219,234,254,0.95),transparent_34%),radial-gradient(circle_at_top_right,rgba(243,232,255,0.90),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(224,242,254,0.92),transparent_38%),linear-gradient(135deg,#eef6ff_0%,#f8fbff_48%,#f4efff_100%)]" />
         <div className="absolute -left-24 top-24 h-96 w-96 rounded-full bg-sky-200/45 blur-3xl" />
@@ -343,7 +334,7 @@ export default function HomePage() {
       <div className="relative z-10 mx-auto max-w-[1240px] px-4 pb-8 pt-28 md:px-6 md:pb-12 md:pt-32">
         <section className="mb-8 grid gap-6 lg:grid-cols-[minmax(0,1fr)_300px]">
           <GlassCard className="relative overflow-hidden p-5 md:p-8">
-            <div className="absolute inset-0 bg-[url('/backgrounds/hero-rain-window.webp')] bg-cover bg-center" />
+            <div className="absolute inset-0 bg-[url('/backgrounds/hero-rain-window.jpg')] bg-cover bg-center" />
             <div className="absolute inset-0 bg-white/72 backdrop-blur-[2px]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.70),transparent_38%),radial-gradient(circle_at_bottom_right,rgba(219,234,254,0.58),transparent_44%)]" />
 
@@ -382,8 +373,6 @@ export default function HomePage() {
                         <iframe
                           className="h-full w-full"
                           src={getYouTubeShortEmbedUrl(item.videoId)}
-                          loading="lazy"
-                          referrerPolicy="strict-origin-when-cross-origin"
                           title={item.title}
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                           allowFullScreen
@@ -428,8 +417,6 @@ export default function HomePage() {
                 <iframe
                   className="h-full w-full"
                   src={embedUrl}
-                  loading="lazy"
-                  referrerPolicy="strict-origin-when-cross-origin"
                   title="Дом 2 смотреть онлайн — свежий выпуск"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
@@ -468,7 +455,7 @@ export default function HomePage() {
                     <div className="relative h-20 w-28 shrink-0 overflow-hidden rounded-2xl bg-slate-200 shadow-sm">
                       <img
                         src={item.image}
-                        alt={item.title} loading="lazy" decoding="async"
+                        alt={item.title}
                         className="h-full w-full object-cover object-center transition duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 flex items-center justify-center bg-slate-950/10">
@@ -512,7 +499,7 @@ export default function HomePage() {
                 <div className="relative overflow-hidden rounded-[1.4rem] bg-white/86 shadow-lg">
                   <img
                     src={item.image}
-                    alt={item.title} loading="lazy" decoding="async"
+                    alt={item.title}
                     className="aspect-[4/5] w-full object-cover object-center transition-transform duration-300 md:group-hover:scale-105"
                   />
                   <div className="absolute left-3 top-3 rounded-full border border-white/80 bg-white/86 px-3 py-1 text-xs font-black text-slate-800 shadow-lg backdrop-blur-xl">

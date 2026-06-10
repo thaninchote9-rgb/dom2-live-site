@@ -9,7 +9,7 @@ export const metadata = {
     description: "Вика вспомнила три совместных года на проекте, предложение, беременность, свадьбу и призналась, что уходит с большой семьёй.",
     url: "https://dom2-live.ru/news/vika-salibekova-poblagodarila-proekt",
     type: "article",
-    images: ["/news/news-vika-salibekova-thanks-project.webp"],
+    images: ["/news/news-vika-salibekova-thanks-project.jpg"],
   },
 };
 
@@ -42,8 +42,8 @@ export default function NewsArticlePage() {
 
         <section className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/88 shadow-[0_24px_90px_rgba(15,23,42,0.30)] backdrop-blur-3xl">
           <img
-            src="/news/news-vika-salibekova-thanks-project.webp"
-            alt="Вика Салибекова поблагодарила проект Дом-2" loading="lazy" decoding="async"
+            src="/news/news-vika-salibekova-thanks-project.jpg"
+            alt="Вика Салибекова поблагодарила проект Дом-2"
             className="w-full bg-slate-200 object-cover object-center"
           />
 

@@ -44,7 +44,7 @@
 
 Фото справа вверху хранится здесь:
 
-`public/photos/streamers-main.webp`
+`public/photos/streamers-main.jpg`
 
 Чтобы заменить фото, загрузите новое изображение с тем же именем `streamers-main.jpg` в эту папку и сделайте commit changes.
 
@@ -53,7 +53,7 @@
 
 Фон сайта хранится здесь:
 
-`public/backgrounds/rain-window.webp`
+`public/backgrounds/rain-window.jpg`
 
 Чтобы заменить фон, загрузите новое изображение с тем же именем `rain-window.jpg` в эту папку и сделайте commit changes.
 
@@ -155,7 +155,7 @@
 
 Изображение новости:
 
-`public/news/news-tigran-vika-salibekovy.webp`
+`public/news/news-tigran-vika-salibekovy.jpg`
 
 
 ## Обновление текущего эфира
@@ -179,7 +179,7 @@
 
 Изображение новости:
 
-`public/news/news-kristina-nikita-left-project.webp`
+`public/news/news-kristina-nikita-left-project.jpg`
 
 
 ## SEO-страницы для Google и Яндекса
@@ -404,7 +404,7 @@
 
 Изображение добавлено в:
 
-`public/news/news-salibekovy-karina-scandal.webp`
+`public/news/news-salibekovy-karina-scandal.jpg`
 
 ## Эффект наведения на новости только для ПК
 
@@ -425,7 +425,7 @@
 
 Изображение добавлено в:
 
-`public/news/news-sveta-prel-leon-salibekovy.webp`
+`public/news/news-sveta-prel-leon-salibekovy.jpg`
 
 ## Обновление главного видео
 
@@ -457,7 +457,7 @@
 
 Изображение добавлено в:
 
-`public/news/news-karina-titueva-left-project.webp`
+`public/news/news-karina-titueva-left-project.jpg`
 
 ## Ограничение новостей на главной
 
@@ -499,7 +499,7 @@
 
 Изображение добавлено в:
 
-`public/news/news-zhenya-horosheva-left-china.webp`
+`public/news/news-zhenya-horosheva-left-china.jpg`
 
 
 ## Обновление главного видео 09.06.2026

@@ -9,7 +9,7 @@ export const metadata = {
     description: "Элина всю ночь общалась с Даней Сахновым, услышала комплименты и представила их идеальной парой, но встреча так и не состоялась.",
     url: "https://dom2-live.ru/news/elina-rakhimova-danya-sakhnov",
     type: "article",
-    images: ["/news/news-elina-rakhimova-danya-sakhnov.webp"],
+    images: ["/news/news-elina-rakhimova-danya-sakhnov.png"],
   },
 };
 
@@ -42,8 +42,8 @@ export default function NewsArticlePage() {
 
         <section className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/88 shadow-[0_24px_90px_rgba(15,23,42,0.30)] backdrop-blur-3xl">
           <img
-            src="/news/news-elina-rakhimova-danya-sakhnov.webp"
-            alt="Элина Рахимова и Даня Сахнов" loading="lazy" decoding="async"
+            src="/news/news-elina-rakhimova-danya-sakhnov.png"
+            alt="Элина Рахимова и Даня Сахнов"
             className="w-full bg-slate-200 object-cover object-center"
           />
 
