@@ -168,23 +168,21 @@ export default function NewsPage() {
             </span>
           </a>
 
-          <nav className="hidden md:flex">
-            <div className="flex items-center gap-2 rounded-full bg-white/72 px-2 py-2 text-sm font-black text-slate-900 shadow-lg backdrop-blur-2xl">
-              <a href="/#watch" className="rounded-full px-4 py-2 text-slate-700 transition hover:text-slate-900">Эфир</a>
-              <a href="/archive" className="rounded-full px-4 py-2 text-slate-700 transition hover:text-slate-900">Предыдущие выпуски</a>
-              <a href="/news" className="rounded-full bg-white/90 px-4 py-2 text-slate-950 shadow-md transition hover:-translate-y-0.5 hover:bg-white">Новости</a>
-              <a href="https://www.youtube.com/@ThomasKing4771/shorts" target="_blank" rel="noreferrer" className="rounded-full px-4 py-2 text-slate-700 transition hover:text-slate-900">Видео участников</a>
+          <nav className="hidden rounded-full bg-gradient-to-r from-sky-400 via-cyan-300 to-violet-500 p-[2px] shadow-[0_0_26px_rgba(56,189,248,0.45),0_0_38px_rgba(139,92,246,0.28)] md:flex">
+            <div className="flex items-center gap-2 rounded-full bg-white/64 px-3 py-2 text-sm font-black text-slate-900 backdrop-blur-2xl">
+              <a href="/#watch" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-sky-800 shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-sky-700 hover:shadow-[0_0_18px_rgba(56,189,248,0.45)]">Смотреть эфир</a>
+              <a href="/archive" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-cyan-800 shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-cyan-700 hover:shadow-[0_0_18px_rgba(34,211,238,0.45)]">Предыдущие выпуски</a>
+              <a href="/news" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-violet-800 shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-violet-700 hover:shadow-[0_0_18px_rgba(139,92,246,0.45)]">Новости</a>
+              <a href="/#about" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-fuchsia-800 shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-fuchsia-700 hover:shadow-[0_0_18px_rgba(217,70,239,0.42)]">О проекте</a>
             </div>
           </nav>
 
           <div className="flex items-center gap-2">
             <span className="hidden text-sm font-black text-slate-800/90 drop-shadow-sm sm:inline">Подписывайтесь на</span>
-            <a href="https://www.youtube.com/@MaxBrabus" target="_blank" rel="noreferrer" className="rounded-lg bg-red-600 px-4 py-2 text-sm font-black text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-red-700 flex items-center gap-2">
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" className="rounded-full border border-red-500/50 bg-white/84 px-4 py-2 text-sm font-black text-red-600 shadow-lg backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-red-500/80 hover:bg-red-50/90 hover:text-red-700">
               YouTube
             </a>
-            <a href="https://t.me/maxbrabusstrim" target="_blank" rel="noreferrer" className="rounded-lg bg-sky-500 px-4 py-2 text-sm font-black text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-sky-600 flex items-center gap-2">
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a11.955 11.955 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.365-1.417.155-.479-.148-1.448-.464-2.082-.896-.822-.549-.13-.846.164-1.222.086-.096 1.409-1.292 2.734-2.98.172-.184.282-.428.282-.672V8.94c0-.272-.113-.537-.311-.729l-.034-.035A1.028 1.028 0 0 0 8.9 7.8c-.244.026-.456.126-.628.271-.293.249-.566.585-.756 1.037-.066.16-.108.315-.11.468-.04.923-.1 2.267-.12 3.22-.017.945-.05 2.156-.064 3.08v.382c0 .277.116.543.315.734l.035.035c.278.24.66.318 1.027.259.24-.04.46-.14.628-.271.293-.249.566-.585.757-1.037.065-.16.107-.315.11-.468.04-.923.099-2.267.12-3.22.016-.945.05-2.157.064-3.08z"/></svg>
+            <a href="https://t.me/" target="_blank" rel="noreferrer" className="rounded-full border border-sky-500/55 bg-white/84 px-4 py-2 text-sm font-black text-sky-600 shadow-lg backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-sky-500/85 hover:bg-sky-50/90 hover:text-sky-700">
               Telegram
             </a>
           </div>
