@@ -1,0 +1,26 @@
+{
+  "name": "Дом 2 Live",
+  "short_name": "Дом 2 Live",
+  "description": "Дом 2 смотреть онлайн, свежие выпуски, эфиры, архив и новости.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#eaf2ff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48 64x64 128x128 256x256",
+      "type": "image/x-icon"
+    }
+  ]
+}
