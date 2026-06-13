@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Дом 2 смотреть 2026 — новые выпуски онлайн",
-  description: "Дом 2 смотреть 2026 — новые выпуски онлайн: свежие выпуски, сегодняшний эфир, архив и новости участников проекта.",
-  alternates: { canonical: "https://dom2-live.ru/dom-2-smotret-2026" },
+  title: "Дом 2 сегодняшний выпуск — смотреть онлайн",
+  description: "Дом 2 сегодняшний выпуск — смотреть онлайн: свежие выпуски, сегодняшний эфир, архив и новости участников проекта.",
+  alternates: { canonical: "https://dom2-live.ru/dom-2-segodnyashniy-vypusk" },
 };
 
 export default function SeoPage() {
@@ -26,11 +26,11 @@ export default function SeoPage() {
       <div className="relative z-10 mx-auto max-w-[1240px] px-4 pb-12 pt-28 md:px-6 md:pt-32">
         <section className="rounded-[2rem] border border-white/80 bg-white/86 p-7 shadow-[0_24px_90px_rgba(15,23,42,0.22)] backdrop-blur-3xl md:p-10">
           <div className="mb-4 inline-flex rounded-full border border-white/80 bg-white/80 px-4 py-2 text-sm font-black text-slate-700 shadow-md">SEO-раздел Дом 2 Live</div>
-          <h1 className="mb-5 text-4xl font-black leading-tight text-slate-950 md:text-6xl">Дом 2 смотреть 2026</h1>
-          <p className="max-w-3xl text-lg leading-8 text-slate-800">На этой странице собраны быстрые переходы к актуальному эфиру, архиву выпусков и свежим новостям Дом 2. Раздел создан для зрителей, которые ищут дом 2 смотреть 2026.</p>
-          <div className="mt-7 flex flex-wrap gap-3"><span className="rounded-full border border-white/80 bg-white/80 px-4 py-2 text-sm font-black text-slate-800 shadow-md">дом 2 смотреть 2026</span>
-<span className="rounded-full border border-white/80 bg-white/80 px-4 py-2 text-sm font-black text-slate-800 shadow-md">дом 2 2026</span>
-<span className="rounded-full border border-white/80 bg-white/80 px-4 py-2 text-sm font-black text-slate-800 shadow-md">дом 2 свежие выпуски 2026</span></div>
+          <h1 className="mb-5 text-4xl font-black leading-tight text-slate-950 md:text-6xl">Дом 2 сегодняшний выпуск</h1>
+          <p className="max-w-3xl text-lg leading-8 text-slate-800">На этой странице собраны быстрые переходы к актуальному эфиру, архиву выпусков и свежим новостям Дом 2. Раздел создан для зрителей, которые ищут дом 2 сегодняшний выпуск.</p>
+          <div className="mt-7 flex flex-wrap gap-3"><span className="rounded-full border border-white/80 bg-white/80 px-4 py-2 text-sm font-black text-slate-800 shadow-md">дом 2 сегодняшний выпуск</span>
+<span className="rounded-full border border-white/80 bg-white/80 px-4 py-2 text-sm font-black text-slate-800 shadow-md">дом 2 смотреть онлайн сегодняшний</span>
+<span className="rounded-full border border-white/80 bg-white/80 px-4 py-2 text-sm font-black text-slate-800 shadow-md">дом 2 сегодня</span></div>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="/#watch" className="rounded-full bg-red-600 px-5 py-3 text-sm font-black text-white shadow-[0_10px_30px_rgba(220,38,38,0.32)] hover:bg-red-700">Смотреть эфир</a>
             <a href="/archive" className="rounded-full border border-white/80 bg-white/80 px-5 py-3 text-sm font-black text-slate-800 shadow-lg hover:bg-white">Предыдущие выпуски</a>

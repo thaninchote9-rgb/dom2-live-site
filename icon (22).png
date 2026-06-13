@@ -1,15 +1,15 @@
 export const metadata = {
-  title: "Андрей Черкасов подтвердил роль наставниц Гракович и Рахимовой — Дом 2",
-  description: "Андрей Черкасов подтвердил, что Вероника Гракович и Элина Рахимова помогают молодёжному коллективу на проекте Дом-2 в роли наставниц.",
+  title: "Кристина Лясковец о женской дружбе и поддержке — Дом 2 новости",
+  description: "Кристина Лясковец поделилась тёплой публикацией о подругах, женской поддержке и важности встретить своего человека.",
   alternates: {
-    canonical: "https://dom2-live.ru/news/andrey-cherkasov-nastavnitsy-grakovich-rakhimova",
+    canonical: "https://dom2-live.ru/news/kristina-lyaskovets-zhenskaya-druzhba",
   },
   openGraph: {
-    title: "Андрей Черкасов подтвердил роль наставниц Гракович и Рахимовой",
-    description: "Зрители давно интересовались функциями тандема Вероники Гракович и Элины Рахимовой на поляне. Черкасов подтвердил их наставническую роль.",
-    url: "https://dom2-live.ru/news/andrey-cherkasov-nastavnitsy-grakovich-rakhimova",
+    title: "Кристина Лясковец рассказала о важности женской дружбы",
+    description: "Кристина Лясковец написала, что апрель подарил ей подруг и напомнила, как важны понимание, поддержка и дружба без осуждения.",
+    url: "https://dom2-live.ru/news/kristina-lyaskovets-zhenskaya-druzhba",
     type: "article",
-    images: ["/news/news-cherkasov-grakovich-rakhimova.png"],
+    images: ["/news/news-kristina-lyaskovets-female-friendship.png"],
   },
 };
 
@@ -42,41 +42,37 @@ export default function NewsArticlePage() {
 
         <section className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/88 shadow-[0_24px_90px_rgba(15,23,42,0.30)] backdrop-blur-3xl">
           <img
-            src="/news/news-cherkasov-grakovich-rakhimova.png"
-            alt="Вероника Гракович и Элина Рахимова на проекте Дом-2"
+            src="/news/news-kristina-lyaskovets-female-friendship.png"
+            alt="Кристина Лясковец рассказала о женской дружбе"
             className="w-full bg-slate-200 object-cover object-center"
           />
 
           <div className="p-6 md:p-10">
             <div className="mb-4 flex flex-wrap gap-3">
-              <span className="rounded-full bg-slate-950 px-4 py-2 text-sm font-black text-white">10.06.2026</span>
+              <span className="rounded-full bg-slate-950 px-4 py-2 text-sm font-black text-white">07.06.2026</span>
               <span className="rounded-full border border-white/80 bg-white/86 px-4 py-2 text-sm font-black text-slate-800 shadow-lg">Участники</span>
             </div>
 
             <h1 className="mb-5 text-3xl font-black leading-tight text-slate-950 md:text-5xl">
-              Андрей Черкасов подтвердил роль наставниц Гракович и Рахимовой на проекте
+              Кристина Лясковец рассказала о важности женской дружбы
             </h1>
 
             <p className="mb-5 text-lg leading-8 text-slate-800">
-              Зрители Дома-2 давно интересуются теми функциями, которые выполняет тандем Вероники Гракович и Элины Рахимовой на поляне в молодёжном коллективе.
+              Кристина Лясковец поделилась тёплой публикацией о подругах. Она написала, что апрель подарил ей близких людей, и подчеркнула, как важно встретить «своего человека».
             </p>
 
             <p className="mb-5 text-lg leading-8 text-slate-800">
-              Андрей Черкасов подтвердил, что девушки действительно находятся на проекте не просто как участницы обсуждений, а помогают молодым ребятам в роли наставниц.
-            </p>
-
-            <p className="mb-5 text-lg leading-8 text-slate-800">
-              Такой формат объясняет, почему Гракович и Рахимова часто оказываются рядом с новыми участниками, комментируют ситуации на поляне и помогают разбирать конфликты внутри коллектива.
+              По словам Кристины, настоящая женская поддержка — это когда тебя поймут, выслушают, поддержат и не осудят. Участница напомнила подписчикам, что такая дружба особенно ценна.
             </p>
 
             <p className="text-lg leading-8 text-slate-800">
-              Теперь зрителям стало понятнее, зачем проекту нужен этот тандем. Обсуждение роли наставниц продолжается, а поклонники Дома-2 следят, как это повлияет на атмосферу в молодёжном составе.
+              Публикация получилась очень личной и эмоциональной: Кристина с теплом высказалась о подругах и отдельно обратилась к тем, кто не верит в женскую дружбу.
             </p>
 
             <div className="mt-8 grid gap-3 rounded-[1.5rem] border border-white/80 bg-slate-50/80 p-5 text-sm font-bold text-slate-700 md:grid-cols-3">
               <a href="/#watch" className="rounded-full bg-red-600 px-5 py-3 text-center text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-red-700">Смотреть свежий эфир</a>
               <a href="/news" className="rounded-full bg-white px-5 py-3 text-center text-slate-900 shadow-lg transition hover:-translate-y-0.5 hover:bg-slate-50">Читать другие новости</a>
-              <a href="https://t.me/maxbrabusstrim" target="_blank" rel="noreferrer" className="rounded-full bg-sky-500 px-5 py-3 text-center text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-sky-600">Обсудить</a>
+              <a href="https://t.me/maxbrabusstrim" className="rounded-full bg-sky-500 px-5 py-3 text-center text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-sky-600">Обсудить</a>
             </div>
           </div>
         </section>

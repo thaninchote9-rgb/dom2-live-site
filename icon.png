@@ -1,11 +1,11 @@
 export const metadata = {
-  title: "Дом 2 смотреть онлайн — свежий выпуск сегодня",
-  description: "Смотрите Дом 2 онлайн: свежие выпуски, актуальный эфир, архив стримов и новости участников проекта.",
-  alternates: { canonical: "https://dom2-live.ru/dom-2-smotret-online" },
+  title: "Дом 2 архив выпусков — смотреть прошлые эфиры",
+  description: "Архив выпусков Дом 2: прошлые эфиры, свежие серии, новости участников и удобная навигация по датам.",
+  alternates: { canonical: "https://dom2-live.ru/dom-2-arhiv" },
   openGraph: {
-    title: "Дом 2 смотреть онлайн — свежий выпуск сегодня",
-    description: "Смотрите Дом 2 онлайн: свежие выпуски, актуальный эфир, архив стримов и новости участников проекта.",
-    url: "https://dom2-live.ru/dom-2-smotret-online",
+    title: "Дом 2 архив выпусков — смотреть прошлые эфиры",
+    description: "Архив выпусков Дом 2: прошлые эфиры, свежие серии, новости участников и удобная навигация по датам.",
+    url: "https://dom2-live.ru/dom-2-arhiv",
     siteName: "Дом 2 Live",
     type: "website",
   },
@@ -19,13 +19,13 @@ export default function SeoPage() {
         <a href="/" className="mb-6 inline-flex rounded-full border border-white/70 bg-white/80 px-5 py-3 text-sm font-black text-slate-800 shadow-lg backdrop-blur-2xl hover:bg-white">← На главную</a>
         <section className="rounded-[2rem] border border-white/75 bg-white/82 p-7 shadow-[0_24px_90px_rgba(15,23,42,0.32)] backdrop-blur-3xl md:p-10">
           <div className="mb-4 inline-flex rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-black text-slate-600 shadow-md">Дом 2 Live</div>
-          <h1 className="mb-5 text-4xl font-black leading-tight text-slate-950 md:text-6xl">Дом 2 смотреть онлайн</h1>
-          <p className="max-w-3xl text-lg leading-8 text-slate-700">На этой странице собрана удобная навигация для просмотра свежих выпусков Дом 2 онлайн. Здесь можно перейти к актуальному эфиру, архиву выпусков и новостям участников.</p>
+          <h1 className="mb-5 text-4xl font-black leading-tight text-slate-950 md:text-6xl">Дом 2 архив выпусков</h1>
+          <p className="max-w-3xl text-lg leading-8 text-slate-700">Архив нужен для зрителей, которые пропустили эфир и хотят вернуться к предыдущим выпускам Дом 2.</p>
           <div className="mt-7 flex flex-wrap gap-3">
-              <span className="rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-black text-slate-700 shadow-md backdrop-blur-xl">дом 2 смотреть онлайн</span>
-              <span className="rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-black text-slate-700 shadow-md backdrop-blur-xl">дом 2 онлайн</span>
-              <span className="rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-black text-slate-700 shadow-md backdrop-blur-xl">дом 2 свежий выпуск</span>
-              <span className="rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-black text-slate-700 shadow-md backdrop-blur-xl">дом 2 эфир</span>
+              <span className="rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-black text-slate-700 shadow-md backdrop-blur-xl">дом 2 архив</span>
+              <span className="rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-black text-slate-700 shadow-md backdrop-blur-xl">дом 2 архив выпусков</span>
+              <span className="rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-black text-slate-700 shadow-md backdrop-blur-xl">дом 2 прошлые серии</span>
+              <span className="rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-black text-slate-700 shadow-md backdrop-blur-xl">дом 2 смотреть архив</span>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="/#watch" className="rounded-full bg-slate-950 px-5 py-3 text-sm font-black text-white shadow-lg hover:bg-slate-800">Смотреть эфир</a>

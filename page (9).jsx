@@ -1,59 +1,58 @@
 export const metadata = {
-  title: "Дом 2 свежие серии — смотреть новый выпуск",
-  description: "Свежие серии Дом 2, новый выпуск, эфир сегодня, архив и новости участников в одном месте.",
-  alternates: { canonical: "https://dom2-live.ru/dom-2-svezhie-serii" },
-  openGraph: {
-    title: "Дом 2 свежие серии — смотреть новый выпуск",
-    description: "Свежие серии Дом 2, новый выпуск, эфир сегодня, архив и новости участников в одном месте.",
-    url: "https://dom2-live.ru/dom-2-svezhie-serii",
-    siteName: "Дом 2 Live",
-    type: "website",
-  },
+  title: "Дом 2 смотреть 2026 — новые выпуски онлайн",
+  description: "Дом 2 смотреть 2026 — новые выпуски онлайн: свежие выпуски, сегодняшний эфир, архив и новости участников проекта.",
+  alternates: { canonical: "https://dom2-live.ru/dom-2-smotret-2026" },
 };
 
 export default function SeoPage() {
   return (
-    <main className="min-h-screen bg-slate-950 bg-[url('/backgrounds/rain-window.jpg')] bg-cover bg-center bg-fixed text-slate-950">
-      <div className="fixed inset-0 bg-slate-950/46 backdrop-blur-[4px]" />
-      <div className="relative z-10 mx-auto max-w-[1120px] px-4 py-10 md:px-6 md:py-14">
-        <a href="/" className="mb-6 inline-flex rounded-full border border-white/70 bg-white/80 px-5 py-3 text-sm font-black text-slate-800 shadow-lg backdrop-blur-2xl hover:bg-white">← На главную</a>
-        <section className="rounded-[2rem] border border-white/75 bg-white/82 p-7 shadow-[0_24px_90px_rgba(15,23,42,0.32)] backdrop-blur-3xl md:p-10">
-          <div className="mb-4 inline-flex rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-black text-slate-600 shadow-md">Дом 2 Live</div>
-          <h1 className="mb-5 text-4xl font-black leading-tight text-slate-950 md:text-6xl">Дом 2 свежие серии</h1>
-          <p className="max-w-3xl text-lg leading-8 text-slate-700">Свежие серии Дом 2 интересуют зрителей каждый день. Здесь собраны переходы к новому выпуску, архиву эфиров и последним новостям проекта.</p>
-          <div className="mt-7 flex flex-wrap gap-3">
-              <span className="rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-black text-slate-700 shadow-md backdrop-blur-xl">дом 2 свежие серии</span>
-              <span className="rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-black text-slate-700 shadow-md backdrop-blur-xl">дом 2 новый выпуск</span>
-              <span className="rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-black text-slate-700 shadow-md backdrop-blur-xl">дом 2 свежий выпуск</span>
-              <span className="rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-black text-slate-700 shadow-md backdrop-blur-xl">дом 2 сегодня</span>
-          </div>
+    <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(219,234,254,0.95),transparent_34%),radial-gradient(circle_at_top_right,rgba(243,232,255,0.90),transparent_36%),linear-gradient(135deg,#eef6ff_0%,#f8fbff_48%,#f4efff_100%)] text-slate-950">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/65 bg-white/82 shadow-lg backdrop-blur-3xl">
+  <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6">
+    <a href="/" className="flex items-center gap-3">
+      <span className="flex h-11 w-11 items-center justify-center rounded-full border border-white/80 bg-white/84 text-xl shadow-lg">▶️</span>
+      <span><span className="block text-lg font-black leading-5 text-slate-950">Дом 2 Live</span><span className="block text-xs font-bold text-slate-600">стримы • эфиры • архив</span></span>
+    </a>
+    <nav className="hidden rounded-full bg-gradient-to-r from-sky-400 via-cyan-300 to-violet-500 p-[2px] shadow-[0_0_26px_rgba(56,189,248,0.45),0_0_38px_rgba(139,92,246,0.28)] md:flex">
+      <div className="flex items-center gap-2 rounded-full bg-white/64 px-3 py-2 text-sm font-black text-slate-900 backdrop-blur-2xl">
+        <a href="/#watch" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-sky-800 shadow-md">Смотреть эфир</a>
+        <a href="/archive" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-cyan-800 shadow-md">Предыдущие выпуски</a>
+        <a href="/news" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-violet-800 shadow-md">Новости</a>
+        <a href="/#about" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-fuchsia-800 shadow-md">О проекте</a>
+      </div>
+    </nav>
+  </div>
+</header>
+      <div className="relative z-10 mx-auto max-w-[1240px] px-4 pb-12 pt-28 md:px-6 md:pt-32">
+        <section className="rounded-[2rem] border border-white/80 bg-white/86 p-7 shadow-[0_24px_90px_rgba(15,23,42,0.22)] backdrop-blur-3xl md:p-10">
+          <div className="mb-4 inline-flex rounded-full border border-white/80 bg-white/80 px-4 py-2 text-sm font-black text-slate-700 shadow-md">SEO-раздел Дом 2 Live</div>
+          <h1 className="mb-5 text-4xl font-black leading-tight text-slate-950 md:text-6xl">Дом 2 смотреть 2026</h1>
+          <p className="max-w-3xl text-lg leading-8 text-slate-800">На этой странице собраны быстрые переходы к актуальному эфиру, архиву выпусков и свежим новостям Дом 2. Раздел создан для зрителей, которые ищут дом 2 смотреть 2026.</p>
+          <div className="mt-7 flex flex-wrap gap-3"><span className="rounded-full border border-white/80 bg-white/80 px-4 py-2 text-sm font-black text-slate-800 shadow-md">дом 2 смотреть 2026</span>
+<span className="rounded-full border border-white/80 bg-white/80 px-4 py-2 text-sm font-black text-slate-800 shadow-md">дом 2 2026</span>
+<span className="rounded-full border border-white/80 bg-white/80 px-4 py-2 text-sm font-black text-slate-800 shadow-md">дом 2 свежие выпуски 2026</span></div>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="/#watch" className="rounded-full bg-slate-950 px-5 py-3 text-sm font-black text-white shadow-lg hover:bg-slate-800">Смотреть эфир</a>
-            <a href="/#archive" className="rounded-full border border-white/70 bg-white/80 px-5 py-3 text-sm font-black text-slate-800 shadow-lg hover:bg-white">Предыдущие выпуски</a>
-            <a href="/#news" className="rounded-full border border-white/70 bg-white/80 px-5 py-3 text-sm font-black text-slate-800 shadow-lg hover:bg-white">Новости</a>
+            <a href="/#watch" className="rounded-full bg-red-600 px-5 py-3 text-sm font-black text-white shadow-[0_10px_30px_rgba(220,38,38,0.32)] hover:bg-red-700">Смотреть эфир</a>
+            <a href="/archive" className="rounded-full border border-white/80 bg-white/80 px-5 py-3 text-sm font-black text-slate-800 shadow-lg hover:bg-white">Предыдущие выпуски</a>
+            <a href="/news" className="rounded-full border border-white/80 bg-white/80 px-5 py-3 text-sm font-black text-slate-800 shadow-lg hover:bg-white">Новости</a>
           </div>
         </section>
-        <section className="mt-6 grid gap-5">
-          <article className="rounded-[1.6rem] border border-white/70 bg-white/78 p-6 shadow-xl backdrop-blur-3xl">
-            <h2 className="mb-3 text-2xl font-black text-slate-950">Свежий выпуск и архив</h2>
-            <p className="text-base leading-8 text-slate-700">На сайте обновляется текущий эфир, а предыдущие выпуски переносятся в архив. Так зрителям удобно смотреть Дом 2 онлайн и возвращаться к прошлым сериям.</p>
-          </article>
-          <article className="rounded-[1.6rem] border border-white/70 bg-white/78 p-6 shadow-xl backdrop-blur-3xl">
-            <h2 className="mb-3 text-2xl font-black text-slate-950">Новости участников</h2>
-            <p className="text-base leading-8 text-slate-700">Рядом с выпусками публикуются новости участников проекта, уходы, конкурсы, семейные события и обсуждения зрителей.</p>
-          </article>
-          <article className="rounded-[1.6rem] border border-white/70 bg-white/78 p-6 shadow-xl backdrop-blur-3xl">
-            <h2 className="mb-3 text-2xl font-black text-slate-950">Удобная навигация</h2>
-            <p className="text-base leading-8 text-slate-700">Страница помогает быстро перейти к эфиру, архиву и новостям, а также усиливает структуру сайта для Google и Яндекса.</p>
-          </article>
+
+        <section className="mt-6 grid gap-5 md:grid-cols-3">
+          <article className="rounded-[1.6rem] border border-white/80 bg-white/84 p-6 shadow-xl backdrop-blur-3xl"><h2 className="mb-3 text-2xl font-black text-slate-950">Свежий эфир</h2><p className="text-base leading-8 text-slate-800">На главной странице отображается актуальное видео. Когда появляется новый выпуск, предыдущий переносится в архив.</p></article>
+          <article className="rounded-[1.6rem] border border-white/80 bg-white/84 p-6 shadow-xl backdrop-blur-3xl"><h2 className="mb-3 text-2xl font-black text-slate-950">Архив выпусков</h2><p className="text-base leading-8 text-slate-800">В архиве можно найти прошлые эфиры и выпуски Дом 2 по датам.</p></article>
+          <article className="rounded-[1.6rem] border border-white/80 bg-white/84 p-6 shadow-xl backdrop-blur-3xl"><h2 className="mb-3 text-2xl font-black text-slate-950">Новости проекта</h2><p className="text-base leading-8 text-slate-800">Раздел новостей помогает следить за участниками, обсуждениями и главными событиями.</p></article>
         </section>
-        <section className="mt-6 rounded-[2rem] border border-white/75 bg-white/82 p-7 shadow-xl backdrop-blur-3xl md:p-10">
-          <h2 className="mb-4 text-3xl font-black text-slate-950">Популярные разделы</h2>
-          <div className="grid gap-3 md:grid-cols-2">
-            <a className="rounded-3xl border border-white/70 bg-white/75 p-5 font-black text-slate-800 shadow-md hover:bg-white" href="/dom-2-smotret-online">Дом 2 смотреть онлайн</a>
-            <a className="rounded-3xl border border-white/70 bg-white/75 p-5 font-black text-slate-800 shadow-md hover:bg-white" href="/dom-2-svezhie-serii">Дом 2 свежие серии</a>
-            <a className="rounded-3xl border border-white/70 bg-white/75 p-5 font-black text-slate-800 shadow-md hover:bg-white" href="/dom-2-segodnya">Дом 2 сегодня</a>
-            <a className="rounded-3xl border border-white/70 bg-white/75 p-5 font-black text-slate-800 shadow-md hover:bg-white" href="/novosti">Новости Дом 2</a>
+
+        <section className="mt-6 rounded-[2rem] border border-white/80 bg-white/86 p-7 shadow-xl backdrop-blur-3xl md:p-10">
+          <h2 className="mb-5 text-3xl font-black text-slate-950">Популярные разделы</h2>
+          <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+            <a href="/dom-2-smotret-online" className="rounded-3xl border border-white/80 bg-white/76 p-5 font-black text-slate-800 shadow-md">Дом 2 смотреть онлайн</a>
+            <a href="/dom-2-svezhie-serii" className="rounded-3xl border border-white/80 bg-white/76 p-5 font-black text-slate-800 shadow-md">Дом 2 свежие серии</a>
+            <a href="/dom-2-segodnyashniy-vypusk" className="rounded-3xl border border-white/80 bg-white/76 p-5 font-black text-slate-800 shadow-md">Сегодняшний выпуск</a>
+            <a href="/dom-2-smotret-online-besplatno" className="rounded-3xl border border-white/80 bg-white/76 p-5 font-black text-slate-800 shadow-md">Смотреть бесплатно</a>
+            <a href="/dom-2-efir-smotret-online" className="rounded-3xl border border-white/80 bg-white/76 p-5 font-black text-slate-800 shadow-md">Эфир онлайн</a>
+            <a href="/news" className="rounded-3xl border border-white/80 bg-white/76 p-5 font-black text-slate-800 shadow-md">Новости Дом 2</a>
           </div>
         </section>
       </div>

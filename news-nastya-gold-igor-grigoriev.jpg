@@ -1,15 +1,15 @@
 export const metadata = {
-  title: "Андрей Черкасов подтвердил роль наставниц Гракович и Рахимовой — Дом 2",
-  description: "Андрей Черкасов подтвердил, что Вероника Гракович и Элина Рахимова помогают молодёжному коллективу на проекте Дом-2 в роли наставниц.",
+  title: "Женя Хорошева хочет развестись с Сергеем — новости Дом 2",
+  description: "Женя Хорошева заявила, что устала от конфликтов с Сергеем и хочет спокойно развестись без грязи.",
   alternates: {
-    canonical: "https://dom2-live.ru/news/andrey-cherkasov-nastavnitsy-grakovich-rakhimova",
+    canonical: "https://dom2-live.ru/news/zhenya-horosheva-razvod-sergey",
   },
   openGraph: {
-    title: "Андрей Черкасов подтвердил роль наставниц Гракович и Рахимовой",
-    description: "Зрители давно интересовались функциями тандема Вероники Гракович и Элины Рахимовой на поляне. Черкасов подтвердил их наставническую роль.",
-    url: "https://dom2-live.ru/news/andrey-cherkasov-nastavnitsy-grakovich-rakhimova",
+    title: "Женя Хорошева хочет развестись с Сергеем",
+    description: "Женя Хорошева написала, что устала от конфликтов и надеется на спокойный развод без грязи.",
+    url: "https://dom2-live.ru/news/zhenya-horosheva-razvod-sergey",
     type: "article",
-    images: ["/news/news-cherkasov-grakovich-rakhimova.png"],
+    images: ["/news/news-zhenya-horosheva-divorce-sergey.png"],
   },
 };
 
@@ -42,41 +42,40 @@ export default function NewsArticlePage() {
 
         <section className="overflow-hidden rounded-[2rem] border border-white/80 bg-white/88 shadow-[0_24px_90px_rgba(15,23,42,0.30)] backdrop-blur-3xl">
           <img
-            src="/news/news-cherkasov-grakovich-rakhimova.png"
-            alt="Вероника Гракович и Элина Рахимова на проекте Дом-2"
+            src="/news/news-zhenya-horosheva-divorce-sergey.png"
+            alt="Женя Хорошева и Сергей"
             className="w-full bg-slate-200 object-cover object-center"
           />
 
           <div className="p-6 md:p-10">
             <div className="mb-4 flex flex-wrap gap-3">
-              <span className="rounded-full bg-slate-950 px-4 py-2 text-sm font-black text-white">10.06.2026</span>
-              <span className="rounded-full border border-white/80 bg-white/86 px-4 py-2 text-sm font-black text-slate-800 shadow-lg">Участники</span>
+              <span className="rounded-full bg-slate-950 px-4 py-2 text-sm font-black text-white">05.06.2026</span>
+              <span className="rounded-full border border-white/80 bg-white/86 px-4 py-2 text-sm font-black text-slate-800 shadow-lg">Отношения</span>
             </div>
 
             <h1 className="mb-5 text-3xl font-black leading-tight text-slate-950 md:text-5xl">
-              Андрей Черкасов подтвердил роль наставниц Гракович и Рахимовой на проекте
+              Женя Хорошева хочет развестись с Сергеем
             </h1>
 
             <p className="mb-5 text-lg leading-8 text-slate-800">
-              Зрители Дома-2 давно интересуются теми функциями, которые выполняет тандем Вероники Гракович и Элины Рахимовой на поляне в молодёжном коллективе.
+              Женя Хорошева высказалась о ситуации с Сергеем и дала понять, что устала от конфликтов в отношениях.
             </p>
 
             <p className="mb-5 text-lg leading-8 text-slate-800">
-              Андрей Черкасов подтвердил, что девушки действительно находятся на проекте не просто как участницы обсуждений, а помогают молодым ребятам в роли наставниц.
+              По словам Жени, Сергей сам отправлял её уезжать, говорил собираться, а также швырялся вещами. После этого она написала, что «всё к лучшему», но в её сообщении явно чувствуется усталость от происходящего.
             </p>
 
             <p className="mb-5 text-lg leading-8 text-slate-800">
-              Такой формат объясняет, почему Гракович и Рахимова часто оказываются рядом с новыми участниками, комментируют ситуации на поляне и помогают разбирать конфликты внутри коллектива.
+              Женя отметила, что хочет рожать детей, варить борщи и жить спокойной семейной жизнью, а не постоянно соревноваться и выяснять, кто в отношениях сильнее.
             </p>
 
             <p className="text-lg leading-8 text-slate-800">
-              Теперь зрителям стало понятнее, зачем проекту нужен этот тандем. Обсуждение роли наставниц продолжается, а поклонники Дома-2 следят, как это повлияет на атмосферу в молодёжном составе.
+              В конце она добавила, что надеется спокойно развестись без грязи. Теперь зрители обсуждают, получится ли у пары расстаться мирно или конфликт получит продолжение.
             </p>
 
-            <div className="mt-8 grid gap-3 rounded-[1.5rem] border border-white/80 bg-slate-50/80 p-5 text-sm font-bold text-slate-700 md:grid-cols-3">
+            <div className="mt-8 grid gap-3 rounded-[1.5rem] border border-white/80 bg-slate-50/80 p-5 text-sm font-bold text-slate-700 md:grid-cols-2">
               <a href="/#watch" className="rounded-full bg-red-600 px-5 py-3 text-center text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-red-700">Смотреть свежий эфир</a>
               <a href="/news" className="rounded-full bg-white px-5 py-3 text-center text-slate-900 shadow-lg transition hover:-translate-y-0.5 hover:bg-slate-50">Читать другие новости</a>
-              <a href="https://t.me/maxbrabusstrim" target="_blank" rel="noreferrer" className="rounded-full bg-sky-500 px-5 py-3 text-center text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-sky-600">Обсудить</a>
             </div>
           </div>
         </section>
