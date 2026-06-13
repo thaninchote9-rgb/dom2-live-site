@@ -199,12 +199,24 @@ export default function NewsPage() {
         </section>
 
         <section className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {newsItems.map((item) => (
+          {newsItems.map((item) => {
+            const tag = item.tag;
+            const styles = {
+              "Отношения": { glow: "shadow-[0_0_0_2px_rgba(236,72,153,0.7),0_0_18px_rgba(236,72,153,0.45)]", badge: "bg-pink-500 text-white" },
+              "Участники": { glow: "shadow-[0_0_0_2px_rgba(56,189,248,0.7),0_0_18px_rgba(56,189,248,0.45)]", badge: "bg-sky-500 text-white" },
+              "Скандал":   { glow: "shadow-[0_0_0_2px_rgba(239,68,68,0.7),0_0_18px_rgba(239,68,68,0.45)]", badge: "bg-red-500 text-white" },
+              "Семья":     { glow: "shadow-[0_0_0_2px_rgba(34,197,94,0.7),0_0_18px_rgba(34,197,94,0.45)]", badge: "bg-green-500 text-white" },
+              "Конкурс":   { glow: "shadow-[0_0_0_2px_rgba(234,179,8,0.7),0_0_18px_rgba(234,179,8,0.45)]", badge: "bg-yellow-400 text-slate-900" },
+              "Мнение":    { glow: "shadow-[0_0_0_2px_rgba(139,92,246,0.7),0_0_18px_rgba(139,92,246,0.45)]", badge: "bg-violet-500 text-white" },
+              "Обсуждения":{ glow: "shadow-[0_0_0_2px_rgba(249,115,22,0.7),0_0_18px_rgba(249,115,22,0.45)]", badge: "bg-orange-500 text-white" },
+            };
+            const s = styles[tag] || { glow: "shadow-[0_0_0_2px_rgba(148,163,184,0.5)]", badge: "bg-slate-700 text-white" };
+            return (
             <a key={item.title} href={item.href || "/news"} className="block text-inherit no-underline">
-              <article className="group overflow-hidden rounded-[2rem] border border-white/80 bg-white/86 p-4 shadow-xl backdrop-blur-3xl transition-transform duration-300 md:hover:-translate-y-2 md:hover:scale-[1.025] md:hover:shadow-[0_28px_80px_rgba(15,23,42,0.34)]">
+              <article className={`group overflow-hidden rounded-[2rem] border border-white/80 bg-white/86 p-4 backdrop-blur-3xl transition-all duration-300 md:hover:-translate-y-2 md:hover:scale-[1.025] ${s.glow}`}>
               <div className="relative overflow-hidden rounded-[1.5rem] bg-slate-200 shadow-lg">
                 <img src={item.image} alt={item.title} className="aspect-[4/5] w-full object-cover object-center transition-transform duration-300 md:group-hover:scale-105" />
-                <div className="absolute left-4 top-4 rounded-full bg-white/86 px-4 py-2 text-sm font-black text-slate-800 shadow-lg backdrop-blur-xl">{item.tag}</div>
+                <div className={`absolute left-4 top-4 rounded-full px-4 py-2 text-sm font-black shadow-lg backdrop-blur-xl ${s.badge}`}>{item.tag}</div>
                 <div className="absolute right-4 top-4 rounded-full bg-slate-950 px-4 py-2 text-sm font-black text-white shadow-lg">{item.date}</div>
               </div>
               <div className="p-3">
@@ -214,7 +226,8 @@ export default function NewsPage() {
               </div>
               </article>
             </a>
-          ))}
+            );
+          })}
         </section>
       </div>
     </main>

@@ -299,6 +299,43 @@ function getYouTubeShortUrl(videoId) {
   return `https://www.youtube.com/shorts/${videoId}`;
 }
 
+function getTagStyle(tag) {
+  switch (tag) {
+    case "Отношения": return {
+      glow: "shadow-[0_0_0_2px_rgba(236,72,153,0.7),0_0_18px_rgba(236,72,153,0.45)]",
+      badge: "bg-pink-500 text-white",
+    };
+    case "Участники": return {
+      glow: "shadow-[0_0_0_2px_rgba(56,189,248,0.7),0_0_18px_rgba(56,189,248,0.45)]",
+      badge: "bg-sky-500 text-white",
+    };
+    case "Скандал": return {
+      glow: "shadow-[0_0_0_2px_rgba(239,68,68,0.7),0_0_18px_rgba(239,68,68,0.45)]",
+      badge: "bg-red-500 text-white",
+    };
+    case "Семья": return {
+      glow: "shadow-[0_0_0_2px_rgba(34,197,94,0.7),0_0_18px_rgba(34,197,94,0.45)]",
+      badge: "bg-green-500 text-white",
+    };
+    case "Конкурс": return {
+      glow: "shadow-[0_0_0_2px_rgba(234,179,8,0.7),0_0_18px_rgba(234,179,8,0.45)]",
+      badge: "bg-yellow-400 text-slate-900",
+    };
+    case "Мнение": return {
+      glow: "shadow-[0_0_0_2px_rgba(139,92,246,0.7),0_0_18px_rgba(139,92,246,0.45)]",
+      badge: "bg-violet-500 text-white",
+    };
+    case "Обсуждения": return {
+      glow: "shadow-[0_0_0_2px_rgba(249,115,22,0.7),0_0_18px_rgba(249,115,22,0.45)]",
+      badge: "bg-orange-500 text-white",
+    };
+    default: return {
+      glow: "shadow-[0_0_0_2px_rgba(148,163,184,0.5),0_0_12px_rgba(148,163,184,0.3)]",
+      badge: "bg-slate-700 text-white",
+    };
+  }
+}
+
 function GlassCard({ children, className = "", id }) {
   return (
     <div
@@ -525,16 +562,18 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-4 md:grid-cols-3">
-            {newsItems.slice(0, 9).map((item) => (
+            {newsItems.slice(0, 9).map((item) => {
+              const tagStyle = getTagStyle(item.tag);
+              return (
               <a key={item.title} href={item.href || "/news"} className="block text-inherit no-underline">
-                <GlassCard className="group overflow-hidden p-3 transition-transform duration-300 md:hover:-translate-y-2 md:hover:scale-[1.025] md:hover:shadow-[0_28px_80px_rgba(15,23,42,0.34)]">
+                <GlassCard className={`group overflow-hidden p-3 transition-all duration-300 md:hover:-translate-y-2 md:hover:scale-[1.025] ${tagStyle.glow}`}>
                 <div className="relative overflow-hidden rounded-[1.4rem] bg-white/86 shadow-lg">
                   <img
                     src={item.image}
                     alt={item.title}
                     className="aspect-[4/5] w-full object-cover object-center transition-transform duration-300 md:group-hover:scale-105"
                   />
-                  <div className="absolute left-3 top-3 rounded-full border border-white/80 bg-white/86 px-3 py-1 text-xs font-black text-slate-800 shadow-lg backdrop-blur-xl">
+                  <div className={`absolute left-3 top-3 rounded-full px-3 py-1 text-xs font-black shadow-lg backdrop-blur-xl ${tagStyle.badge}`}>
                     {item.tag}
                   </div>
                   <div className="absolute right-3 top-3 rounded-full border border-white/80 bg-slate-950/85 px-3 py-1 text-xs font-black text-white shadow-lg backdrop-blur-xl">
@@ -551,7 +590,8 @@ export default function HomePage() {
                 </div>
                 </GlassCard>
               </a>
-            ))}
+              );
+            })}
           </div>
         </section>
 
