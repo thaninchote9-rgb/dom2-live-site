@@ -27,11 +27,12 @@ export default function NewsArticlePage() {
             </span>
           </a>
 
-          <nav className="hidden rounded-full bg-gradient-to-r from-sky-400 via-cyan-300 to-violet-500 p-[2px] shadow-[0_0_26px_rgba(56,189,248,0.45),0_0_38px_rgba(139,92,246,0.28)] md:flex">
-            <div className="flex items-center gap-2 rounded-full bg-white/64 px-3 py-2 text-sm font-black text-slate-900 backdrop-blur-2xl">
-              <a href="/#watch" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-sky-800 shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-sky-700">Смотреть эфир</a>
-              <a href="/archive" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-cyan-800 shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-cyan-700">Предыдущие выпуски</a>
-              <a href="/news" className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-violet-800 shadow-md transition hover:-translate-y-0.5 hover:bg-white/95 hover:text-violet-700">Новости</a>
+          <nav className="hidden md:flex">
+            <div className="flex items-center gap-2 rounded-full bg-white/72 px-2 py-2 text-sm font-black text-slate-900 shadow-lg backdrop-blur-2xl">
+              <a href="/#watch" className="rounded-full px-4 py-2 text-slate-700 transition hover:text-slate-900">Эфир</a>
+              <a href="/archive" className="rounded-full px-4 py-2 text-slate-700 transition hover:text-slate-900">Предыдущие выпуски</a>
+              <a href="/news" className="rounded-full bg-white/90 px-4 py-2 text-slate-950 shadow-md transition hover:-translate-y-0.5 hover:bg-white">Новости</a>
+              <a href="https://www.youtube.com/@ThomasKing4771/shorts" target="_blank" rel="noreferrer" className="rounded-full px-4 py-2 text-slate-700 transition hover:text-slate-900">Видео участников</a>
             </div>
           </nav>
         </div>
