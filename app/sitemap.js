@@ -10,6 +10,7 @@ export default function sitemap() {
     "/novosti",
     "/archive",
     "/news",
+    "/news/nikita-guranda-otvetil-na-voprosy",
     "/news/dasha-vinogradova-pokinula-proekt",
     "/news/nastya-gold-igor-grigoriev-den-rozhdeniya",
     "/news/karina-titueva-pokinula-proekt-dom-2",
