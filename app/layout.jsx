@@ -26,6 +26,14 @@ export const metadata = {
     siteName: "Дом 2 Live",
     locale: "ru_RU",
     type: "website",
+    images: ["/og-cover.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Дом 2 смотреть онлайн — свежий выпуск сегодня",
+    description:
+      "Смотреть дом 2 онлайн, свежий выпуск сегодня, стримы дом 2 и архив эфиров.",
+    images: ["/og-cover.jpg"],
   },
   alternates: {
     canonical: "https://dom2-live.ru",
@@ -53,7 +61,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ru">
-      <body>{children}        <Analytics />
+      <body><script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: `[{"@context":"https://schema.org","@type":"WebSite","name":"Дом 2 Live","url":"https://dom2-live.ru","inLanguage":"ru-RU"},{"@context":"https://schema.org","@type":"Organization","name":"Дом 2 Live","url":"https://dom2-live.ru","logo":"https://dom2-live.ru/icon-192.png","sameAs":["https://www.youtube.com/@ThomasKing4771","https://t.me/maxbrabusstrim"]}]` }}
+        />
+        {children}        <Analytics />
       </body>
     </html>
   );
