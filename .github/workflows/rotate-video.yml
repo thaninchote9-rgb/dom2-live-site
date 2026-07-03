@@ -1,0 +1,41 @@
+name: Rotate homepage video
+
+on:
+  schedule:
+    # Каждые 15 минут проверяем YouTube-канал на новые видео/стримы
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rotate-video
+  cancel-in-progress: false
+
+jobs:
+  rotate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run rotation script
+        run: node scripts/rotate-video.mjs
+
+      - name: Commit and push if changed
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "dom2-video-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add app/page.jsx app/archive/page.jsx
+            git commit -m "chore: auto-rotate homepage video"
+            git push
+          else
+            echo "Новых видео нет, изменений не требуется."
+          fi
