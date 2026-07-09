@@ -8,6 +8,13 @@ export const metadata = {
 
 const archiveItems = [
   {
+    date: "09.07",
+    title: "Дом 2 смотреть онлайн — архив эфира",
+    videoUrl: "https://youtube.com/live/HDhNA1LeKAA?feature=share",
+    image: "https://img.youtube.com/vi/HDhNA1LeKAA/hqdefault.jpg",
+    tag: "Архив",
+  },
+  {
     date: "08.07",
     title: "Дом 2 смотреть онлайн — архив эфира",
     videoUrl: "https://youtube.com/live/tEApVqMBuHI?feature=share",
