@@ -1,7 +1,7 @@
 const siteConfig = {
   siteName: "Дом 2 Live",
   brandName: "Max Brabus",
-    youtubeChannelUrl: "https://www.youtube.com/@EnzoCampbell3045",
+    youtubeChannelUrl: "https://www.youtube.com/@HjHj-s7x",
     telegramUrl: "https://t.me/maxbrabusstrim",
 
   // Чтобы обновить главный плеер, меняйте только этот ID.
