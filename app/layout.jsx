@@ -63,7 +63,7 @@ export default function RootLayout({ children }) {
     <html lang="ru">
       <body><script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: `[{"@context":"https://schema.org","@type":"WebSite","name":"Дом 2 Live","url":"https://dom2-live.ru","inLanguage":"ru-RU"},{"@context":"https://schema.org","@type":"Organization","name":"Дом 2 Live","url":"https://dom2-live.ru","logo":"https://dom2-live.ru/icon-192.png","sameAs":["https://www.youtube.com/@ThomasKing4771","https://t.me/maxbrabusstrim"]}]` }}
+          dangerouslySetInnerHTML={{ __html: `[{"@context":"https://schema.org","@type":"WebSite","name":"Дом 2 Live","url":"https://dom2-live.ru","inLanguage":"ru-RU"},{"@context":"https://schema.org","@type":"Organization","name":"Дом 2 Live","url":"https://dom2-live.ru","logo":"https://dom2-live.ru/icon-192.png","sameAs":["https://www.youtube.com/@HjHj-s7x","https://t.me/maxbrabusstrim"]}]` }}
         />
         {children}        <Analytics />
       </body>
