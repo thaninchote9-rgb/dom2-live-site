@@ -14,7 +14,7 @@
 
 import fs from "node:fs";
 
-const CHANNEL_ID = "UC7bIm-PdxJKfbh-JqUqCYag"; // @EnzoCampbell3045 — Макс Брабус шоу стримы
+const CHANNEL_ID = "UCeamc8kwZAbG_tkWp82LdwQ"; // @HjHj-s7x — Стримы Брабус Макс
 const RSS_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
 
 const PAGE_JSX = "app/page.jsx";
