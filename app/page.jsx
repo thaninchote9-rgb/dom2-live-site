@@ -12,7 +12,7 @@ const siteConfig = {
   // Чтобы обновить главный плеер, меняйте только этот ID.
   // Пример: https://www.youtube.com/watch?v=r6JvpOAPlG4
   // ID здесь: r6JvpOAPlG4
-  currentVideoId: "JBlgwFYO5Co",
+  currentVideoId: "p3y6Zc_sNhA",
 };
 
 const archiveItems = [
