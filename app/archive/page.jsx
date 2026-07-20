@@ -10,6 +10,13 @@ const archiveItems = [
   {
     date: "20.07",
     title: "Дом 2 смотреть онлайн — архив эфира",
+    videoUrl: "https://youtube.com/live/kLc0Isc8X44?feature=share",
+    image: "https://img.youtube.com/vi/kLc0Isc8X44/hqdefault.jpg",
+    tag: "Архив",
+  },
+  {
+    date: "20.07",
+    title: "Дом 2 смотреть онлайн — архив эфира",
     videoUrl: "https://youtube.com/live/X6gac2twods?feature=share",
     image: "https://img.youtube.com/vi/X6gac2twods/hqdefault.jpg",
     tag: "Архив",
