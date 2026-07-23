@@ -4,6 +4,9 @@ import { getTelegramPost, parseSlug } from "../../../lib/telegram.js";
 
 export const revalidate = 600;
 
+// Единая ссылка для кнопки на всех текущих и будущих страницах новостей.
+const TELEGRAM_CHANNEL_URL = "https://t.me/maxbrabusstrim";
+
 async function getArticle(slug) {
   const manual = findManual(slug);
   if (manual) return manual;
@@ -61,7 +64,7 @@ export default async function NewsArticlePage({ params }) {
         </div>
 
         {article.postUrl ? (
-          <a href={article.postUrl} target="_blank" rel="noreferrer" className="mt-8 inline-flex rounded-2xl bg-sky-600 px-5 py-3 font-black text-white shadow-lg transition hover:bg-sky-700">
+          <a href={TELEGRAM_CHANNEL_URL} target="_blank" rel="noreferrer" className="mt-8 inline-flex rounded-2xl bg-sky-600 px-5 py-3 font-black text-white shadow-lg transition hover:bg-sky-700">
             Открыть оригинал в Telegram →
           </a>
         ) : null}
