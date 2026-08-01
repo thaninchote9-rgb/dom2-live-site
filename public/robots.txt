@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://dom2-live.ru/sitemap.xml
-Host: dom2-live.ru

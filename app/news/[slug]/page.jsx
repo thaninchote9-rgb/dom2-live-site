@@ -16,7 +16,8 @@ async function getArticle(slug) {
   return getTelegramPost(parsed.channelKey, parsed.postId);
 }
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   const article = await getArticle(params.slug);
   if (!article) return { title: "Новость не найдена" };
 
@@ -33,7 +34,8 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function NewsArticlePage({ params }) {
+export default async function NewsArticlePage(props) {
+  const params = await props.params;
   const article = await getArticle(params.slug);
   if (!article) notFound();
 
