@@ -642,7 +642,7 @@ export default async function HomePage() {
             <div className="space-y-3">
               {archiveItems.slice(0, 5).map((item) => (
                 <a
-                  key={`${item.date}-${item.title}`}
+                  key={`${item.date}-${item.videoUrl}`}
                   href={item.videoUrl}
                   target={item.videoUrl === "#" ? undefined : "_blank"}
                   rel={item.videoUrl === "#" ? undefined : "noreferrer"}
