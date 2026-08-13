@@ -127,11 +127,11 @@ function buildArchiveBlock(videoId, dateStr) {
 }
 
 function insertIntoArchiveArray(src, block) {
-  const marker = /(const archiveItems = \[\r?\n)/;
+  const marker = /(const archiveItems = \[)(?:\r?\n)?/;
   if (!marker.test(src)) {
     throw new Error("Не найден массив archiveItems — проверьте формат файла.");
   }
-  return src.replace(marker, `$1${block}`);
+  return src.replace(marker, `$1\n${block}`);
 }
 
 async function main() {
