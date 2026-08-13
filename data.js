@@ -1,12 +1,7 @@
-const currentVideoId = 'q0MIQp6TBgE';
-const currentVideoUrl = 'https://youtube.com/live/q0MIQp6TBgE?feature=share';
+const currentVideoId = 'K5WMKVN1f48';
+const currentVideoUrl = 'https://youtube.com/watch?v=K5WMKVN1f48';
 
-const archiveItems = [
-  { date: '04.06.2026', title: 'Предыдущий эфир Дом-2 — свежий стрим', url: 'https://youtu.be/LcWHS-tVwpg' },
-  { date: '31.05.2026', title: 'Архив Дом-2 смотреть онлайн — прошлый эфир', url: 'https://youtu.be/0Rh6JCfb7kY' },
-  { date: '28.05.2026', title: 'Новый эфир Дом-2 сегодняшний выпуск — свежий стрим', url: 'https://www.youtube.com/live/r6JvpOAPlG4?si=uXsyZSu54UdvocDK' },
-  { date: '27.05.2026', title: 'Архив Дом-2 смотреть онлайн — архив эфира', url: 'https://youtu.be/j-jxUE1EYUg?si=BHj6oGf9tFLFoVuy' }
-];
+const archiveItems = [];
 
 const newsItems = [
   {

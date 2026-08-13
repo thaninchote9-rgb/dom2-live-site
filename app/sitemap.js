@@ -22,6 +22,8 @@ const staticRoutes = [
   "/dom-2-efir-smotret-online",
   "/dom-2-smotret-2026",
   "/dom-2-smotret-v-horoshem-kachestve",
+  "/smotret-dom-2-ne-iz-rf",
+  "/vpn",
 ];
 
 /** Ручные статьи — остаются в индексе навсегда. */
