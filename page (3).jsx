@@ -1,13 +1,13 @@
 const siteConfig = {
   siteName: "Дом 2 Live",
   brandName: "Max Brabus",
-  youtubeChannelUrl: "https://www.youtube.com/@ThomasKing4771",
+  youtubeChannelUrl: "https://www.youtube.com/@dancedoll11",
   telegramUrl: "https://t.me/maxbrabusstrim",
 
   // Чтобы обновить главный плеер, меняйте только этот ID.
   // Пример: https://www.youtube.com/watch?v=r6JvpOAPlG4
   // ID здесь: r6JvpOAPlG4
-  currentVideoId: "JS4yCw3s-6M",
+  currentVideoId: "K5WMKVN1f48",
 };
 
 const archiveItems = [

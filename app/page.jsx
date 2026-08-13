@@ -6,501 +6,22 @@ export const revalidate = 600;
 const siteConfig = {
   siteName: "Дом 2 Live",
   brandName: "Max Brabus",
-    youtubeChannelUrl: "https://www.youtube.com/@HjHj-s7x",
+    youtubeChannelUrl: "https://www.youtube.com/@dancedoll11",
     telegramUrl: "https://t.me/maxbrabusstrim",
 
   // Чтобы обновить главный плеер, меняйте только этот ID.
-  // Пример: https://www.youtube.com/watch?v=r6JvpOAPlG4
-  // ID здесь: r6JvpOAPlG4
-  currentVideoId: "chPgllnGtmQ",
+  // Пример: https://www.youtube.com/watch?v=K5WMKVN1f48
+  // ID здесь: K5WMKVN1f48
+  currentVideoId: "K5WMKVN1f48",
 };
 
-const archiveItems = [
-  {
-    date: "10.08",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/CHCGOxrDqqQ?feature=share",
-    image: "https://img.youtube.com/vi/CHCGOxrDqqQ/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "10.08",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/EAwDwSIGQ54?feature=share",
-    image: "https://img.youtube.com/vi/EAwDwSIGQ54/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "09.08",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/hertv4vkrvE?feature=share",
-    image: "https://img.youtube.com/vi/hertv4vkrvE/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "08.08",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/HxH6Y7n2sE4?feature=share",
-    image: "https://img.youtube.com/vi/HxH6Y7n2sE4/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "07.08",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/CHCGOxrDqqQ?feature=share",
-    image: "https://img.youtube.com/vi/CHCGOxrDqqQ/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "07.08",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/byeoVkW9RXY?feature=share",
-    image: "https://img.youtube.com/vi/byeoVkW9RXY/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "07.08",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/CHCGOxrDqqQ?feature=share",
-    image: "https://img.youtube.com/vi/CHCGOxrDqqQ/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "06.08",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/_LFW9b2SUG8?feature=share",
-    image: "https://img.youtube.com/vi/_LFW9b2SUG8/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "05.08",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/CHCGOxrDqqQ?feature=share",
-    image: "https://img.youtube.com/vi/CHCGOxrDqqQ/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "05.08",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/SvsfSIlTYK0?feature=share",
-    image: "https://img.youtube.com/vi/SvsfSIlTYK0/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "04.08",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/CHCGOxrDqqQ?feature=share",
-    image: "https://img.youtube.com/vi/CHCGOxrDqqQ/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "03.08",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/KkywVxGwdXU?feature=share",
-    image: "https://img.youtube.com/vi/KkywVxGwdXU/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "02.08",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/CHCGOxrDqqQ?feature=share",
-    image: "https://img.youtube.com/vi/CHCGOxrDqqQ/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "02.08",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/c16D0WptpXo?feature=share",
-    image: "https://img.youtube.com/vi/c16D0WptpXo/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "01.08",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/CHCGOxrDqqQ?feature=share",
-    image: "https://img.youtube.com/vi/CHCGOxrDqqQ/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "31.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/qGo0OZVqlfQ?feature=share",
-    image: "https://img.youtube.com/vi/qGo0OZVqlfQ/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "30.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/iyQstxO7Lsk?feature=share",
-    image: "https://img.youtube.com/vi/iyQstxO7Lsk/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "30.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/ngH9_8IDu2o?feature=share",
-    image: "https://img.youtube.com/vi/ngH9_8IDu2o/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "29.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/x4uQCEiVtjY?feature=share",
-    image: "https://img.youtube.com/vi/x4uQCEiVtjY/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "28.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/chPgllnGtmQ?feature=share",
-    image: "https://img.youtube.com/vi/chPgllnGtmQ/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "28.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/-6nwCg_TzDI?feature=share",
-    image: "https://img.youtube.com/vi/-6nwCg_TzDI/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "28.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/1mGwHy38Mfw?feature=share",
-    image: "https://img.youtube.com/vi/1mGwHy38Mfw/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "23.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/kLc0Isc8X44?feature=share",
-    image: "https://img.youtube.com/vi/kLc0Isc8X44/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "20.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/7o4GlUGRnS8?feature=share",
-    image: "https://img.youtube.com/vi/7o4GlUGRnS8/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "20.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/kLc0Isc8X44?feature=share",
-    image: "https://img.youtube.com/vi/kLc0Isc8X44/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "20.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/X6gac2twods?feature=share",
-    image: "https://img.youtube.com/vi/X6gac2twods/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "19.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/e-3L4fXwENM?feature=share",
-    image: "https://img.youtube.com/vi/e-3L4fXwENM/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "19.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/JBlgwFYO5Co?feature=share",
-    image: "https://img.youtube.com/vi/JBlgwFYO5Co/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "17.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/p3y6Zc_sNhA?feature=share",
-    image: "https://img.youtube.com/vi/p3y6Zc_sNhA/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "17.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/kLc0Isc8X44?feature=share",
-    image: "https://img.youtube.com/vi/kLc0Isc8X44/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "17.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/p3y6Zc_sNhA?feature=share",
-    image: "https://img.youtube.com/vi/p3y6Zc_sNhA/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "16.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/kLc0Isc8X44?feature=share",
-    image: "https://img.youtube.com/vi/kLc0Isc8X44/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "16.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/f96Pk8jMWsU?feature=share",
-    image: "https://img.youtube.com/vi/f96Pk8jMWsU/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "15.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/iD6bgCygkIk?feature=share",
-    image: "https://img.youtube.com/vi/iD6bgCygkIk/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "15.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/0JDZEDOXp6g?feature=share",
-    image: "https://img.youtube.com/vi/0JDZEDOXp6g/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "14.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/iD6bgCygkIk?feature=share",
-    image: "https://img.youtube.com/vi/iD6bgCygkIk/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "14.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/zu7rrzUNgrc?feature=share",
-    image: "https://img.youtube.com/vi/zu7rrzUNgrc/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "09.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/HDhNA1LeKAA?feature=share",
-    image: "https://img.youtube.com/vi/HDhNA1LeKAA/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "08.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/tEApVqMBuHI?feature=share",
-    image: "https://img.youtube.com/vi/tEApVqMBuHI/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "07.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/taSyB0Xi04s?feature=share",
-    image: "https://img.youtube.com/vi/taSyB0Xi04s/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "07.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/B-i8PVMt7kk?feature=share",
-    image: "https://img.youtube.com/vi/B-i8PVMt7kk/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "06.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/taSyB0Xi04s?feature=share",
-    image: "https://img.youtube.com/vi/taSyB0Xi04s/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "03.07",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/iW6janF-zqY?feature=share",
-    image: "https://img.youtube.com/vi/iW6janF-zqY/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "26.06",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/t4XLUfb7wTQ?feature=share",
-    image: "https://img.youtube.com/vi/t4XLUfb7wTQ/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "23.06",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/iqJpZCxgl0Q?feature=share",
-    image: "https://img.youtube.com/vi/iqJpZCxgl0Q/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "22.06",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/2873DwkeSQs?feature=share",
-    image: "https://img.youtube.com/vi/2873DwkeSQs/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "21.06",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/RxY2b6zfVgk?feature=share",
-    image: "https://img.youtube.com/vi/RxY2b6zfVgk/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "20.06",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/w2d904B3Xyw?feature=share",
-    image: "https://img.youtube.com/vi/w2d904B3Xyw/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "19.06",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/h6aUygMMD9U?feature=share",
-    image: "https://img.youtube.com/vi/h6aUygMMD9U/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "18.06",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/7EeFUgmhpBE?feature=share",
-    image: "https://img.youtube.com/vi/7EeFUgmhpBE/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "17.06",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/W5WfFIdpH1g?feature=share",
-    image: "https://img.youtube.com/vi/W5WfFIdpH1g/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-        date: "16.06",
-        title: "Дом 2 смотреть онлайн — архив эфира",
-        videoUrl: "https://youtube.com/live/oHIx6489Gbs?feature=share",
-        image: "https://img.youtube.com/vi/oHIx6489Gbs/hqdefault.jpg",
-        tag: "Архив",
-  },
-  {
-    date: "13.06",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/_3fwu8TgU2Q?feature=share",
-    image: "https://img.youtube.com/vi/_3fwu8TgU2Q/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "13.06",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/Z07UcKQ6aFQ?feature=share",
-    image: "https://img.youtube.com/vi/Z07UcKQ6aFQ/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "09.06",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/FwnyRl_l1Fs?feature=share",
-    image: "https://img.youtube.com/vi/FwnyRl_l1Fs/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "08.06",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/WuxfLiWWHcE?feature=share",
-    image: "https://img.youtube.com/vi/WuxfLiWWHcE/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "07.06",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/xyctdh3_Ad8?feature=share",
-    image: "https://img.youtube.com/vi/xyctdh3_Ad8/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "06.06",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/jx_2MRa5Kn8?feature=share",
-    image: "https://img.youtube.com/vi/jx_2MRa5Kn8/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "05.06",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/yyq7qy3DLQ0?feature=share",
-    image: "https://img.youtube.com/vi/yyq7qy3DLQ0/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "04.06",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/q0MIQp6TBgE?feature=share",
-    image: "https://img.youtube.com/vi/q0MIQp6TBgE/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "03.06",
-    title: "Дом 2 сегодняшний выпуск — свежий стрим",
-    videoUrl: "https://youtube.com/live/FQQA_0O5blA?feature=share",
-    image: "https://img.youtube.com/vi/FQQA_0O5blA/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "02.06",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/udLhhalRvKk?feature=share",
-    image: "https://img.youtube.com/vi/udLhhalRvKk/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "01.06",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/XuAjJREmJnA?feature=share",
-    image: "https://img.youtube.com/vi/XuAjJREmJnA/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "31.05",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtu.be/LcWHS-tVwpg",
-    image: "https://img.youtube.com/vi/LcWHS-tVwpg/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "30.05",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtu.be/0Rh6JCfb7kY",
-    image: "https://img.youtube.com/vi/0Rh6JCfb7kY/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "29.05",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtube.com/live/cC49cINpf_s?feature=share",
-    image: "https://img.youtube.com/vi/cC49cINpf_s/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "28.05",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://www.youtube.com/live/r6JvpOAPlG4",
-    image: "https://img.youtube.com/vi/r6JvpOAPlG4/hqdefault.jpg",
-    tag: "Архив",
-  },
-  {
-    date: "27.05",
-    title: "Дом 2 смотреть онлайн — архив эфира",
-    videoUrl: "https://youtu.be/j-jxUE1EYUg",
-    image: "https://img.youtube.com/vi/j-jxUE1EYUg/hqdefault.jpg",
-    tag: "Архив",
-  },
-];
-
-
+const archiveItems = [];
 
 const shortVideoItems = [
   {
-    title: "Короткое видео Дом 2 Live",
-    date: "05.06.2026",
-    videoId: "9dIVZhsoS6U",
+    title: "Макс Брабус стрим (НЕ ДОМ 2)",
+    date: "12.08.2026",
+    videoId: "DkB3Llqtqyk",
   },
 ];
 
@@ -594,7 +115,17 @@ export default async function HomePage() {
       </div>
 
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/35 bg-white/86 shadow-sm backdrop-blur-2xl">
-        <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-4 px-4 py-4 md:px-6">
+        <div className="border-b border-violet-200/70 bg-gradient-to-r from-sky-100/95 via-white/95 to-violet-100/95">
+          <div className="mx-auto flex max-w-[1500px] items-center justify-center gap-2 px-3 py-2 text-xs font-black sm:gap-4 sm:text-sm">
+            <a href="/smotret-dom-2-ne-iz-rf" className="rounded-full bg-violet-600 px-4 py-1.5 text-center text-white shadow-md transition hover:bg-violet-700">
+              🌍 Смотреть Дом-2 не из РФ
+            </a>
+            <a href="/vpn" className="rounded-full border border-violet-300 bg-white px-4 py-1.5 text-violet-800 shadow-sm transition hover:border-violet-500 hover:bg-violet-50">
+              VPN
+            </a>
+          </div>
+        </div>
+        <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-4 px-4 py-3 md:px-6">
           <a href="/" className="flex items-center gap-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-3xl border border-white/60 bg-white/74 text-xl shadow-xl backdrop-blur-xl">
               <Icon label="play">▶</Icon>
@@ -633,7 +164,7 @@ export default async function HomePage() {
         </div>
       </header>
 
-      <div className="relative z-10 mx-auto max-w-[1240px] px-4 pb-8 pt-28 md:px-6 md:pb-12 md:pt-32">
+      <div className="relative z-10 mx-auto max-w-[1240px] px-4 pb-8 pt-40 md:px-6 md:pb-12 md:pt-44">
         <section className="mb-8 grid gap-6 lg:grid-cols-[minmax(0,1fr)_300px]">
           <GlassCard className="relative overflow-hidden p-5 md:p-8">
             <div className="absolute inset-0 bg-[url('/backgrounds/hero-rain-window.jpg')] bg-cover bg-center" />
@@ -745,7 +276,11 @@ export default async function HomePage() {
             </div>
 
             <div className="space-y-3">
-              {archiveItems.slice(0, 5).map((item) => (
+              {archiveItems.length === 0 ? (
+                <div className="rounded-3xl border border-white/70 bg-white/74 p-5 text-sm leading-6 text-slate-700 shadow-md backdrop-blur-xl">
+                  Архив нового YouTube-канала пока пуст. Следующий эфир автоматически появится здесь после публикации.
+                </div>
+              ) : archiveItems.slice(0, 5).map((item) => (
                 <a
                   key={`${item.date}-${item.videoUrl}`}
                   href={item.videoUrl}

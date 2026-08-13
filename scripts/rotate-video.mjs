@@ -3,18 +3,18 @@
 // Автоматическая ротация главного видео на dom2-live.ru.
 // Логика:
 //  1. Берём RSS-фид YouTube-канала (без API-ключа).
-//  2. Идём от новых видео к старым, пропускаем Shorts.
-//  3. Как только находим самое новое видео, которое НЕ Shorts и НЕ совпадает
+//  2. Синхронизируем блок Shorts на главной со свежими роликами из фида.
+//  3. Идём от новых видео к старым. Как только находим самое новое видео,
+//     которое НЕ Shorts и НЕ совпадает
 //     с текущим currentVideoId — это новый эфир/выпуск.
 //  4. Старое currentVideoId уходит в архив (app/page.jsx и app/archive/page.jsx),
 //     новое становится главным.
 //
-// Скрипт ничего не делает, если новых подходящих видео нет (в т.ч. если
-// появились только Shorts) — тогда просто выходит без изменений.
+// Если появился только Shorts, обновляется только блок коротких видео.
 
 import fs from "node:fs";
 
-const CHANNEL_ID = "UCeamc8kwZAbG_tkWp82LdwQ"; // @HjHj-s7x — Стримы Брабус Макс
+const CHANNEL_ID = "UCm2K8OXusqgt4MmJoUL9Hfg"; // @dancedoll11 — Макс Брабус 23
 const RSS_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
 
 const PAGE_JSX = "app/page.jsx";
@@ -51,6 +51,10 @@ function parseFeedEntries(xml) {
 // пропустим один цикл, на следующем прогоне (~15 мин) перепроверим).
 async function isShort(videoId) {
   try {
+    const watchPage = await fetchText(`https://www.youtube.com/watch?v=${videoId}`);
+    const lengthSeconds = Number((watchPage.match(/"lengthSeconds":"(\d+)"/) || [])[1]);
+    if (Number.isFinite(lengthSeconds) && lengthSeconds > 180) return false;
+
     const res = await fetch(`https://www.youtube.com/shorts/${videoId}`, {
       redirect: "manual",
       headers: { "User-Agent": UA },
@@ -78,6 +82,28 @@ function writeFile(p, content) {
 function getCurrentVideoId(pageSrc) {
   const m = pageSrc.match(/currentVideoId:\s*"([^"]+)"/);
   return m ? m[1] : null;
+}
+
+function formatPublishedDate(value) {
+  const date = value ? new Date(value) : new Date();
+  const msk = new Date(date.getTime() + 3 * 60 * 60 * 1000);
+  const dd = String(msk.getUTCDate()).padStart(2, "0");
+  const mm = String(msk.getUTCMonth() + 1).padStart(2, "0");
+  return `${dd}.${mm}.${msk.getUTCFullYear()}`;
+}
+
+function replaceShortVideoItems(src, entries) {
+  const items = entries.slice(0, 6).map((entry) => `  {
+    title: ${JSON.stringify(entry.title || "Короткое видео Max Brabus")},
+    date: "${formatPublishedDate(entry.published)}",
+    videoId: "${entry.videoId}",
+  },`).join("\n");
+  const block = `const shortVideoItems = [\n${items}${items ? "\n" : ""}];`;
+  const marker = /const shortVideoItems = \[[\s\S]*?\];/;
+  if (!marker.test(src)) {
+    throw new Error("Не найден массив shortVideoItems — проверьте формат файла.");
+  }
+  return src.replace(marker, block);
 }
 
 // Дата в формате DD.MM (используется в архиве), по московскому времени.
@@ -123,22 +149,37 @@ async function main() {
   const currentVideoId = getCurrentVideoId(pageSrc);
   console.log("Текущее видео на сайте:", currentVideoId);
 
-  let target = null;
+  const classified = [];
   for (const entry of entries) {
+    const short = await isShort(entry.videoId);
+    classified.push({ ...entry, short });
+    console.log(`- ${entry.videoId} "${entry.title}" short=${short}`);
+  }
+
+  let newPageSrc = replaceShortVideoItems(
+    pageSrc,
+    classified.filter((entry) => entry.short),
+  );
+
+  let target = null;
+  for (const entry of classified) {
     if (entry.videoId === currentVideoId) {
       console.log(`Дошли до текущего видео (${currentVideoId}) в фиде, новых подходящих видео нет.`);
       break;
     }
-    const short = await isShort(entry.videoId);
-    console.log(`- ${entry.videoId} "${entry.title}" short=${short}`);
-    if (!short) {
+    if (!entry.short) {
       target = entry;
       break;
     }
   }
 
   if (!target) {
-    console.log("Новых видео (кроме Shorts) не найдено. Ничего не меняем.");
+    if (newPageSrc !== pageSrc) {
+      writeFile(PAGE_JSX, newPageSrc);
+      console.log("Блок Shorts синхронизирован. Нового основного видео нет.");
+    } else {
+      console.log("Новых видео и изменений в Shorts нет. Ничего не меняем.");
+    }
     return;
   }
 
@@ -146,7 +187,7 @@ async function main() {
 
   const dateStr = todayDDMM();
 
-  let newPageSrc = pageSrc.replace(
+  newPageSrc = newPageSrc.replace(
     /currentVideoId:\s*"[^"]+"/,
     `currentVideoId: "${target.videoId}"`
   );
