@@ -6,7 +6,15 @@ export const metadata = {
   },
 };
 
-const archiveItems = [];
+const archiveItems = [
+  {
+    date: "14.08",
+    title: "Дом 2 смотреть онлайн — архив эфира",
+    videoUrl: "https://youtube.com/live/K5WMKVN1f48?feature=share",
+    image: "https://img.youtube.com/vi/K5WMKVN1f48/hqdefault.jpg",
+    tag: "Архив",
+  },
+];
 
 export default function ArchivePage() {
   return (
