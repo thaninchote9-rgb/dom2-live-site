@@ -133,30 +133,25 @@ export default async function HomePage() {
       </div>
 
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/35 bg-white/86 shadow-sm backdrop-blur-2xl">
-        <div className="border-b border-violet-200/70 bg-gradient-to-r from-sky-100/95 via-white/95 to-violet-100/95">
-          <div className="mx-auto flex max-w-[1500px] items-center justify-center gap-2 px-3 py-2 text-xs font-black sm:gap-4 sm:text-sm">
-            <a href="/smotret-dom-2-ne-iz-rf" className="rounded-full bg-violet-600 px-4 py-1.5 text-center text-white shadow-md transition hover:bg-violet-700">
-              🌍 Смотреть Дом-2 не из РФ
+        <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-4 px-4 py-3 md:px-6">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <a href="/" className="flex items-center gap-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-3xl border border-white/60 bg-white/74 text-xl shadow-xl backdrop-blur-xl">
+                <Icon label="play">▶</Icon>
+              </div>
+              <div>
+                <div className="text-lg font-black tracking-tight text-slate-950">
+                  {siteConfig.siteName}
+                </div>
+                <div className="text-xs font-medium text-slate-700">
+                  стримы • эфиры • архив
+                </div>
+              </div>
             </a>
-            <a href="/vpn" className="rounded-full border border-violet-300 bg-white px-4 py-1.5 text-violet-800 shadow-sm transition hover:border-violet-500 hover:bg-violet-50">
+            <a href="/vpn" className="rounded-full border border-violet-300 bg-white px-4 py-2 text-sm font-black text-violet-800 shadow-md transition hover:-translate-y-0.5 hover:border-violet-500 hover:bg-violet-50">
               VPN
             </a>
           </div>
-        </div>
-        <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-4 px-4 py-3 md:px-6">
-          <a href="/" className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-3xl border border-white/60 bg-white/74 text-xl shadow-xl backdrop-blur-xl">
-              <Icon label="play">▶</Icon>
-            </div>
-            <div>
-              <div className="text-lg font-black tracking-tight text-slate-950">
-                {siteConfig.siteName}
-              </div>
-              <div className="text-xs font-medium text-slate-700">
-                стримы • эфиры • архив
-              </div>
-            </div>
-          </a>
 
           <nav className="hidden rounded-full bg-gradient-to-r from-sky-400 via-cyan-300 to-violet-500 p-[2px] shadow-[0_0_26px_rgba(56,189,248,0.45),0_0_38px_rgba(139,92,246,0.28)] md:flex">
             <div className="flex items-center gap-1.5 rounded-full bg-white/64 px-2 py-2 text-[13px] font-black text-slate-900 backdrop-blur-2xl">
@@ -168,7 +163,7 @@ export default async function HomePage() {
             </div>
           </nav>
 
-          <div className="flex items-center gap-2">
+          <div className="hidden items-center gap-2 sm:flex">
             <span className="hidden whitespace-nowrap text-sm font-black text-slate-800/90 drop-shadow-sm xl:inline">
               Подписывайтесь на
             </span>
@@ -182,7 +177,7 @@ export default async function HomePage() {
         </div>
       </header>
 
-      <div className="relative z-10 mx-auto max-w-[1240px] px-4 pb-8 pt-40 md:px-6 md:pb-12 md:pt-44">
+      <div className="relative z-10 mx-auto max-w-[1240px] px-4 pb-8 pt-28 md:px-6 md:pb-12 md:pt-32">
         <section className="mb-8 grid gap-6 lg:grid-cols-[minmax(0,1fr)_300px]">
           <GlassCard className="relative overflow-hidden p-5 md:p-8">
             <div className="absolute inset-0 bg-[url('/backgrounds/hero-rain-window.jpg')] bg-cover bg-center" />
