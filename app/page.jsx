@@ -26,21 +26,6 @@ const archiveItems = [
 ];
 
 const shortVideoItems = [
-  {
-    title: "Макс Брабус сегодняшний выпуск стрим смотрим Ютуб",
-    date: "14.08.2026",
-    videoId: "mpYYZhZc_bk",
-  },
-  {
-    title: "Макс Брабус стрим (НЕ ДОМ 2)",
-    date: "12.08.2026",
-    videoId: "DkB3Llqtqyk",
-  },
-  {
-    title: "Макс Брабус стрим (НЕ ДОМ 2)",
-    date: "12.08.2026",
-    videoId: "K5WMKVN1f48",
-  },
 ];
 
 function Icon({ children, label }) {
