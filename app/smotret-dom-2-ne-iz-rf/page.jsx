@@ -44,21 +44,16 @@ export default function WatchOutsideRussiaPage() {
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_top_left,rgba(219,234,254,0.96),transparent_38%),radial-gradient(circle_at_top_right,rgba(243,232,255,0.94),transparent_42%),linear-gradient(135deg,#eef6ff_0%,#fbfdff_50%,#f5efff_100%)]" />
 
       <header className="relative z-10 border-b border-white/70 bg-white/86 shadow-sm backdrop-blur-2xl">
-        <div className="border-b border-violet-200/70 bg-gradient-to-r from-sky-100 via-white to-violet-100">
-          <div className="mx-auto flex max-w-5xl items-center justify-center gap-2 px-3 py-2 text-xs font-black sm:gap-4 sm:text-sm">
-            <a href="/smotret-dom-2-ne-iz-rf" className="rounded-full bg-violet-600 px-4 py-1.5 text-center text-white shadow-md">
-              🌍 Смотреть Дом-2 не из РФ
+        <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
+          <div className="flex items-center gap-3">
+            <a href="/" className="flex items-center gap-3 font-black text-slate-950">
+              <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-lg shadow-lg">▶</span>
+              <span>Дом 2 Live</span>
             </a>
-            <a href="/vpn" className="rounded-full border border-violet-300 bg-white px-4 py-1.5 text-violet-800 shadow-sm hover:bg-violet-50">
+            <a href="/vpn" className="rounded-full border border-violet-300 bg-white px-4 py-2 text-sm font-black text-violet-800 shadow-md transition hover:-translate-y-0.5 hover:border-violet-500 hover:bg-violet-50">
               VPN
             </a>
           </div>
-        </div>
-        <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
-          <a href="/" className="flex items-center gap-3 font-black text-slate-950">
-            <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-lg shadow-lg">▶</span>
-            <span>Дом 2 Live</span>
-          </a>
           <a href="/" className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-black text-slate-700 shadow-sm hover:border-violet-300 hover:text-violet-700">
             На главную
           </a>
