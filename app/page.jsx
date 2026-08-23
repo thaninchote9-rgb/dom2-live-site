@@ -75,6 +75,31 @@ const archiveItems = [
 ];
 
 const shortVideoItems = [
+  {
+    title: "Дом 2 сегодняшний выпуск от 23.08 Макс Брабус (3 выпуска)",
+    date: "23.08.2026",
+    videoId: "h3lQkr51bvk",
+  },
+  {
+    title: "Макс Брабус смотрит Кто уб#л модель из ДОМА 2",
+    date: "15.08.2026",
+    videoId: "6413sxsmaII",
+  },
+  {
+    title: "Макс Брабус сегодняшний выпуск стрим смотрим Ютуб",
+    date: "14.08.2026",
+    videoId: "mpYYZhZc_bk",
+  },
+  {
+    title: "Макс Брабус стрим (НЕ ДОМ 2)",
+    date: "12.08.2026",
+    videoId: "DkB3Llqtqyk",
+  },
+  {
+    title: "Макс Брабус стрим (НЕ ДОМ 2)",
+    date: "12.08.2026",
+    videoId: "K5WMKVN1f48",
+  },
 ];
 
 function Icon({ children, label }) {
