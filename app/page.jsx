@@ -12,10 +12,17 @@ const siteConfig = {
   // Чтобы обновить главный плеер, меняйте только этот ID.
   // Пример: https://www.youtube.com/watch?v=K5WMKVN1f48
   // ID здесь: K5WMKVN1f48
-  currentVideoId: "MFlSy-cxtQM",
+  currentVideoId: "4UTzjLvIYKU",
 };
 
 const archiveItems = [
+  {
+    date: "02.09",
+    title: "Дом 2 смотреть онлайн — архив эфира",
+    videoUrl: "https://youtube.com/live/MFlSy-cxtQM?feature=share",
+    image: "https://img.youtube.com/vi/MFlSy-cxtQM/hqdefault.jpg",
+    tag: "Архив",
+  },
   {
     date: "01.09",
     title: "Дом 2 смотреть онлайн — архив эфира",
@@ -96,6 +103,11 @@ const archiveItems = [
 ];
 
 const shortVideoItems = [
+  {
+    title: "Дом 2 1 сентября",
+    date: "01.09.2026",
+    videoId: "OpGLm4qnGwc",
+  },
 ];
 
 function Icon({ children, label }) {
