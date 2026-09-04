@@ -111,6 +111,11 @@ const archiveItems = [
 
 const shortVideoItems = [
   {
+    title: "Дом 2 Кристина все о Никите #дом2 #дом2новости",
+    date: "04.09.2026",
+    videoId: "Yp0uHzMT6Ls",
+  },
+  {
     title: "Дом 2 1 сентября",
     date: "01.09.2026",
     videoId: "OpGLm4qnGwc",
