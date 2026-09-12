@@ -33,7 +33,7 @@ jobs:
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "dom2-video-bot"
             git config user.email "actions@users.noreply.github.com"
-            git add app/page.jsx app/archive/page.jsx
+            git add lib/home-media.js app/archive/page.jsx
             git commit -m "chore: auto-rotate homepage video"
             git push
           else

@@ -7,7 +7,7 @@
 //  3. Идём от новых видео к старым. Как только находим самое новое видео,
 //     которое НЕ Shorts и НЕ совпадает
 //     с текущим currentVideoId — это новый эфир/выпуск.
-//  4. Старое currentVideoId уходит в архив (app/page.jsx и app/archive/page.jsx),
+//  4. Старое currentVideoId уходит в архив (lib/home-media.js и app/archive/page.jsx),
 //     новое становится главным.
 //
 // Если появился только Shorts, обновляется только блок коротких видео.
@@ -17,7 +17,7 @@ import fs from "node:fs";
 const CHANNEL_ID = "UCm2K8OXusqgt4MmJoUL9Hfg"; // @dancedoll11 — Макс Брабус 23
 const RSS_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
 
-const PAGE_JSX = "app/page.jsx";
+const MEDIA_JS = "lib/home-media.js";
 const ARCHIVE_JSX = "app/archive/page.jsx";
 
 const UA = "Mozilla/5.0 (compatible; dom2-live-rotate-bot/1.0)";
@@ -79,8 +79,8 @@ function writeFile(p, content) {
   fs.writeFileSync(p, content, "utf8");
 }
 
-function getCurrentVideoId(pageSrc) {
-  const m = pageSrc.match(/currentVideoId:\s*"([^"]+)"/);
+function getCurrentVideoId(mediaSrc) {
+  const m = mediaSrc.match(/currentVideoId:\s*"([^"]+)"/);
   return m ? m[1] : null;
 }
 
@@ -93,7 +93,7 @@ function formatPublishedDate(value) {
 }
 
 function replaceShortVideoItems(src, entries) {
-  const items = entries.slice(0, 6).map((entry) => `  {
+  const items = entries.slice(0, 10).map((entry) => `  {
     title: ${JSON.stringify(entry.title || "Короткое видео Max Brabus")},
     date: "${formatPublishedDate(entry.published)}",
     videoId: "${entry.videoId}",
@@ -145,8 +145,8 @@ async function main() {
     return;
   }
 
-  const pageSrc = readFile(PAGE_JSX);
-  const currentVideoId = getCurrentVideoId(pageSrc);
+  const mediaSrc = readFile(MEDIA_JS);
+  const currentVideoId = getCurrentVideoId(mediaSrc);
   console.log("Текущее видео на сайте:", currentVideoId);
 
   const classified = [];
@@ -156,8 +156,8 @@ async function main() {
     console.log(`- ${entry.videoId} "${entry.title}" short=${short}`);
   }
 
-  let newPageSrc = replaceShortVideoItems(
-    pageSrc,
+  let newMediaSrc = replaceShortVideoItems(
+    mediaSrc,
     classified.filter((entry) => entry.short),
   );
 
@@ -174,8 +174,8 @@ async function main() {
   }
 
   if (!target) {
-    if (newPageSrc !== pageSrc) {
-      writeFile(PAGE_JSX, newPageSrc);
+    if (newMediaSrc !== mediaSrc) {
+      writeFile(MEDIA_JS, newMediaSrc);
       console.log("Блок Shorts синхронизирован. Нового основного видео нет.");
     } else {
       console.log("Новых видео и изменений в Shorts нет. Ничего не меняем.");
@@ -187,21 +187,21 @@ async function main() {
 
   const dateStr = todayDDMM();
 
-  newPageSrc = newPageSrc.replace(
+  newMediaSrc = newMediaSrc.replace(
     /currentVideoId:\s*"[^"]+"/,
     `currentVideoId: "${target.videoId}"`
   );
 
   if (currentVideoId) {
     const archiveBlock = buildArchiveBlock(currentVideoId, dateStr);
-    newPageSrc = insertIntoArchiveArray(newPageSrc, archiveBlock);
-    writeFile(PAGE_JSX, newPageSrc);
+    newMediaSrc = insertIntoArchiveArray(newMediaSrc, archiveBlock);
+    writeFile(MEDIA_JS, newMediaSrc);
 
     const archivePageSrc = readFile(ARCHIVE_JSX);
     const newArchivePageSrc = insertIntoArchiveArray(archivePageSrc, archiveBlock);
     writeFile(ARCHIVE_JSX, newArchivePageSrc);
   } else {
-    writeFile(PAGE_JSX, newPageSrc);
+    writeFile(MEDIA_JS, newMediaSrc);
   }
 
   console.log("Готово.");
