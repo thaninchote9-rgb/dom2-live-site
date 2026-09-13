@@ -17,7 +17,7 @@ export const metadata = {
   },
 };
 
-const youtubeUrl = "https://www.youtube.com/@dancedoll11";
+const youtubeUrl = "https://www.youtube.com/@WardaYosry-g9d";
 const telegramUrl = "https://t.me/maxbrabusstrim";
 
 export default function NewsArticlePage() {

@@ -132,7 +132,7 @@ export default function ArchivePage() {
 
           <div className="flex items-center gap-2">
             <span className="hidden text-sm font-black text-slate-800/90 drop-shadow-sm sm:inline">Подписывайтесь на</span>
-            <a href="https://www.youtube.com/@dancedoll11" target="_blank" rel="noreferrer" className="rounded-full border border-red-500/50 bg-white/84 px-4 py-2 text-sm font-black text-red-600 shadow-lg backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-red-500/80 hover:bg-red-50/90 hover:text-red-700">
+            <a href="https://www.youtube.com/@WardaYosry-g9d" target="_blank" rel="noreferrer" className="rounded-full border border-red-500/50 bg-white/84 px-4 py-2 text-sm font-black text-red-600 shadow-lg backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-red-500/80 hover:bg-red-50/90 hover:text-red-700">
               YouTube
             </a>
             <a href="https://t.me/" target="_blank" rel="noreferrer" className="rounded-full border border-sky-500/55 bg-white/84 px-4 py-2 text-sm font-black text-sky-600 shadow-lg backdrop-blur-xl transition hover:-translate-y-0.5 hover:border-sky-500/85 hover:bg-sky-50/90 hover:text-sky-700">
@@ -155,8 +155,8 @@ export default function ArchivePage() {
           {archiveItems.length === 0 ? (
             <div className="rounded-[2rem] border border-white/80 bg-white/86 p-8 text-center shadow-xl backdrop-blur-3xl md:col-span-2">
               <h2 className="text-2xl font-black text-slate-950">Архив нового канала пока пуст</h2>
-              <p className="mt-3 text-base leading-7 text-slate-700">Новые эфиры с YouTube-канала @dancedoll11 будут автоматически добавляться сюда после публикации.</p>
-              <a href="https://www.youtube.com/@dancedoll11" target="_blank" rel="noreferrer" className="mt-5 inline-flex rounded-full bg-red-600 px-5 py-3 text-sm font-black text-white shadow-lg hover:bg-red-700">Открыть канал на YouTube</a>
+              <p className="mt-3 text-base leading-7 text-slate-700">Новые выпуски добавляются вручную через админку, а Shorts автоматически появляются с канала @WardaYosry-g9d.</p>
+              <a href="https://www.youtube.com/@WardaYosry-g9d" target="_blank" rel="noreferrer" className="mt-5 inline-flex rounded-full bg-red-600 px-5 py-3 text-sm font-black text-white shadow-lg hover:bg-red-700">Открыть канал на YouTube</a>
             </div>
           ) : archiveItems.map((item) => (
             <a key={`${item.date}-${item.videoUrl}`} href={item.videoUrl} target={item.videoUrl === "#" ? undefined : "_blank"} rel={item.videoUrl === "#" ? undefined : "noreferrer"} className="group overflow-hidden rounded-[2rem] border border-white/80 bg-white/86 p-4 shadow-xl backdrop-blur-3xl transition hover:-translate-y-1 hover:bg-white/86">
