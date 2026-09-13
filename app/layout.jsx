@@ -44,7 +44,7 @@ export const metadata = {
     follow: true,
   },
   verification: {
-    google: "igwl-wJHRiLb6MN3bvDE3ffIBtl9XpAfWALlPbPNo6U",
+    google: "ciwbmJzu6dp3q8i3fMcAjuXVoi3G4k6kh9G2AwzSsg0",
     yandex: "c5326ec331a378a4",
   },
   icons: {
