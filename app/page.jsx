@@ -4,6 +4,12 @@ import { formatAdminVideo, getSiteVideos } from "../lib/site-videos.js";
 import { getYoutubeShorts } from "../lib/youtube-shorts.js";
 import OliveHome from "./OliveHome";
 import "./olive.css";
+export const metadata = {
+  title: { absolute: "Дом 2 смотреть онлайн бесплатно — сегодняшний выпуск" },
+  description:
+    "Дом 2 сегодняшний выпуск и свежие серии смотреть онлайн бесплатно в хорошем качестве. Последние выпуски, короткие видео и новости участников.",
+  alternates: { canonical: "https://dom2-live.ru" },
+};
 export const revalidate = 30;
 export default async function HomePage() {
   const [news, adminVideos, youtubeShorts] = await Promise.all([getNews(), getSiteVideos(), getYoutubeShorts()]);
@@ -35,5 +41,19 @@ export default async function HomePage() {
     })
     .slice(0, 3);
   const shorts = youtubeShorts.length ? youtubeShorts : shortVideoItems.slice(0, 10);
-  return <OliveHome news={news.all.slice(0, 15)} config={siteConfig} current={current} episodes={episodes} shorts={shorts} />;
+  const videoSchema = current.publishedAt ? {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: `${current.title} — выпуск от ${current.date}`,
+    description: `Дом 2: сегодняшний выпуск от ${current.date}. Смотреть онлайн бесплатно в плеере YouTube.`,
+    thumbnailUrl: [current.image],
+    uploadDate: current.publishedAt,
+    embedUrl: `https://www.youtube.com/embed/${current.videoId}`,
+    contentUrl: current.videoUrl,
+  } : null;
+
+  return <>
+    {videoSchema ? <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema).replace(/</g, "\\u003c") }} /> : null}
+    <OliveHome news={news.all.slice(0, 15)} config={siteConfig} current={current} episodes={episodes} shorts={shorts} />
+  </>;
 }
