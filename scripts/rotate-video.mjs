@@ -23,29 +23,10 @@ function parseFeedEntries(xml) {
     const videoId = (block.match(/<yt:videoId>([^<]+)<\/yt:videoId>/) || [])[1];
     const title = (block.match(/<title>([^<]*)<\/title>/) || [])[1];
     const published = (block.match(/<published>([^<]+)<\/published>/) || [])[1];
-    if (videoId) entries.push({ videoId, title: title || "", published: published || "" });
+    const shortId = (block.match(/<link\s+rel="alternate"\s+href="https:\/\/www\.youtube\.com\/shorts\/([^"?]+)[^"]*"\s*\/>/) || [])[1];
+    if (videoId && shortId === videoId) entries.push({ videoId, title: title || "", published: published || "" });
   }
   return entries;
-}
-
-async function isShort(videoId) {
-  try {
-    const watchPage = await fetchText(`https://www.youtube.com/watch?v=${videoId}`);
-    const lengthSeconds = Number((watchPage.match(/"lengthSeconds":"(\d+)"/) || [])[1]);
-    if (Number.isFinite(lengthSeconds) && lengthSeconds > 180) return false;
-
-    const response = await fetch(`https://www.youtube.com/shorts/${videoId}`, {
-      redirect: "manual",
-      headers: { "User-Agent": UA },
-    });
-    if (response.status >= 300 && response.status < 400) {
-      return !(response.headers.get("location") || "").includes(`v=${videoId}`);
-    }
-    return response.status === 200;
-  } catch (error) {
-    console.warn(`Не удалось определить формат ${videoId}: ${error.message}`);
-    return false;
-  }
 }
 
 function formatPublishedDate(value) {
@@ -74,11 +55,7 @@ async function main() {
     return;
   }
 
-  const shorts = [];
-  for (const entry of entries) {
-    if (await isShort(entry.videoId)) shorts.push(entry);
-    if (shorts.length === 10) break;
-  }
+  const shorts = entries.slice(0, 10);
 
   const source = fs.readFileSync(MEDIA_JS, "utf8");
   const updated = replaceShorts(source, shorts);

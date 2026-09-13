@@ -1,11 +1,12 @@
 import { getNews } from "../lib/news.js";
 import { siteConfig, archiveItems, shortVideoItems } from "../lib/home-media.js";
 import { formatAdminVideo, getSiteVideos } from "../lib/site-videos.js";
+import { getYoutubeShorts } from "../lib/youtube-shorts.js";
 import OliveHome from "./OliveHome";
 import "./olive.css";
 export const revalidate = 30;
 export default async function HomePage() {
-  const [news, adminVideos] = await Promise.all([getNews(), getSiteVideos()]);
+  const [news, adminVideos, youtubeShorts] = await Promise.all([getNews(), getSiteVideos(), getYoutubeShorts()]);
   const fallbackCurrent = {
     videoId: siteConfig.currentVideoId,
     title: "Предыдущий выпуск",
@@ -33,5 +34,6 @@ export default async function HomePage() {
       return true;
     })
     .slice(0, 3);
-  return <OliveHome news={news.all.slice(0, 15)} config={siteConfig} current={current} episodes={episodes} shorts={shortVideoItems.slice(0, 10)} />;
+  const shorts = youtubeShorts.length ? youtubeShorts : shortVideoItems.slice(0, 10);
+  return <OliveHome news={news.all.slice(0, 15)} config={siteConfig} current={current} episodes={episodes} shorts={shorts} />;
 }
