@@ -32,12 +32,20 @@ export async function GET(request) {
         Referer: "https://t.me/",
       },
       cache: "force-cache",
+      signal: AbortSignal.timeout(5000),
     });
   } catch {
     return new Response("upstream error", { status: 502 });
   }
 
-  if (!upstream.ok) return new Response("upstream error", { status: 502 });
+  if (!upstream.ok) {
+    // Expired CDN links are missing images, not a server outage on our site.
+    const missing = [403, 404, 410].includes(upstream.status);
+    return new Response(missing ? "image unavailable" : "upstream error", {
+      status: missing ? 404 : 502,
+      headers: { "X-Robots-Tag": "noindex" },
+    });
+  }
 
   const type = upstream.headers.get("content-type") || "image/jpeg";
   if (!type.startsWith("image/")) {

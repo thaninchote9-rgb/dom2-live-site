@@ -44,11 +44,8 @@ const manualArticles = [
 ];
 
 export default async function sitemap() {
-  const now = new Date();
-
   const base = [...staticRoutes, ...manualArticles].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: now,
     changeFrequency: route === "" ? "daily" : "weekly",
     priority: route === "" ? 1 : 0.8,
   }));
@@ -57,7 +54,8 @@ export default async function sitemap() {
   let telegram = [];
   try {
     const news = await getNews();
-    telegram = news.telegram.map((item) => ({
+    // Include the complete manual archive, not just the separately authored routes.
+    telegram = news.all.map((item) => ({
       url: `${baseUrl}${item.href}`,
       lastModified: new Date(item.publishedAt),
       changeFrequency: "daily",
@@ -69,7 +67,7 @@ export default async function sitemap() {
 
   // На случай совпадений оставляем уникальные URL.
   const seen = new Set();
-  return [...base, ...telegram].filter((entry) => {
+  return [...telegram, ...base].filter((entry) => {
     if (seen.has(entry.url)) return false;
     seen.add(entry.url);
     return true;

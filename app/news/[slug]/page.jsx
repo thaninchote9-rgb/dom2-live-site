@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { notFound } from "next/navigation";
 import { findManual } from "../../../lib/news.js";
 import { getTelegramPost, parseSlug } from "../../../lib/telegram.js";
@@ -7,30 +8,36 @@ export const revalidate = 600;
 // Единая ссылка для кнопки на всех текущих и будущих страницах новостей.
 const TELEGRAM_CHANNEL_URL = "https://t.me/maxbrabusstrim";
 
-async function getArticle(slug) {
+const getArticle = cache(async (slug) => {
   const manual = findManual(slug);
   if (manual) return manual;
 
   const parsed = parseSlug(slug);
   if (!parsed) return null;
   return getTelegramPost(parsed.channelKey, parsed.postId);
-}
+});
 
 export async function generateMetadata(props) {
   const params = await props.params;
   const article = await getArticle(params.slug);
-  if (!article) return { title: "Новость не найдена" };
+  if (!article) return { title: "Новость не найдена", robots: { index: false, follow: true } };
 
+  const description = article.text.length > 200
+    ? `${article.text.slice(0, 197).trimEnd()}…`
+    : article.text;
   return {
     title: article.title,
-    description: article.text,
+    description,
     alternates: { canonical: `https://dom2-live.ru/news/${article.slug}` },
     openGraph: {
       title: article.title,
-      description: article.text,
+      description,
       images: article.rawImage || article.image,
       type: "article",
+      url: `https://dom2-live.ru/news/${article.slug}`,
+      publishedTime: article.publishedAt,
     },
+    twitter: { card: "summary_large_image", title: article.title, description, images: [article.rawImage || article.image] },
   };
 }
 
@@ -41,8 +48,21 @@ export default async function NewsArticlePage(props) {
 
   const paragraphs = article.paragraphs?.filter(Boolean) || [article.text];
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline: article.title,
+    description: article.text,
+    datePublished: article.publishedAt,
+    image: [new URL(article.rawImage || article.image, "https://dom2-live.ru").href],
+    mainEntityOfPage: `https://dom2-live.ru/news/${article.slug}`,
+    inLanguage: "ru-RU",
+    publisher: { "@type": "Organization", name: "Дом 2 Live", url: "https://dom2-live.ru" },
+  };
+
   return (
     <main className="min-h-screen bg-[linear-gradient(135deg,#dbeafe,#fdf2f8_48%,#e0f2fe)] text-slate-900">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
       <header className="border-b border-white/50 bg-white/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-4xl items-center justify-between gap-4 px-4 py-4">
           <a href="/" className="font-black text-slate-950">▶ Дом 2 Live</a>
@@ -54,7 +74,7 @@ export default async function NewsArticlePage(props) {
         <a href="/news" className="text-sm font-bold text-sky-700">← К списку новостей</a>
         <div className="mt-7 flex flex-wrap items-center gap-3 text-sm font-black">
           <span className="rounded-full bg-slate-900 px-3 py-1 text-white">{article.tag}</span>
-          <time className="text-slate-600">{article.date}</time>
+          <time dateTime={article.publishedAt} className="text-slate-600">{article.date}</time>
           {article.source === "telegram" ? <span className="text-slate-500">Telegram</span> : null}
         </div>
         <h1 className="mt-5 text-3xl font-black leading-tight tracking-tight md:text-5xl">{article.title}</h1>

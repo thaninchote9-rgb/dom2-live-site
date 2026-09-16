@@ -36,13 +36,6 @@ export const metadata = {
       "Сегодняшний выпуск и свежие серии Дом 2, короткие видео и новости участников.",
     images: ["/og-cover.jpg"],
   },
-  alternates: {
-    canonical: "https://dom2-live.ru",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
   verification: {
     google: "ciwbmJzu6dp3q8i3fMcAjuXVoi3G4k6kh9G2AwzSsg0",
     yandex: "c5326ec331a378a4",
