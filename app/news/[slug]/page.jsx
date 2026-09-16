@@ -1,5 +1,5 @@
 import { cache } from "react";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { findManual } from "../../../lib/news.js";
 import { getTelegramPost, parseSlug } from "../../../lib/telegram.js";
 
@@ -45,6 +45,7 @@ export default async function NewsArticlePage(props) {
   const params = await props.params;
   const article = await getArticle(params.slug);
   if (!article) notFound();
+  if (params.slug !== article.slug) permanentRedirect(`/news/${article.slug}`);
 
   const paragraphs = article.paragraphs?.filter(Boolean) || [article.text];
 
