@@ -3,7 +3,7 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { findManual } from "../../../lib/news.js";
 import { getTelegramPost, parseSlug } from "../../../lib/telegram.js";
 
-export const revalidate = 600;
+export const revalidate = 3600;
 
 // Единая ссылка для кнопки на всех текущих и будущих страницах новостей.
 const TELEGRAM_CHANNEL_URL = "https://t.me/maxbrabusstrim";

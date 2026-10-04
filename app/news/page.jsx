@@ -1,6 +1,6 @@
 import { getNews } from "../../lib/news.js";
 
-export const revalidate = 600;
+export const revalidate = 3600;
 
 export const metadata = {
   title: "Новости Дом 2 — свежие новости участников",

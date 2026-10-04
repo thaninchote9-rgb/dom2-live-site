@@ -10,7 +10,7 @@ export const metadata = {
     "Дом 2 сегодняшний выпуск и свежие серии смотреть онлайн бесплатно в хорошем качестве. Последние выпуски, короткие видео и новости участников.",
   alternates: { canonical: "https://dom2-live.ru" },
 };
-export const revalidate = 30;
+export const revalidate = 3600;
 export default async function HomePage() {
   const [news, adminVideos, youtubeShorts] = await Promise.all([getNews(), getSiteVideos(), getYoutubeShorts()]);
   const fallbackCurrent = {
