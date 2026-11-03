@@ -1,3 +1,4 @@
+import { clientIp } from '@/lib/client-ip';
 import { createHmac, randomBytes, timingSafeEqual } from 'crypto';
 import { NextRequest, NextResponse } from 'next/server';
 import { fetchWithTimeout } from '@/lib/fetch-timeout';
@@ -40,12 +41,7 @@ function validOrigin(req: NextRequest): boolean {
 }
 
 function normalizedIp(req: NextRequest): string {
-  const forwarded =
-    req.headers.get('x-vercel-forwarded-for') ||
-    req.headers.get('x-forwarded-for') ||
-    req.headers.get('x-real-ip') ||
-    '';
-  const raw = forwarded.split(',')[0]?.trim().toLowerCase() || 'unknown';
+  const raw = clientIp(req.headers).toLowerCase();
   if (/^\d{1,3}(?:\.\d{1,3}){3}$/.test(raw)) return raw;
   if (raw.includes(':')) {
     const prefix = raw.split(':').slice(0, 4).join(':');

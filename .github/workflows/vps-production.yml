@@ -1,0 +1,62 @@
+name: Deploy VPS production
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['**/*.md']
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Sync YouTube Shorts"]
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: brabus-dom2-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: >-
+      github.ref == 'refs/heads/main' &&
+      (github.event_name != 'workflow_run' ||
+       (github.event.workflow_run.conclusion == 'success' &&
+        github.event.workflow_run.head_branch == 'main' &&
+        github.event.workflow_run.head_repository.full_name == github.repository))
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Build the GitHub main revision without secrets
+        run: |
+          sha=$(git rev-parse HEAD)
+          echo "DEPLOY_SHA=$sha" >> "$GITHUB_ENV"
+          docker build --build-arg GIT_SHA="$sha" -t "brabus-dom2:$sha" .
+          docker save "brabus-dom2:$sha" | gzip -1 > release.tgz
+          test "$(stat -c '%s' release.tgz)" -le 419430400
+      - name: Send image to the VPS and wait for health check
+        env:
+          DEPLOY_KEY: ${{ secrets.BRABUS_VPS_DEPLOY_KEY }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          latest=$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/main" --jq .object.sha)
+          if [[ "$latest" != "$DEPLOY_SHA" ]]; then
+            echo "A newer main revision exists; skipping this deployment."
+            exit 0
+          fi
+          test -n "$DEPLOY_KEY"
+          umask 077
+          temp=$(mktemp -d)
+          trap 'rm -f -- "$temp/key" "$temp/known_hosts"; rmdir -- "$temp"' EXIT
+          printf '%s\n' "$DEPLOY_KEY" > "$temp/key"
+          printf '%s\n' '31.76.19.138 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDmxUTX6tCxUEAU6Y5H3daqFftBfmPWK7c2r4CVxAa+A' > "$temp/known_hosts"
+          checksum=$(sha256sum release.tgz | cut -d' ' -f1)
+          ssh -T -i "$temp/key" -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes \
+            -o UserKnownHostsFile="$temp/known_hosts" -o ConnectTimeout=15 \
+            -o ServerAliveInterval=15 -o ServerAliveCountMax=6 brabus-ci@31.76.19.138 \
+            "deploy $DEPLOY_SHA $checksum" < release.tgz
