@@ -32,7 +32,20 @@ jobs:
         with:
           ref: main
           persist-credentials: false
+      - name: Check if the scheduled job changed main
+        id: revision
+        env:
+          EVENT: ${{ github.event_name }}
+          ORIGINAL_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          if [[ "$EVENT" == workflow_run && "$(git rev-parse HEAD)" == "$ORIGINAL_SHA" ]]; then
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+            echo "No source changes; skipping the VPS build."
+          else
+            echo "deploy=true" >> "$GITHUB_OUTPUT"
+          fi
       - name: Build the GitHub main revision without secrets
+        if: steps.revision.outputs.deploy == 'true'
         run: |
           sha=$(git rev-parse HEAD)
           echo "DEPLOY_SHA=$sha" >> "$GITHUB_ENV"
@@ -40,6 +53,7 @@ jobs:
           docker save "brabus-dom2:$sha" | gzip -1 > release.tgz
           test "$(stat -c '%s' release.tgz)" -le 419430400
       - name: Send image to the VPS and wait for health check
+        if: steps.revision.outputs.deploy == 'true'
         env:
           DEPLOY_KEY: ${{ secrets.BRABUS_VPS_DEPLOY_KEY }}
           GH_TOKEN: ${{ github.token }}
