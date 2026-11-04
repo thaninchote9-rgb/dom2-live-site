@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata = {
@@ -59,7 +60,18 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: `[{"@context":"https://schema.org","@type":"WebSite","name":"Дом 2 Live","url":"https://dom2-live.ru","inLanguage":"ru-RU"},{"@context":"https://schema.org","@type":"Organization","name":"Дом 2 Live","url":"https://dom2-live.ru","logo":"https://dom2-live.ru/icon-192.png","sameAs":["https://www.youtube.com/@WardaYosry-g9d","https://t.me/maxbrabusstrim"]}]` }}
         />
-        {children}        {process.env.VERCEL ? <Analytics /> : null}
+        {children}
+        {process.env.VERCEL ? (
+          <Analytics />
+        ) : process.env.NODE_ENV === "production" ? (
+          <Script
+            src="/brabus-insights.js"
+            data-website-id="a6d087a7-68c4-4947-8de0-8e084b302fbd"
+            data-domains="dom2-live.ru"
+            data-exclude-search="true"
+            data-exclude-hash="true"
+          />
+        ) : null}
       </body>
     </html>
   );
