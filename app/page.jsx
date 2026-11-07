@@ -40,7 +40,7 @@ export default async function HomePage() {
       return true;
     })
     .slice(0, 3);
-  const shorts = youtubeShorts.length ? youtubeShorts : shortVideoItems.slice(0, 10);
+  const shorts = youtubeShorts ?? shortVideoItems.slice(0, 10);
   const videoSchema = current.publishedAt ? {
     "@context": "https://schema.org",
     "@type": "VideoObject",
