@@ -1,27 +1,18 @@
+import { getEpisodeFeed, siteOrigin, todayPath } from "../lib/episode-pages.js";
 import { getNews } from "../lib/news.js";
 
-// Карта сайта пересобирается раз в час — вместе с новыми авто-новостями.
-export const revalidate = 3600;
+// Даты изменений выпусков берутся из ленты админки.
+export const revalidate = 0;
 
-const baseUrl = "https://dom2-live.ru";
+const baseUrl = siteOrigin;
 
 /** Статичные разделы сайта. */
 const staticRoutes = [
-  "",
-  "/dom-2-smotret-online",
-  "/dom-2-svezhie-serii",
-  "/dom-2-segodnya",
-  "/dom-2-efir",
-  "/dom-2-arhiv",
+  "/",
   "/novosti",
   "/archive",
   "/news",
-  "/dom-2-segodnyashniy-vypusk",
-  "/dom-2-smotret-online-besplatno",
-  "/dom-2-svezhie-serii-smotret-besplatno",
-  "/dom-2-efir-smotret-online",
-  "/dom-2-smotret-2026",
-  "/dom-2-smotret-v-horoshem-kachestve",
+  todayPath,
   "/smotret-dom-2-ne-iz-rf",
   "/vpn",
 ];
@@ -44,10 +35,10 @@ const manualArticles = [
 ];
 
 export default async function sitemap() {
+  const { current } = await getEpisodeFeed();
   const base = [...staticRoutes, ...manualArticles].map((route) => ({
     url: `${baseUrl}${route}`,
-    changeFrequency: route === "" ? "daily" : "weekly",
-    priority: route === "" ? 1 : 0.8,
+    ...((route === todayPath || route === "/archive") && current?.addedAt ? { lastModified: current.addedAt } : {}),
   }));
 
   // Свежие новости из Telegram.

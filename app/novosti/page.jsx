@@ -50,9 +50,9 @@ export default function SeoPage() {
         <section className="mt-6 rounded-[2rem] border border-white/75 bg-white/82 p-7 shadow-xl backdrop-blur-3xl md:p-10">
           <h2 className="mb-4 text-3xl font-black text-slate-950">Популярные разделы</h2>
           <div className="grid gap-3 md:grid-cols-2">
-            <a className="rounded-3xl border border-white/70 bg-white/75 p-5 font-black text-slate-800 shadow-md hover:bg-white" href="/dom-2-smotret-online">Дом 2 смотреть онлайн</a>
-            <a className="rounded-3xl border border-white/70 bg-white/75 p-5 font-black text-slate-800 shadow-md hover:bg-white" href="/dom-2-svezhie-serii">Дом 2 свежие серии</a>
-            <a className="rounded-3xl border border-white/70 bg-white/75 p-5 font-black text-slate-800 shadow-md hover:bg-white" href="/dom-2-segodnya">Дом 2 сегодня</a>
+            <a className="rounded-3xl border border-white/70 bg-white/75 p-5 font-black text-slate-800 shadow-md hover:bg-white" href="/">Дом 2 смотреть онлайн</a>
+            <a className="rounded-3xl border border-white/70 bg-white/75 p-5 font-black text-slate-800 shadow-md hover:bg-white" href="/archive">Дом 2 свежие серии</a>
+            <a className="rounded-3xl border border-white/70 bg-white/75 p-5 font-black text-slate-800 shadow-md hover:bg-white" href="/dom-2-segodnyashniy-vypusk">Дом 2 сегодня</a>
             <a className="rounded-3xl border border-white/70 bg-white/75 p-5 font-black text-slate-800 shadow-md hover:bg-white" href="/novosti">Новости Дом 2</a>
           </div>
         </section>
