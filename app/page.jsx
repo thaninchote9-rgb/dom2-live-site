@@ -1,35 +1,30 @@
 import { getNews } from "../lib/news.js";
 import { siteConfig, archiveItems, shortVideoItems } from "../lib/home-media.js";
-import { formatAdminVideo, getSiteVideos } from "../lib/site-videos.js";
+import { getEpisodeFeed } from "../lib/episode-pages.js";
 import { getYoutubeShorts } from "../lib/youtube-shorts.js";
 import OliveHome from "./OliveHome";
 import "./olive.css";
+
 export const metadata = {
-  title: { absolute: "Дом 2 смотреть онлайн бесплатно — сегодняшний выпуск" },
-  description:
-    "Дом 2 сегодняшний выпуск и свежие серии смотреть онлайн бесплатно в хорошем качестве. Последние выпуски, короткие видео и новости участников.",
-  alternates: { canonical: "https://dom2-live.ru" },
+  title: { absolute: "Дом 2 смотреть онлайн бесплатно — Дом 2 Live" },
+  description: "Смотри Дом 2 онлайн бесплатно. Последний выпуск, свежие серии и архив эфиров по датам, короткие видео и новости участников.",
+  alternates: { canonical: "/" },
 };
-export const revalidate = 30;
+
+export const revalidate = 0;
+
 export default async function HomePage() {
-  const [news, adminVideos, youtubeShorts] = await Promise.all([getNews(), getSiteVideos(), getYoutubeShorts()]);
-  const fallbackCurrent = {
+  const [news, feed, youtubeShorts] = await Promise.all([getNews(), getEpisodeFeed(), getYoutubeShorts()]);
+  const fallback = {
     videoId: siteConfig.currentVideoId,
-    title: "Предыдущий выпуск",
-    date: "Ранее",
+    title: "Запись эфира Дом 2",
+    date: null,
     videoUrl: `https://www.youtube.com/watch?v=${siteConfig.currentVideoId}`,
     image: `https://img.youtube.com/vi/${siteConfig.currentVideoId}/hqdefault.jpg`,
   };
-  const current = adminVideos.current
-    ? formatAdminVideo(adminVideos.current)
-    : { ...fallbackCurrent, title: "Последний выпуск" };
-  const recentCandidates = [
-    ...adminVideos.recent.map(formatAdminVideo),
-    ...(adminVideos.current ? [fallbackCurrent] : []),
-    ...archiveItems,
-  ];
+  const current = feed.current ?? fallback;
   const seen = new Set([current.videoId]);
-  const episodes = recentCandidates
+  const episodes = [...feed.episodes, ...archiveItems]
     .map((item) => ({
       ...item,
       videoId: item.videoId || item.videoUrl?.match(/(?:live\/|v=)([A-Za-z0-9_-]{11})/)?.[1],
@@ -40,20 +35,6 @@ export default async function HomePage() {
       return true;
     })
     .slice(0, 3);
-  const shorts = youtubeShorts ?? shortVideoItems.slice(0, 10);
-  const videoSchema = current.publishedAt ? {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    name: `${current.title} — выпуск от ${current.date}`,
-    description: `Дом 2: сегодняшний выпуск от ${current.date}. Смотреть онлайн бесплатно в плеере YouTube.`,
-    thumbnailUrl: [current.image],
-    uploadDate: current.publishedAt,
-    embedUrl: `https://www.youtube.com/embed/${current.videoId}`,
-    contentUrl: current.videoUrl,
-  } : null;
 
-  return <>
-    {videoSchema ? <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema).replace(/</g, "\\u003c") }} /> : null}
-    <OliveHome news={news.all.slice(0, 15)} config={siteConfig} current={current} episodes={episodes} shorts={shorts} />
-  </>;
+  return <OliveHome news={news.all.slice(0, 15)} config={siteConfig} current={current} episodes={episodes} shorts={youtubeShorts ?? shortVideoItems.slice(0, 10)} />;
 }
